@@ -244,3 +244,245 @@ When the number of iterations is not known beforehand.
 # Final Notes
 
 The `while` loop is useful when the number of iterations is dynamic. For array traversal, `for` is usually preferred because it is shorter and easier to read.
+
+
+# JavaScript Array Traversal using `do...while` Loop
+
+The **`do...while` loop** is similar to the `while` loop, but it executes the code **at least once** before checking the condition.
+
+---
+
+# Table of Contents
+
+- What is do...while?
+- Why Use do...while?
+- Syntax
+- How it Works
+- Examples
+- Real Project Examples
+- Best Practices
+- Common Mistakes
+- Interview Questions
+- Summary Table
+
+---
+
+# What is do...while?
+
+## Definition
+
+A `do...while` loop executes the code first and then checks the condition.
+
+Even if the condition is `false`, the loop runs **one time**.
+
+---
+
+# Why Use do...while?
+
+We use a `do...while` loop when:
+
+- Code must execute at least once.
+- User input needs validation.
+- Menu-driven programs.
+- Retry operations.
+
+---
+
+# Syntax
+
+```javascript
+let i = 0;
+
+do{
+
+    console.log(array[i]);
+
+    i++;
+
+}while(i < array.length);
+```
+
+---
+
+# Example 1 (Print Array)
+
+```javascript
+const fruits = [
+
+    "Apple",
+
+    "Mango",
+
+    "Orange"
+
+];
+
+let i = 0;
+
+do{
+
+    console.log(fruits[i]);
+
+    i++;
+
+}while(i < fruits.length);
+```
+
+### Output
+
+```javascript
+Apple
+Mango
+Orange
+```
+
+---
+
+# Example 2 (Sum of Numbers)
+
+```javascript
+const numbers = [
+
+    10,
+
+    20,
+
+    30
+
+];
+
+let i = 0;
+
+let sum = 0;
+
+do{
+
+    sum += numbers[i];
+
+    i++;
+
+}while(i < numbers.length);
+
+console.log(sum);
+```
+
+### Output
+
+```javascript
+60
+```
+
+---
+
+# Example 3 (Runs At Least Once)
+
+```javascript
+const numbers = [];
+
+let i = 0;
+
+do{
+
+    console.log("Loop Executed");
+
+}while(i < numbers.length);
+```
+
+### Output
+
+```javascript
+Loop Executed
+```
+
+---
+
+# Real Project Example
+
+## Menu Items
+
+```javascript
+const menu = [
+
+    "Home",
+
+    "About",
+
+    "Contact"
+
+];
+
+let i = 0;
+
+do{
+
+    console.log(menu[i]);
+
+    i++;
+
+}while(i < menu.length);
+```
+
+---
+
+# Best Practices
+
+- ✅ Use `do...while` only when the loop must run at least once.
+- ✅ Always update the loop variable.
+- ✅ Use `array.length` for the stopping condition.
+
+---
+
+# Common Mistakes
+
+## Forgetting `i++`
+
+Wrong
+
+```javascript
+do{
+
+    console.log(array[i]);
+
+}while(i < array.length);
+```
+
+This creates an **infinite loop**.
+
+---
+
+## Using `do...while` unnecessarily
+
+If the loop does **not** need to execute at least once, prefer a `for` or `while` loop.
+
+---
+
+# Interview Questions
+
+### What is the difference between `while` and `do...while`?
+
+`while` checks the condition first.
+
+`do...while` executes the code first and then checks the condition.
+
+---
+
+### Does `do...while` always execute once?
+
+✅ Yes.
+
+---
+
+# Summary Table
+
+| Feature | Description |
+|---------|-------------|
+| Loop | `do...while` |
+| Checks Condition | After execution |
+| Runs At Least Once | ✅ Yes |
+| Best Use | Menus, Validation, Retry Logic |
+
+---
+
+# Final Notes
+
+The `do...while` loop is less common for array traversal but is very useful when you need the loop body to execute at least once. It is commonly used in login systems, menu-driven programs, and input validation.
