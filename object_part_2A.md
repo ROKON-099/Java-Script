@@ -786,3 +786,7 @@ square(n){
 | Return Value | `return` statement |
 | Call Method | `object.method()` |
 | Best Practice | Use ES6 methods with `this` |
+
+
+
+
