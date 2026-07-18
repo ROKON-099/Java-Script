@@ -369,4 +369,205 @@ Escape characters allow special characters to be included inside a string.
 They start with a backslash (`\`).
 
 ---
+## Common Escape Characters
 
+| Escape | Meaning |
+|---------|---------|
+| `\"` | Double Quote |
+| `\'` | Single Quote |
+| `\\` | Backslash |
+| `\n` | New Line |
+| `\t` | Tab |
+
+---
+
+## Double Quote Example
+
+```javascript
+let text = "He said, \"Hello\"";
+
+console.log(text);
+```
+
+### Output
+
+```
+He said, "Hello"
+```
+
+---
+
+## Single Quote Example
+
+```javascript
+let text = 'It\'s JavaScript';
+
+console.log(text);
+```
+
+### Output
+
+```
+It's JavaScript
+```
+
+---
+
+## New Line
+
+```javascript
+let text = "HTML\nCSS\nJavaScript";
+
+console.log(text);
+```
+
+### Output
+
+```
+HTML
+CSS
+JavaScript
+```
+
+---
+
+## Tab
+
+```javascript
+let text = "Name\tAge";
+
+console.log(text);
+```
+
+### Output
+
+```
+Name    Age
+```
+
+---
+
+## Backslash
+
+```javascript
+let path = "C:\\Users\\Admin";
+
+console.log(path);
+```
+
+### Output
+
+```
+C:\Users\Admin
+```
+
+---
+
+# Best Practices
+
+✅ Use double quotes or single quotes consistently.
+
+```javascript
+let name = "Rokon";
+```
+
+---
+
+✅ Use template literals when inserting variables.
+
+```javascript
+let name = "Rokon";
+
+console.log(`Welcome ${name}`);
+```
+
+---
+
+✅ Use `.length` instead of manually counting characters.
+
+---
+
+# Common Mistakes
+
+### Forgetting Quotes
+
+❌
+
+```javascript
+let name = Rokon;
+```
+
+Error
+
+---
+
+### Wrong Index
+
+```javascript
+let name = "Java";
+
+console.log(name[10]);
+```
+
+Output
+
+```
+undefined
+```
+
+---
+
+### Trying to Modify a Character
+
+❌
+
+```javascript
+let name = "Java";
+
+name[0] = "C";
+```
+
+Output
+
+```
+Java
+```
+
+---
+
+# Interview Questions
+
+## What is a String?
+
+A string is a sequence of characters used to represent text in JavaScript.
+
+---
+
+## What is String Length?
+
+The `length` property returns the total number of characters in a string.
+
+---
+
+## What does Immutable mean?
+
+Immutable means the value cannot be changed after it is created. Strings in JavaScript are immutable.
+
+---
+
+## What is Character Index?
+
+An index is the position of a character inside a string. Indexing starts from **0**.
+
+---
+
+## Summary
+
+| Topic | Description |
+|---------|-------------|
+| String | Sequence of characters |
+| Quotes | Single, Double, Backticks |
+| length | Returns total characters |
+| Character Access | Uses index starting from 0 |
+| Immutable | Characters cannot be changed directly |
+| Escape Characters | Special characters inside strings |
