@@ -571,3 +571,5 @@ An index is the position of a character inside a string. Indexing starts from **
 | Character Access | Uses index starting from 0 |
 | Immutable | Characters cannot be changed directly |
 | Escape Characters | Special characters inside strings |
+
+
