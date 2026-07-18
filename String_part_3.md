@@ -248,4 +248,356 @@ console.log(star.repeat(10));
 ```
 
 ---
+## Example
 
+```javascript
+let text = "Hi ";
+
+console.log(text.repeat(3));
+```
+
+Output
+
+```
+Hi Hi Hi
+```
+
+---
+
+## Real Project Example
+
+```javascript
+console.log("-".repeat(40));
+```
+
+Output
+
+```
+----------------------------------------
+```
+
+Useful for console formatting.
+
+---
+
+# 5. charAt()
+
+## Definition
+
+The `charAt()` method returns the character at a specified index.
+
+---
+
+## Syntax
+
+```javascript
+string.charAt(index)
+```
+
+---
+
+## Example
+
+```javascript
+let language = "JavaScript";
+
+console.log(language.charAt(0));
+```
+
+### Output
+
+```
+J
+```
+
+---
+
+## Example
+
+```javascript
+console.log(language.charAt(4));
+```
+
+Output
+
+```
+S
+```
+
+---
+
+## Another Way
+
+```javascript
+console.log(language[4]);
+```
+
+Output
+
+```
+S
+```
+
+Modern JavaScript usually prefers bracket notation.
+
+---
+
+# 6. indexOf()
+
+## Definition
+
+The `indexOf()` method returns the **first index** of a specified value.
+
+If the value is not found, it returns **-1**.
+
+---
+
+## Syntax
+
+```javascript
+string.indexOf(searchValue)
+```
+
+---
+
+## Example
+
+```javascript
+let language = "JavaScript";
+
+console.log(language.indexOf("Script"));
+```
+
+### Output
+
+```
+4
+```
+
+---
+
+## Example
+
+```javascript
+console.log(language.indexOf("Python"));
+```
+
+Output
+
+```
+-1
+```
+
+---
+
+## Real Project Example
+
+```javascript
+let email = "admin@gmail.com";
+
+if(email.indexOf("@") !== -1){
+    console.log("Valid Email");
+}
+```
+
+Output
+
+```
+Valid Email
+```
+
+---
+
+# 7. lastIndexOf()
+
+## Definition
+
+The `lastIndexOf()` method returns the **last occurrence** of a value.
+
+---
+
+## Syntax
+
+```javascript
+string.lastIndexOf(searchValue)
+```
+
+---
+
+## Example
+
+```javascript
+let text = "Java Java Java";
+
+console.log(text.lastIndexOf("Java"));
+```
+
+### Output
+
+```
+10
+```
+
+---
+
+## Example
+
+```javascript
+let sentence = "one two one";
+
+console.log(sentence.lastIndexOf("one"));
+```
+
+Output
+
+```
+8
+```
+
+---
+
+# Real Project Example
+
+```javascript
+let file = "photo.backup.jpg";
+
+console.log(file.lastIndexOf("."));
+```
+
+Output
+
+```
+12
+```
+
+Useful for finding file extensions.
+
+---
+
+# Summary Table
+
+| Method | Purpose | Returns |
+|----------|----------|----------|
+| replace() | Replace first match | String |
+| replaceAll() | Replace all matches | String |
+| split() | Convert string to array | Array |
+| repeat() | Repeat string | String |
+| charAt() | Character at index | String |
+| indexOf() | First occurrence | Number |
+| lastIndexOf() | Last occurrence | Number |
+
+---
+
+# Most Frequently Used
+
+⭐⭐⭐⭐⭐
+
+- split()
+- replace()
+- indexOf()
+
+⭐⭐⭐⭐
+
+- replaceAll()
+- charAt()
+
+⭐⭐⭐
+
+- repeat()
+- lastIndexOf()
+
+---
+
+# Common Mistakes
+
+### replace()
+
+❌ Expecting all matches to be replaced.
+
+```javascript
+"Java Java".replace("Java","JS")
+```
+
+Output
+
+```
+JS Java
+```
+
+---
+
+### split()
+
+Using the wrong separator.
+
+```javascript
+"HTML CSS".split(",")
+```
+
+Output
+
+```javascript
+["HTML CSS"]
+```
+
+---
+
+### indexOf()
+
+Always check for `-1`.
+
+```javascript
+if(text.indexOf("Java") !== -1){
+    console.log("Found");
+}
+```
+
+---
+
+# Interview Questions
+
+## Q1. What is the difference between replace() and replaceAll()?
+
+| replace() | replaceAll() |
+|------------|--------------|
+| Replaces first occurrence | Replaces all occurrences |
+
+---
+
+## Q2. Which method converts a string into an array?
+
+```
+split()
+```
+
+---
+
+## Q3. Which method repeats a string?
+
+```
+repeat()
+```
+
+---
+
+## Q4. Which method returns the first occurrence?
+
+```
+indexOf()
+```
+
+---
+
+## Q5. Which method returns the last occurrence?
+
+```
+lastIndexOf()
+```
+
+---
+
+## Q6. Which method returns a character at a specific position?
+
+```
+charAt()
+```
