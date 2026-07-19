@@ -40,7 +40,7 @@ name = "Karim";
 let age = 23;
 age = 24; // Allowed
 
-// let age = 25; ❌ Error
+// let age = 25;  Error
 ```
 
 ---
@@ -53,7 +53,7 @@ age = 24; // Allowed
 ```javascript
 const PI = 3.1416;
 
-// PI = 3.14; ❌ Error
+// PI = 3.14;  Error
 ```
 
 ---
@@ -63,9 +63,9 @@ const PI = 3.1416;
 | Feature | var | let | const |
 |---------|-----|-----|-------|
 | Scope | Function | Block | Block |
-| Redeclare | ✅ Yes | ❌ No | ❌ No |
-| Reassign | ✅ Yes | ✅ Yes | ❌ No |
-| Hoisted | ✅ Yes | ✅ Yes (TDZ) | ✅ Yes (TDZ) |
+| Redeclare |  Yes |  No |  No |
+| Reassign |  Yes |  Yes |  No |
+| Hoisted |  Yes |  Yes (TDZ) |  Yes (TDZ) |
 
 ---
 
