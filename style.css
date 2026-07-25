@@ -1,28 +1,69 @@
+/*======================================================
+        DOCUMENTATION THEME v3
+                PART 1
+      Layout • Typography • Headings
+======================================================*/
+
+
+/*=========================
+        ROOT
+=========================*/
+
+:root{
+
+    --primary:#2563eb;
+    --primary-dark:#1d4ed8;
+
+    --text:#1f2937;
+    --heading:#111827;
+
+    --border:#dbe4ef;
+
+    --bg:#ffffff;
+    --card:#f8fafc;
+
+}
+
+
+/*=========================
+        PAGE
+=========================*/
 
 @page{
+
     size:A4;
+
     margin:2cm;
+
 }
+
+
+/*=========================
+        BODY
+=========================*/
 
 body{
 
-    font-family:"Segoe UI",sans-serif;
+    font-family:"Segoe UI",Arial,sans-serif;
 
-    font-size:12px;
+    font-size:14px;
 
-    color:#374151;
+    line-height:1.8;
 
-    line-height:1.9;
+    color:var(--text);
 
-    background:#ffffff;
+    background:white;
 
 }
 
 
+/*=========================
+        PARAGRAPH
+=========================*/
 
 p{
 
-    margin:15px 0;
+    margin:14px 0;
 
     text-align:justify;
 
@@ -30,19 +71,16 @@ p{
 
 
 /*=========================
-        LINKS
+        LINK
 =========================*/
 
 a{
 
-    color:#2563eb;
+    color:var(--primary);
 
     text-decoration:none;
 
-    font-weight:500;
-
 }
-
 
 a:hover{
 
@@ -51,56 +89,47 @@ a:hover{
 }
 
 
-
 /*=========================
         H1
 =========================*/
 
-
 h1{
 
-    font-size:23px;
+    font-size:36px;
 
     font-weight:800;
 
-    color:#111827;
+    color:var(--heading);
 
-    margin-top:20px;
+    margin:0 0 12px;
 
-    margin-bottom:10px;
-
-    line-height:1.2;
+    line-height:1.25;
 
 }
-
-
 
 
 /*=========================
         SUBTITLE
 =========================*/
 
-
 .subtitle{
 
     display:block;
 
-    font-size:16px;
+    font-size:18px;
 
-    color:#2563eb;
+    font-weight:400;
 
-    margin-bottom:35px;
+    color:var(--primary);
 
-    font-weight:500;
+    margin-bottom:28px;
 
 }
-
 
 
 /*=========================
         HR
 =========================*/
-
 
 hr{
 
@@ -108,41 +137,32 @@ hr{
 
     height:4px;
 
-    background:#1e293b;
+    background:#1f2937;
 
-    border-radius:30px;
-
-    margin:35px 0;
+    margin:28px 0 36px;
 
 }
-
-
 
 
 /*=========================
         H2
 =========================*/
 
-
 h2{
 
     position:relative;
 
-    padding-left:22px;
-
-    margin-top:50px;
-
-    margin-bottom:20px;
-
-    font-size:24px;
-
-    color:#111827;
+    font-size:28px;
 
     font-weight:700;
 
+    color:var(--heading);
+
+    padding-left:20px;
+
+    margin:45px 0 18px;
+
 }
-
-
 
 h2::before{
 
@@ -152,67 +172,42 @@ h2::before{
 
     left:0;
 
-    top:4px;
+    top:3px;
 
     width:6px;
 
     height:38px;
 
-    border-radius:50px;
+    border-radius:999px;
 
-    background:blue;
-    box-shadow:0 0 10px rgba(37,99,235,.35);
+    background:var(--primary);
 
 }
-
-
 
 
 /*=========================
         H3
 =========================*/
 
-
 h3{
 
-    position:relative;
-
-    padding-left:18px;
-
-    margin-top:35px;
-
-    margin-bottom:15px;
-
-    font-size:16px;
-
-    color:#1f2937;
+    font-size:17px;
 
     font-weight:700;
 
-}
+    color:#374151;
 
+    text-transform:uppercase;
 
+    letter-spacing:.5px;
 
-h3::before{
+    margin:32px 0 14px;
 
-    content:"";
+    border-bottom:1px solid #e5e7eb;
 
-    position:absolute;
-
-    left:0;
-
-    top:4px;
-
-    width:5px;
-
-    height:28px;
-
-    border-radius:30px;
-
-    backgroud:blue;
+    padding-bottom:6px;
 
 }
-
 
 
 /*=========================
@@ -223,32 +218,25 @@ h4{
 
     font-size:16px;
 
-    color:#334155;
-
     font-weight:700;
 
-}
+    color:#374151;
 
+    margin:24px 0 10px;
+
+}
 
 
 /*=========================
         LIST
 =========================*/
 
-
-ul{
-
-    margin-left:28px;
-
-}
-
-
+ul,
 ol{
 
-    margin-left:28px;
+    margin:12px 0 12px 24px;
 
 }
-
 
 li{
 
@@ -257,52 +245,79 @@ li{
 }
 
 
-
-
 /*=========================
         STRONG
 =========================*/
 
-
 strong{
+
+    font-weight:700;
 
     color:#111827;
 
 }
 
 
-
-
 /*=========================
-        ITALIC
+        EMPHASIS
 =========================*/
-
 
 em{
 
-    color:#475569;
+    font-style:italic;
+
+    color:#4b5563;
 
 }
 
 
+/*=========================
+        INFORMATION CARD
+=========================*/
+
+.p-box{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:10px;
+
+    padding:22px 24px;
+
+    margin:24px 0;
+
+}
+
+.p-box p{
+
+    margin:0 0 14px;
+
+}
+
+.p-box p:last-child{
+
+    margin-bottom:0;
+
+}
 
 
 /*=========================
         SELECTION
 =========================*/
 
-
 ::selection{
 
     background:#2563eb;
 
-    color:white;
+    color:#fff;
 
 }
 /*======================================================
-            PART 2
-    CODE BLOCKS • TABLES • CALLOUT BOXES
-=======================================================*/
+        DOCUMENTATION THEME v3
+                PART 2
+      Code • Tables • Boxes • Images
+======================================================*/
 
 
 /*=========================
@@ -311,22 +326,13 @@ em{
 
 code{
 
-    font-family:"JetBrains Mono", Consolas, monospace;
-
-    background:#fff1f2;
-
-    color:#f7063a;
-
-    border:1px solid #171616;
-
-    border-radius:7px;
-
-    padding:3px 7px;
-
-    font-size:14px;
-
-    font-weight:600;
-
+    font-family: "JetBrains Mono", "Consolas", monospace;
+    font-size: 13px;
+    color: #0f172a;               
+    background: #f1f5f9;          
+    border: 1px solid #cbd5e1;    
+    border-radius: 6px;
+    padding: 2px 6px;
 }
 
 
@@ -336,38 +342,151 @@ code{
 
 pre{
 
-    background:#1e1e1e;
+    background:#1f2937;
 
-    color:#e80e0e;
+    color:#e5e7eb;
 
     padding:22px;
 
-    border-radius:14px;
+    border-radius:12px;
 
     overflow-x:auto;
 
-    margin:25px 0;
+    margin:22px 0;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+}
+
+pre code{
+
+    background:none;
 
     border:none;
 
-    box-shadow:0 10px 30px rgba(0,0,0,.18);
+    color:inherit;
+
+    padding:0;
+
+    font-size:13px;
+
+    line-height:1.7;
 
 }
 
 
-pre code{
+/*=========================
+        EXPECTED OUTPUT
+=========================*/
 
-    background:transparent;
+.output{
 
-    color:inherit;
+    background:#f1f5f9;
 
-    border:none;
+    border-left:5px solid #64748b;
 
-    padding:0;
+    padding:18px 20px;
 
-    font-size:15px;
+    border-radius:6px;
 
-    line-height:1.7;
+    margin:20px 0;
+
+    font-family:"JetBrains Mono",monospace;
+
+}
+
+
+/*=========================
+        ANALYSIS BOX
+=========================*/
+
+.analysis{
+
+    background:#eff6ff;
+
+    border:1px solid #bfdbfe;
+
+    border-radius:10px;
+
+    padding:18px 22px;
+
+    margin:24px 0;
+
+}
+
+
+/*=========================
+        INFO
+=========================*/
+
+.info{
+
+    background:#eff6ff;
+
+    border-left:5px solid #2563eb;
+
+    padding:18px 22px;
+
+    border-radius:8px;
+
+    margin:20px 0;
+
+}
+
+
+/*=========================
+        TIP
+=========================*/
+
+.tip{
+
+    background:#ecfdf5;
+
+    border-left:5px solid #10b981;
+
+    padding:18px 22px;
+
+    border-radius:8px;
+
+    margin:20px 0;
+
+}
+
+
+/*=========================
+        WARNING
+=========================*/
+
+.warning{
+
+    background:#fffbeb;
+
+    border-left:5px solid #f59e0b;
+
+    padding:18px 22px;
+
+    border-radius:8px;
+
+    margin:20px 0;
+
+}
+
+
+/*=========================
+        DANGER
+=========================*/
+
+.danger{
+
+    background:#fef2f2;
+
+    border-left:5px solid #ef4444;
+
+    padding:18px 22px;
+
+    border-radius:8px;
+
+    margin:20px 0;
 
 }
 
@@ -378,19 +497,17 @@ pre code{
 
 blockquote{
 
-    background:#eff6ff;
+    background:#f8fafc;
 
-    border-left:6px solid #2563eb;
+    border-left:5px solid #2563eb;
 
-    padding:18px 22px;
+    padding:16px 20px;
 
-    border-radius:10px;
+    border-radius:8px;
 
-    margin:25px 0;
+    margin:20px 0;
 
-    color:#334155;
-
-    font-style:italic;
+    color:#475569;
 
 }
 
@@ -405,61 +522,47 @@ table{
 
     border-collapse:collapse;
 
-    margin:30px 0;
+    margin:24px 0;
 
-    border-radius:12px;
+    font-size:14px;
+
+    border-radius:8px;
 
     overflow:hidden;
 
-    font-size:15px;
-
 }
-
 
 thead{
 
     background:#1E3A8A;
 
-    color:white;
+    color:#fff;
 
 }
-
 
 th{
 
-    padding:15px;
-
-    font-weight:700;
+    padding:14px;
 
     text-align:center;
 
-}
+    font-weight:700;
 
+}
 
 td{
 
-    padding:14px;
+    padding:12px;
 
-    border:1px solid #e5e7eb;
-
-    text-align:left;
+    border:1px solid #d1d5db;
 
 }
-
 
 tbody tr:nth-child(even){
 
     background:#f8fafc;
 
 }
-
-
-tbody tr:nth-child(odd){
-
-    background:white;
-
-}
-
 
 tbody tr:hover{
 
@@ -478,106 +581,45 @@ img{
 
     max-width:100%;
 
-    margin:30px auto;
+    margin:24px auto;
 
-    border-radius:14px;
+    border-radius:10px;
 
-    box-shadow:0 8px 20px rgba(0,0,0,.12);
-
-}
-
-
-/*=========================
-        INFO BOX
-=========================*/
-
-.info{
-
-    background:#eff6ff;
-
-    border-left:6px solid #2563eb;
-
-    border-radius:12px;
-
-    padding:18px 22px;
-
-    margin:25px 0;
+    border:1px solid #e5e7eb;
 
 }
 
 
 /*=========================
-        TIP BOX
+        FIGURE CAPTION
 =========================*/
 
-.tip{
+figcaption{
 
-    background:#ecfdf5;
+    text-align:center;
 
-    border-left:6px solid #10b981;
+    color:#6b7280;
 
-    border-radius:12px;
+    font-size:12px;
 
-    padding:18px 22px;
-
-    margin:25px 0;
+    margin-top:8px;
 
 }
 
 
 /*=========================
-        WARNING BOX
+        MARK
 =========================*/
 
-.warning{
+mark{
 
-    background:#fffbeb;
+    background:#e1d471;
 
-    border-left:6px solid #f59e0b;
+    color:#111827;
 
-    border-radius:12px;
+    padding:2px 4px;
 
-    padding:18px 22px;
-
-    margin:25px 0;
-
-}
-
-
-/*=========================
-        DANGER BOX
-=========================*/
-
-.danger{
-
-    background:#fef2f2;
-
-    border-left:6px solid #ef4444;
-
-    border-radius:12px;
-
-    padding:18px 22px;
-
-    margin:25px 0;
-
-}
-
-
-/*=========================
-        NOTE BOX
-=========================*/
-
-.note{
-
-    background:#f8fafc;
-
-    border-left:6px solid #64748b;
-
-    border-radius:12px;
-
-    padding:18px 22px;
-
-    margin:25px 0;
+    border-radius:4px;
 
 }
 
@@ -592,55 +634,22 @@ kbd{
 
     border:1px solid #d1d5db;
 
-    border-bottom:3px solid #9ca3af;
+    border-bottom:2px solid #9ca3af;
 
-    border-radius:6px;
+    border-radius:5px;
 
-    padding:2px 8px;
+    padding:2px 7px;
 
-    font-family:Consolas, monospace;
+    font-size:12px;
 
-    font-size:14px;
-
-}
-
-
-/*=========================
-        HORIZONTAL RULE
-=========================*/
-
-hr{
-
-    border:none;
-
-    height:2px;
-
-    background:#d1d5db;
-
-    margin:40px 0;
-
-}
-
-
-/*=========================
-        TEXT HIGHLIGHT
-=========================*/
-
-mark{
-
-    background:#fef08a;
-
-    color:#111827;
-
-    padding:2px 4px;
-
-    border-radius:4px;
+    font-family:Consolas,monospace;
 
 }
 /*======================================================
-            PART 3
-        PRINT • COVER • PAGE BREAK
-=======================================================*/
+        DOCUMENTATION THEME v3
+                PART 3
+        Cover • Print • Utilities
+======================================================*/
 
 
 /*=========================
@@ -651,7 +660,7 @@ mark{
 
     text-align:center;
 
-    margin-top:180px;
+    margin-top:170px;
 
     page-break-after:always;
 
@@ -659,29 +668,21 @@ mark{
 
 .cover h1{
 
-    font-size:48px;
+    font-size:42px;
+
+    margin-bottom:12px;
 
     color:#111827;
 
-    margin-bottom:15px;
-
 }
 
-.cover h2{
+.cover .subtitle{
 
-    font-size:26px;
+    font-size:20px;
 
     color:#2563eb;
 
-    font-weight:500;
-
-    padding:0;
-
-}
-
-.cover h2::before{
-
-    display:none;
+    margin-bottom:25px;
 
 }
 
@@ -689,11 +690,9 @@ mark{
 
     text-align:center;
 
-    color:#64748b;
+    font-size:15px;
 
-    margin-top:25px;
-
-    font-size:18px;
+    color:#6b7280;
 
 }
 
@@ -708,17 +707,13 @@ mark{
 
 }
 
-.toc h2{
-
-    margin-bottom:25px;
-
-}
-
 .toc ul{
 
     list-style:none;
 
-    padding-left:0;
+    margin:0;
+
+    padding:0;
 
 }
 
@@ -749,26 +744,26 @@ mark{
 
 
 /*=========================
-        FIGURE
+        DIVIDER
 =========================*/
 
-figure{
+.divider{
 
-    margin:30px auto;
+    margin:35px 0;
 
-    text-align:center;
+    height:2px;
 
-}
+    background:linear-gradient(
 
-figcaption{
+        to right,
 
-    margin-top:10px;
+        #2563eb,
 
-    font-size:14px;
+        #60a5fa,
 
-    color:#64748b;
+        transparent
 
-    font-style:italic;
+    );
 
 }
 
@@ -783,15 +778,13 @@ dt{
 
     color:#111827;
 
-    margin-top:12px;
+    margin-top:14px;
 
 }
 
 dd{
 
-    margin-left:20px;
-
-    margin-bottom:12px;
+    margin:0 0 14px 22px;
 
     color:#4b5563;
 
@@ -804,9 +797,9 @@ dd{
 
 small{
 
-    color:#6b7280;
+    font-size:12px;
 
-    font-size:13px;
+    color:#6b7280;
 
 }
 
@@ -823,70 +816,61 @@ sup{
 
 
 /*=========================
-        HEADER
+        TABLE FIX
 =========================*/
 
-header{
+table{
 
-    border-bottom:2px solid #e5e7eb;
+    page-break-inside:avoid;
 
-    padding-bottom:12px;
+}
 
-    margin-bottom:30px;
+thead{
+
+    display:table-header-group;
 
 }
 
 
 /*=========================
-        FOOTER
+        IMAGE FIX
 =========================*/
 
-footer{
+img{
 
-    border-top:2px solid #e5e7eb;
-
-    margin-top:40px;
-
-    padding-top:15px;
-
-    color:#64748b;
-
-    font-size:13px;
-
-    text-align:center;
+    page-break-inside:avoid;
 
 }
 
 
 /*=========================
-        SECTION SPACING
+        CODE FIX
 =========================*/
 
-section{
+pre{
 
-    margin-bottom:45px;
+    page-break-inside:avoid;
+
+    white-space:pre-wrap;
+
+    word-break:break-word;
 
 }
 
 
 /*=========================
-        HORIZONTAL DIVIDER
+        BOX FIX
 =========================*/
 
-.divider{
+.info,
+.tip,
+.warning,
+.danger,
+.analysis,
+.output,
+blockquote{
 
-    height:3px;
-
-    background:linear-gradient(
-        90deg,
-        #2563eb,
-        #60a5fa,
-        transparent
-    );
-
-    border-radius:50px;
-
-    margin:40px 0;
+    page-break-inside:avoid;
 
 }
 
@@ -899,93 +883,36 @@ section{
 
     body{
 
-        font-size:15px;
+        background:white;
 
-        color:#000;
-
-        background:#fff;
+        color:#1f2937;
 
     }
 
-    h1,h2,h3,h4{
+    h1,
+    h2,
+    h3,
+    h4{
 
         page-break-after:avoid;
 
     }
 
-    table{
+    p{
 
-        page-break-inside:avoid;
+        orphans:3;
 
-    }
-
-    pre{
-
-        page-break-inside:avoid;
-
-        white-space:pre-wrap;
-
-        word-break:break-word;
+        widows:3;
 
     }
 
-    blockquote{
+    a{
 
-        page-break-inside:avoid;
+        color:#2563eb;
 
-    }
-
-    img{
-
-        page-break-inside:avoid;
-
-        max-width:100%;
+        text-decoration:none;
 
     }
-
-    .cover{
-
-        page-break-after:always;
-
-    }
-
-    .page-break{
-
-        page-break-before:always;
-
-    }
-
-}
-
-
-/*=========================
-        SCROLLBAR
-(Preview only)
-=========================*/
-
-::-webkit-scrollbar{
-
-    width:10px;
-
-}
-
-::-webkit-scrollbar-thumb{
-
-    background:#94a3b8;
-
-    border-radius:20px;
-
-}
-
-::-webkit-scrollbar-thumb:hover{
-
-    background:#64748b;
-
-}
-
-::-webkit-scrollbar-track{
-
-    background:#f1f5f9;
 
 }
 
