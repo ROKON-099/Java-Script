@@ -658,7 +658,7 @@ includes()
 | Purpose | Find the first index of a value |
 | Parameters | value, startIndex (optional) |
 | Returns | Index or `-1` |
-| Changes Original Array | ❌ No |
+| Changes Original Array |  No |
 | Common Uses | Search, Update, Remove, Validation |
 
 ---
@@ -667,9 +667,9 @@ includes()
 
 | Method | Returns | Modifies Array |
 |---------|----------|----------------|
-| `includes()` | `true` / `false` | ❌ No |
-| `indexOf()` | First Index / `-1` | ❌ No |
-| `lastIndexOf()` | Last Index / `-1` | ❌ No |
+| `includes()` | `true` / `false` |  No |
+| `indexOf()` | First Index / `-1` |  No |
+| `lastIndexOf()` | Last Index / `-1` |  No |
 
 ---
 
@@ -677,11 +677,11 @@ includes()
 
 The `indexOf()` method is essential when you need the **position** of an element rather than just checking if it exists. It is widely used in:
 
-- ✅ Search functionality
-- ✅ Updating array elements
-- ✅ Removing items with `splice()`
-- ✅ Data validation
-- ✅ Form processing
-- ✅ Menu and navigation systems
+-  Search functionality
+-  pdating array elements
+-  Removing items with `splice()`
+-  Data validation
+-  Form processing
+-  Menu and navigation systems
 
 Mastering `indexOf()` is an important step before learning more advanced array methods such as `find()`, `findIndex()`, and `filter()`.
