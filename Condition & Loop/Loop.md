@@ -6,7 +6,7 @@ A **loop** is a programming structure that allows you to execute the same block 
 
 Instead of writing the same code repeatedly, you can use loops to automate repetitive tasks.
 
----
+
 
 # Why Do We Use Loops?
 
@@ -18,7 +18,7 @@ Loops help us:
 - Reduce duplicate code
 - Improve readability
 
----
+
 
 # Types of Loops
 
@@ -28,7 +28,7 @@ Loops help us:
 4. for...of Loop
 5. for...in Loop
 
----
+
 
 # 1. for Loop
 
@@ -47,12 +47,12 @@ for (initialization; condition; update) {
 ### Parts of a for Loop
 
 | Part | Purpose |
-|------|----------|
+||-|
 | Initialization | Runs once before the loop starts |
 | Condition | Checked before every iteration |
 | Update | Runs after each iteration |
 
----
+
 
 ## Example
 
@@ -72,7 +72,7 @@ for(let i = 1; i <= 5; i++){
 5
 ```
 
----
+
 
 ## Step by Step
 
@@ -118,7 +118,7 @@ false
 Loop Stops
 ```
 
----
+
 
 # Real Project Example
 
@@ -130,7 +130,7 @@ for(let i = 1; i <= 10; i++){
 }
 ```
 
----
+
 
 # 2. while Loop
 
@@ -146,7 +146,7 @@ while(condition){
 }
 ```
 
----
+
 
 ## Example
 
@@ -169,13 +169,13 @@ while(i <= 5){
 5
 ```
 
----
+
 
 # Real Project Example
 
 Loading data from an API until all pages are fetched.
 
----
+
 
 # 3. do...while Loop
 
@@ -191,7 +191,7 @@ do{
 }while(condition);
 ```
 
----
+
 
 ## Example
 
@@ -210,7 +210,7 @@ do{
 10
 ```
 
----
+
 
 # Why?
 
@@ -218,7 +218,7 @@ The code inside `do` executes first.
 
 Then JavaScript checks the condition.
 
----
+
 
 # 4. for...of Loop
 
@@ -226,7 +226,7 @@ Then JavaScript checks the condition.
 
 The `for...of` loop is used to iterate over iterable objects like arrays and strings.
 
----
+
 
 ## Example
 
@@ -246,7 +246,7 @@ Mango
 Orange
 ```
 
----
+
 
 # String Example
 
@@ -268,7 +268,7 @@ o
 n
 ```
 
----
+
 
 # Real Project Example
 
@@ -280,7 +280,7 @@ for(const product of products){
 }
 ```
 
----
+
 
 # 5. for...in Loop
 
@@ -288,7 +288,7 @@ for(const product of products){
 
 The `for...in` loop is used to iterate over object properties.
 
----
+
 
 ## Example
 
@@ -312,7 +312,7 @@ age
 country
 ```
 
----
+
 
 ## Get Values
 
@@ -330,7 +330,7 @@ Rokon
 Bangladesh
 ```
 
----
+
 
 # Loop Control Statements
 
@@ -361,7 +361,7 @@ for(let i=1;i<=10;i++){
 4
 ```
 
----
+
 
 ## continue
 
@@ -390,7 +390,7 @@ for(let i=1;i<=5;i++){
 5
 ```
 
----
+
 
 # Nested Loop
 
@@ -408,7 +408,7 @@ for(let row=1; row<=3; row++){
 }
 ```
 
----
+
 
 # Common Loop Examples
 
@@ -420,7 +420,7 @@ for(let i=1;i<=100;i++){
 }
 ```
 
----
+
 
 ## Print Even Numbers
 
@@ -430,7 +430,7 @@ for(let i=2;i<=20;i+=2){
 }
 ```
 
----
+
 
 ## Print Odd Numbers
 
@@ -440,7 +440,7 @@ for(let i=1;i<=20;i+=2){
 }
 ```
 
----
+
 
 ## Sum of Numbers
 
@@ -460,7 +460,7 @@ Output
 15
 ```
 
----
+
 
 ## Multiplication Table
 
@@ -472,31 +472,31 @@ for(let i=1;i<=10;i++){
 }
 ```
 
----
+
 
 # Which Loop Should You Use?
 
 | Loop | Best Use |
-|------|----------|
+||-----|----------|
 | for | Known number of iterations |
 | while | Unknown number of iterations |
 | do...while | Run at least once |
 | for...of | Arrays & Strings |
 | for...in | Objects |
 
----
+
 
 # Best Practices
 
-✅ Use `for` when you know how many times to loop.
+ Use `for` when you know how many times to loop.
 
-✅ Use `for...of` for arrays.
+ Use `for...of` for arrays.
 
-✅ Use `for...in` for objects.
+ Use `for...in` for objects.
 
-✅ Avoid infinite loops.
+ Avoid infinite loops.
 
----
+
 
 # Common Mistakes
 
@@ -516,7 +516,7 @@ while(i<=5){
 
 Infinite Loop
 
----
+
 
 ## Wrong Condition
 
@@ -527,7 +527,7 @@ for(let i=1;i>=10;i++){
 
 The loop never executes.
 
----
+
 
 # Interview Questions
 
@@ -535,26 +535,26 @@ The loop never executes.
 
 A loop is a control structure that repeatedly executes a block of code while a condition remains true.
 
----
+
 
 ## Difference between for and while
 
 | for | while |
-|------|--------|
+||----|-------|
 | Known iterations | Unknown iterations |
 | Initialization inside loop | Initialization outside loop |
 | Compact syntax | More flexible |
 
----
+
 
 ## Difference between for...of and for...in
 
 | for...of | for...in |
-|------------|-----------|
+|----------|----------|
 | Arrays | Objects |
 | Returns values | Returns keys |
 
----
+
 
 # Summary
 
