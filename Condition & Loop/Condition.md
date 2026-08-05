@@ -6,7 +6,7 @@ A **condition** is an expression that evaluates to either `true` or `false`.
 
 Conditions allow JavaScript to make decisions and execute different blocks of code based on whether a condition is true or false.
 
----
+
 
 # Why Do We Use Conditions?
 
@@ -18,7 +18,7 @@ Conditions help a program:
 - Control program flow
 - Display different content
 
----
+
 
 # Types of Conditional Statements
 
@@ -29,7 +29,7 @@ Conditions help a program:
 5. switch
 6. Ternary Operator
 
----
+
 
 # 1. if Statement
 
@@ -61,7 +61,7 @@ if (age >= 18) {
 You can vote.
 ```
 
----
+
 
 # 2. if...else Statement
 
@@ -97,7 +97,7 @@ if (age >= 18) {
 Minor
 ```
 
----
+
 
 # 3. else if Statement
 
@@ -144,7 +144,7 @@ else {
 Grade A
 ```
 
----
+
 
 # 4. Nested if Statement
 
@@ -173,7 +173,7 @@ if (age >= 18) {
 Entry Allowed
 ```
 
----
+
 
 # 5. switch Statement
 
@@ -227,7 +227,7 @@ default:
 Wednesday
 ```
 
----
+
 
 # 6. Ternary Operator
 
@@ -257,7 +257,7 @@ console.log(result);
 Adult
 ```
 
----
+
 
 # Comparison Operators Used in Conditions
 
@@ -272,12 +272,12 @@ Adult
 | >= | Greater Than or Equal |
 | <= | Less Than or Equal |
 
----
+
 
 # Logical Operators Used in Conditions
 
 | Operator | Description |
-|----------|-------------|
+|-|-|
 | && | AND |
 | \|\| | OR |
 | ! | NOT |
@@ -293,7 +293,7 @@ if(age >=18 && hasID){
 }
 ```
 
----
+
 
 # Real Project Examples
 
@@ -309,7 +309,7 @@ if(isLoggedIn){
 }
 ```
 
----
+
 
 ## Password Check
 
@@ -323,7 +323,7 @@ if(password.length >= 6){
 }
 ```
 
----
+
 
 ## Shopping Discount
 
@@ -337,7 +337,7 @@ if(total >= 1000){
 }
 ```
 
----
+
 
 ## Weather App
 
@@ -351,39 +351,38 @@ if(temperature > 35){
 }
 ```
 
----
+
 
 # Best Practices
 
-✅ Use `===` instead of `==`
+ Use `===` instead of `==`
 
 ```javascript
 if(age === 18){
 }
 ```
 
-✅ Use meaningful variable names.
+ Use meaningful variable names.
 
 ```javascript
 let isLoggedIn = true;
 ```
 
-✅ Avoid deeply nested conditions.
+ Avoid deeply nested conditions.
 
----
+
 
 # Common Mistakes
 
 ### Missing Curly Braces
 
-❌
+
 
 ```javascript
 if(age >=18)
 console.log("Adult");
 ```
 
-✅
 
 ```javascript
 if(age >=18){
@@ -391,25 +390,25 @@ if(age >=18){
 }
 ```
 
----
+
 
 ### Using = Instead of ===
 
-❌
+
 
 ```javascript
 if(age = 18){
 }
 ```
 
-✅
+
 
 ```javascript
 if(age === 18){
 }
 ```
 
----
+
 
 # Interview Questions
 
@@ -417,23 +416,23 @@ if(age === 18){
 
 A conditional statement is used to execute different blocks of code based on whether a condition is true or false.
 
----
+
 
 ## 2. What is the difference between if and switch?
 
 | if | switch |
-|----|---------|
+|----|--------|
 | Works with any condition | Works with one value |
 | Better for ranges | Better for fixed values |
 | More flexible | Easier to read with many cases |
 
----
+
 
 ## 3. When should you use switch?
 
 Use `switch` when comparing one variable against multiple fixed values.
 
----
+
 
 # Summary
 
