@@ -1,922 +1,154 @@
-/*======================================================
-        DOCUMENTATION THEME v3
-                PART 1
-      Layout • Typography • Headings
-======================================================*/
+/* ===========================
+   Markdown PDF Default Style
+   =========================== */
 
+@page {
+    size: A4;
+    margin: 22mm 18mm;
 
-/*=========================
-        ROOT
-=========================*/
-
-:root{
-
-    --primary:#2563eb;
-    --primary-dark:#1d4ed8;
-
-    --text:#1f2937;
-    --heading:#111827;
-
-    --border:#dbe4ef;
-
-    --bg:#ffffff;
-    --card:#f8fafc;
-
+    @bottom-center {
+        content: counter(page) " / " counter(pages);
+        font-size: 10px;
+        color: #777;
+    }
 }
-
-
-/*=========================
-        PAGE
-=========================*/
-
-@page{
-
-    size:A4;
-
-    margin:2cm;
-
-}
-
-
-/*=========================
-        BODY
-=========================*/
 
 body{
-
-    font-family:"Segoe UI",Arial,sans-serif;
-
+    font-family: "Segoe UI", Arial, sans-serif;
     font-size:14px;
-
     line-height:1.8;
-
-    color:var(--text);
-
-    background:white;
-
+    color:#222;
 }
 
-
-/*=========================
-        PARAGRAPH
-=========================*/
-
-p{
-
-    margin:14px 0;
-
-    text-align:justify;
-
-}
-
-
-/*=========================
-        LINK
-=========================*/
-
-a{
-
-    color:var(--primary);
-
-    text-decoration:none;
-
-}
-
-a:hover{
-
-    text-decoration:underline;
-
-}
-
-
-/*=========================
-        H1
-=========================*/
+/* ---------- Headings ---------- */
 
 h1{
-
-    font-size:36px;
-
-    font-weight:800;
-
-    color:var(--heading);
-
-    margin:0 0 12px;
-
-    line-height:1.25;
-
+    font-size:30px;
+    color:#1e3a8a;
+    text-align:center;
+    margin-top:0;
+    margin-bottom:20px;
+    font-weight:700;
 }
-
-
-/*=========================
-        SUBTITLE
-=========================*/
-
-.subtitle{
-
-    display:block;
-
-    font-size:18px;
-
-    font-weight:400;
-
-    color:var(--primary);
-
-    margin-bottom:28px;
-
-}
-
-
-/*=========================
-        HR
-=========================*/
-
-hr{
-
-    border:none;
-
-    height:4px;
-
-    background:#1f2937;
-
-    margin:28px 0 36px;
-
-}
-
-
-/*=========================
-        H2
-=========================*/
 
 h2{
-
-    position:relative;
-
-    font-size:28px;
-
+    font-size:24px;
+    color:#2563eb;
+    margin-top:35px;
+    margin-bottom:12px;
     font-weight:700;
-
-    color:var(--heading);
-
-    padding-left:20px;
-
-    margin:45px 0 18px;
-
 }
-
-h2::before{
-
-    content:"";
-
-    position:absolute;
-
-    left:0;
-
-    top:3px;
-
-    width:6px;
-
-    height:38px;
-
-    border-radius:999px;
-
-    background:var(--primary);
-
-}
-
-
-/*=========================
-        H3
-=========================*/
 
 h3{
-
-    font-size:17px;
-
+    font-size:20px;
+    color:#111827;
+    margin-top:25px;
+    margin-bottom:10px;
     font-weight:700;
-
-    color:#374151;
-
-    text-transform:uppercase;
-
-    letter-spacing:.5px;
-
-    margin:32px 0 14px;
-
-    border-bottom:1px solid #e5e7eb;
-
-    padding-bottom:6px;
-
 }
-
-
-/*=========================
-        H4
-=========================*/
 
 h4{
-
-    font-size:16px;
-
-    font-weight:700;
-
+    font-size:17px;
     color:#374151;
-
-    margin:24px 0 10px;
-
+    margin-top:18px;
+    margin-bottom:8px;
+    font-weight:600;
 }
 
+/* ---------- Paragraph ---------- */
 
-/*=========================
-        LIST
-=========================*/
+p{
+    margin:8px 0;
+    text-align:justify;
+}
+
+/* ---------- List ---------- */
 
 ul,
 ol{
-
-    margin:12px 0 12px 24px;
-
+    margin-left:24px;
 }
 
 li{
-
-    margin:8px 0;
-
+    margin:6px 0;
 }
 
-
-/*=========================
-        STRONG
-=========================*/
-
-strong{
-
-    font-weight:700;
-
-    color:#111827;
-
-}
-
-
-/*=========================
-        EMPHASIS
-=========================*/
-
-em{
-
-    font-style:italic;
-
-    color:#4b5563;
-
-}
-
-
-/*=========================
-        INFORMATION CARD
-=========================*/
-
-.p-box{
-
-    background:var(--card);
-
-    border:1px solid var(--border);
-
-    border-radius:10px;
-
-    padding:22px 24px;
-
-    margin:24px 0;
-
-}
-
-.p-box p{
-
-    margin:0 0 14px;
-
-}
-
-.p-box p:last-child{
-
-    margin-bottom:0;
-
-}
-
-
-/*=========================
-        SELECTION
-=========================*/
-
-::selection{
-
-    background:#2563eb;
-
-    color:#fff;
-
-}
-/*======================================================
-        DOCUMENTATION THEME v3
-                PART 2
-      Code • Tables • Boxes • Images
-======================================================*/
-
-
-/*=========================
-        INLINE CODE
-=========================*/
+/* ---------- Inline Code ---------- */
 
 code{
-
-    font-family: "JetBrains Mono", "Consolas", monospace;
-    font-size: 13px;
-    color: #0f172a;               
-    background: #f1f5f9;          
-    border: 1px solid #cbd5e1;    
-    border-radius: 6px;
-    padding: 2px 6px;
+    background:#f3f4f6;
+    color:#c7254e;
+    padding:2px 6px;
+    border-radius:4px;
+    font-size:13px;
 }
 
-
-/*=========================
-        CODE BLOCK
-=========================*/
+/* ---------- Code Block ---------- */
 
 pre{
-
     background:#1f2937;
-
-    color:#e5e7eb;
-
-    padding:22px;
-
-    border-radius:12px;
-
-    overflow-x:auto;
-
-    margin:22px 0;
-
-    box-shadow:0 4px 12px rgba(0,0,0,.08);
-
+    color:#f8fafc;
+    padding:18px;
+    border-radius:8px;
+    overflow:auto;
+    font-size:13px;
+    line-height:1.6;
 }
 
 pre code{
-
     background:none;
-
-    border:none;
-
     color:inherit;
-
     padding:0;
-
-    font-size:13px;
-
-    line-height:1.7;
-
 }
 
-
-/*=========================
-        EXPECTED OUTPUT
-=========================*/
-
-.output{
-
-    background:#f1f5f9;
-
-    border-left:5px solid #64748b;
-
-    padding:18px 20px;
-
-    border-radius:6px;
-
-    margin:20px 0;
-
-    font-family:"JetBrains Mono",monospace;
-
-}
-
-
-/*=========================
-        ANALYSIS BOX
-=========================*/
-
-.analysis{
-
-    background:#eff6ff;
-
-    border:1px solid #bfdbfe;
-
-    border-radius:10px;
-
-    padding:18px 22px;
-
-    margin:24px 0;
-
-}
-
-
-/*=========================
-        INFO
-=========================*/
-
-.info{
-
-    background:#eff6ff;
-
-    border-left:5px solid #2563eb;
-
-    padding:18px 22px;
-
-    border-radius:8px;
-
-    margin:20px 0;
-
-}
-
-
-/*=========================
-        TIP
-=========================*/
-
-.tip{
-
-    background:#ecfdf5;
-
-    border-left:5px solid #10b981;
-
-    padding:18px 22px;
-
-    border-radius:8px;
-
-    margin:20px 0;
-
-}
-
-
-/*=========================
-        WARNING
-=========================*/
-
-.warning{
-
-    background:#fffbeb;
-
-    border-left:5px solid #f59e0b;
-
-    padding:18px 22px;
-
-    border-radius:8px;
-
-    margin:20px 0;
-
-}
-
-
-/*=========================
-        DANGER
-=========================*/
-
-.danger{
-
-    background:#fef2f2;
-
-    border-left:5px solid #ef4444;
-
-    padding:18px 22px;
-
-    border-radius:8px;
-
-    margin:20px 0;
-
-}
-
-
-/*=========================
-        BLOCKQUOTE
-=========================*/
-
-blockquote{
-
-    background:#f8fafc;
-
-    border-left:5px solid #2563eb;
-
-    padding:16px 20px;
-
-    border-radius:8px;
-
-    margin:20px 0;
-
-    color:#475569;
-
-}
-
-
-/*=========================
-        TABLE
-=========================*/
+/* ---------- Table ---------- */
 
 table{
-
     width:100%;
-
     border-collapse:collapse;
-
-    margin:24px 0;
-
-    font-size:14px;
-
-    border-radius:8px;
-
-    overflow:hidden;
-
-}
-
-thead{
-
-    background:#1E3A8A;
-
-    color:#fff;
-
+    margin:20px 0;
+    font-size:13px;
 }
 
 th{
-
-    padding:14px;
-
-    text-align:center;
-
-    font-weight:700;
-
+    background:#2563eb;
+    color:white;
+    padding:10px;
+    text-align:left;
 }
 
 td{
-
-    padding:12px;
-
+    padding:10px;
     border:1px solid #d1d5db;
-
 }
 
-tbody tr:nth-child(even){
-
+tr:nth-child(even){
     background:#f8fafc;
-
 }
 
-tbody tr:hover{
+/* ---------- Blockquote ---------- */
 
-    background:#dbeafe;
-
-}
-
-
-/*=========================
-        IMAGE
-=========================*/
-
-img{
-
-    display:block;
-
-    max-width:100%;
-
-    margin:24px auto;
-
-    border-radius:10px;
-
-    border:1px solid #e5e7eb;
-
-}
-
-
-/*=========================
-        FIGURE CAPTION
-=========================*/
-
-figcaption{
-
-    text-align:center;
-
-    color:#6b7280;
-
-    font-size:12px;
-
-    margin-top:8px;
-
-}
-
-
-/*=========================
-        MARK
-=========================*/
-
-mark{
-
-    background:#e1d471;
-
-    color:#111827;
-
-    padding:2px 4px;
-
-    border-radius:4px;
-
-}
-
-
-/*=========================
-        KEYBOARD KEY
-=========================*/
-
-kbd{
-
-    background:#f3f4f6;
-
-    border:1px solid #d1d5db;
-
-    border-bottom:2px solid #9ca3af;
-
-    border-radius:5px;
-
-    padding:2px 7px;
-
-    font-size:12px;
-
-    font-family:Consolas,monospace;
-
-}
-/*======================================================
-        DOCUMENTATION THEME v3
-                PART 3
-        Cover • Print • Utilities
-======================================================*/
-
-
-/*=========================
-        COVER PAGE
-=========================*/
-
-.cover{
-
-    text-align:center;
-
-    margin-top:170px;
-
-    page-break-after:always;
-
-}
-
-.cover h1{
-
-    font-size:42px;
-
-    margin-bottom:12px;
-
-    color:#111827;
-
-}
-
-.cover .subtitle{
-
-    font-size:20px;
-
-    color:#2563eb;
-
-    margin-bottom:25px;
-
-}
-
-.cover p{
-
-    text-align:center;
-
-    font-size:15px;
-
-    color:#6b7280;
-
-}
-
-
-/*=========================
-        TABLE OF CONTENTS
-=========================*/
-
-.toc{
-
-    page-break-after:always;
-
-}
-
-.toc ul{
-
-    list-style:none;
-
-    margin:0;
-
-    padding:0;
-
-}
-
-.toc li{
-
-    padding:8px 0;
-
-    border-bottom:1px dotted #cbd5e1;
-
-}
-
-
-/*=========================
-        PAGE BREAK
-=========================*/
-
-.page-break{
-
-    page-break-before:always;
-
-}
-
-.no-break{
-
-    page-break-inside:avoid;
-
-}
-
-
-/*=========================
-        DIVIDER
-=========================*/
-
-.divider{
-
-    margin:35px 0;
-
-    height:2px;
-
-    background:linear-gradient(
-
-        to right,
-
-        #2563eb,
-
-        #60a5fa,
-
-        transparent
-
-    );
-
-}
-
-
-/*=========================
-        DEFINITION LIST
-=========================*/
-
-dt{
-
-    font-weight:700;
-
-    color:#111827;
-
-    margin-top:14px;
-
-}
-
-dd{
-
-    margin:0 0 14px 22px;
-
-    color:#4b5563;
-
-}
-
-
-/*=========================
-        SMALL TEXT
-=========================*/
-
-small{
-
-    font-size:12px;
-
-    color:#6b7280;
-
-}
-
-
-/*=========================
-        FOOTNOTE
-=========================*/
-
-sup{
-
-    color:#2563eb;
-
-}
-
-
-/*=========================
-        TABLE FIX
-=========================*/
-
-table{
-
-    page-break-inside:avoid;
-
-}
-
-thead{
-
-    display:table-header-group;
-
-}
-
-
-/*=========================
-        IMAGE FIX
-=========================*/
-
-img{
-
-    page-break-inside:avoid;
-
-}
-
-
-/*=========================
-        CODE FIX
-=========================*/
-
-pre{
-
-    page-break-inside:avoid;
-
-    white-space:pre-wrap;
-
-    word-break:break-word;
-
-}
-
-
-/*=========================
-        BOX FIX
-=========================*/
-
-.info,
-.tip,
-.warning,
-.danger,
-.analysis,
-.output,
 blockquote{
-
-    page-break-inside:avoid;
-
+    background:#f8fafc;
+    border-left:5px solid #2563eb;
+    padding:10px 15px;
+    color:#444;
+    margin:20px 0;
+    font-style:italic;
 }
 
+/* ---------- Image ---------- */
 
-/*=========================
-        PRINT
-=========================*/
-
-@media print{
-
-    body{
-
-        background:white;
-
-        color:#1f2937;
-
-    }
-
-    h1,
-    h2,
-    h3,
-    h4{
-
-        page-break-after:avoid;
-
-    }
-
-    p{
-
-        orphans:3;
-
-        widows:3;
-
-    }
-
-    a{
-
-        color:#2563eb;
-
-        text-decoration:none;
-
-    }
-
+img{
+    display:block;
+    margin:auto;
+    max-width:90%;
 }
 
+/* ---------- Links ---------- */
 
-/*=========================
-        END
-=========================*/
+a{
+    color:#2563eb;
+    text-decoration:none;
+}
+

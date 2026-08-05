@@ -20,7 +20,7 @@ Strings are enclosed in:
 - Double Quotes (`" "`)
 - Backticks (`` ` ` ``)
 
----
+
 
 ## Why Do We Use Strings?
 
@@ -34,7 +34,7 @@ Strings are used to store textual data such as:
 - Product Name
 - City Name
 
----
+
 
 ## Creating Strings
 
@@ -54,7 +54,7 @@ console.log(name);
 Rokon
 ```
 
----
+
 
 ### 2. Using Single Quotes
 
@@ -70,7 +70,7 @@ console.log(country);
 Bangladesh
 ```
 
----
+
 
 ### 3. Using Backticks (Template Literals)
 
@@ -86,7 +86,7 @@ console.log(language);
 JavaScript
 ```
 
----
+
 
 ## String Examples
 
@@ -105,7 +105,7 @@ MD
 Rokonuzzaman
 ```
 
----
+
 
 ## String Length
 
@@ -122,7 +122,7 @@ It counts:
 
 Everything counts as one character.
 
----
+
 
 ## Syntax
 
@@ -130,7 +130,7 @@ Everything counts as one character.
 string.length
 ```
 
----
+
 
 ## Example 1
 
@@ -146,7 +146,7 @@ console.log(name.length);
 10
 ```
 
----
+
 
 ## Example 2
 
@@ -171,7 +171,7 @@ H e l l o _ W o r l d
 Space is also counted.
 ```
 
----
+
 
 ## Real Project Example
 
@@ -193,7 +193,7 @@ if(password.length >= 8){
 Strong Password
 ```
 
----
+
 
 # Character Access
 
@@ -203,7 +203,7 @@ Each character in a string has its own position called an **index**.
 
 JavaScript starts counting from **0**.
 
----
+
 
 ## Example
 
@@ -221,7 +221,7 @@ Index
 0  1  2  3  4  5  6  7  8  9
 ```
 
----
+
 
 ## Access Using Index
 
@@ -241,7 +241,7 @@ a
 S
 ```
 
----
+
 
 ## Last Character
 
@@ -257,7 +257,7 @@ console.log(language[language.length-1]);
 t
 ```
 
----
+
 
 ## Loop Through a String
 
@@ -280,7 +280,7 @@ d
 e
 ```
 
----
+
 
 # Immutable
 
@@ -292,7 +292,7 @@ Immutable means **once a string is created, its characters cannot be changed dir
 
 You cannot modify an existing character using its index.
 
----
+
 
 ## Wrong Example
 
@@ -312,7 +312,7 @@ Rokon
 
 Nothing changes.
 
----
+
 
 ## Why?
 
@@ -320,7 +320,7 @@ JavaScript does not allow changing individual characters of a string.
 
 Instead, create a new string.
 
----
+
 
 ## Correct Way
 
@@ -338,7 +338,7 @@ console.log(name);
 Mokon
 ```
 
----
+
 
 ## Another Example
 
@@ -358,7 +358,7 @@ Hello World
 
 JavaScript creates a **new string** instead of changing the old one.
 
----
+
 
 # Escape Characters
 
@@ -368,18 +368,18 @@ Escape characters allow special characters to be included inside a string.
 
 They start with a backslash (`\`).
 
----
+
 ## Common Escape Characters
 
 | Escape | Meaning |
-|---------|---------|
+|||
 | `\"` | Double Quote |
 | `\'` | Single Quote |
 | `\\` | Backslash |
 | `\n` | New Line |
 | `\t` | Tab |
 
----
+
 
 ## Double Quote Example
 
@@ -395,7 +395,7 @@ console.log(text);
 He said, "Hello"
 ```
 
----
+
 
 ## Single Quote Example
 
@@ -411,7 +411,7 @@ console.log(text);
 It's JavaScript
 ```
 
----
+
 
 ## New Line
 
@@ -429,7 +429,7 @@ CSS
 JavaScript
 ```
 
----
+
 
 ## Tab
 
@@ -445,7 +445,7 @@ console.log(text);
 Name    Age
 ```
 
----
+
 
 ## Backslash
 
@@ -461,7 +461,7 @@ console.log(path);
 C:\Users\Admin
 ```
 
----
+
 
 # Best Practices
 
@@ -471,7 +471,7 @@ C:\Users\Admin
 let name = "Rokon";
 ```
 
----
+
 
 ✅ Use template literals when inserting variables.
 
@@ -481,11 +481,11 @@ let name = "Rokon";
 console.log(`Welcome ${name}`);
 ```
 
----
+
 
 ✅ Use `.length` instead of manually counting characters.
 
----
+
 
 # Common Mistakes
 
@@ -499,7 +499,7 @@ let name = Rokon;
 
 Error
 
----
+
 
 ### Wrong Index
 
@@ -515,7 +515,7 @@ Output
 undefined
 ```
 
----
+
 
 ### Trying to Modify a Character
 
@@ -533,7 +533,7 @@ Output
 Java
 ```
 
----
+
 
 # Interview Questions
 
@@ -541,30 +541,30 @@ Java
 
 A string is a sequence of characters used to represent text in JavaScript.
 
----
+
 
 ## What is String Length?
 
 The `length` property returns the total number of characters in a string.
 
----
+
 
 ## What does Immutable mean?
 
 Immutable means the value cannot be changed after it is created. Strings in JavaScript are immutable.
 
----
+
 
 ## What is Character Index?
 
 An index is the position of a character inside a string. Indexing starts from **0**.
 
----
+
 
 ## Summary
 
 | Topic | Description |
-|---------|-------------|
+||-|
 | String | Sequence of characters |
 | Quotes | Single, Double, Backticks |
 | length | Returns total characters |
@@ -590,7 +590,7 @@ This section covers the most commonly used string methods in JavaScript.
 - startsWith()
 - endsWith()
 
----
+
 
 # 1. toLowerCase()
 
@@ -600,7 +600,7 @@ The `toLowerCase()` method converts all characters in a string to lowercase.
 
 It does **not** change the original string. It returns a new string.
 
----
+
 
 ## Syntax
 
@@ -608,7 +608,7 @@ It does **not** change the original string. It returns a new string.
 string.toLowerCase()
 ```
 
----
+
 
 ## Example
 
@@ -624,7 +624,7 @@ console.log(text.toLowerCase());
 hello world
 ```
 
----
+
 
 ## Real Project Example
 
@@ -642,7 +642,7 @@ Output
 admin@gmail.com
 ```
 
----
+
 
 # 2. toUpperCase()
 
@@ -652,7 +652,7 @@ The `toUpperCase()` method converts all characters to uppercase.
 
 It returns a new string.
 
----
+
 
 ## Syntax
 
@@ -660,7 +660,7 @@ It returns a new string.
 string.toUpperCase()
 ```
 
----
+
 
 ## Example
 
@@ -676,7 +676,7 @@ console.log(text.toUpperCase());
 JAVASCRIPT
 ```
 
----
+
 
 ## Real Project Example
 
@@ -692,7 +692,7 @@ Output
 BANGLADESH
 ```
 
----
+
 
 # 3. trim()
 
@@ -702,7 +702,7 @@ The `trim()` method removes whitespace from the beginning and the end of a strin
 
 It does not remove spaces between words.
 
----
+
 
 ## Syntax
 
@@ -710,7 +710,7 @@ It does not remove spaces between words.
 string.trim()
 ```
 
----
+
 
 ## Example
 
@@ -726,7 +726,7 @@ console.log(text.trim());
 Hello World
 ```
 
----
+
 
 ## Without trim()
 
@@ -740,7 +740,7 @@ After trim()
 "Hello World"
 ```
 
----
+
 
 ## Real Project Example
 
@@ -758,7 +758,7 @@ Output
 Rokon
 ```
 
----
+
 
 # 4. slice()
 
@@ -768,7 +768,7 @@ The `slice()` method extracts a part of a string.
 
 The original string is not changed.
 
----
+
 
 ## Syntax
 
@@ -779,7 +779,7 @@ string.slice(start, end)
 - Start index is included.
 - End index is excluded.
 
----
+
 
 ## Example
 
@@ -795,7 +795,7 @@ console.log(language.slice(0,4));
 Java
 ```
 
----
+
 
 ## Example 2
 
@@ -809,7 +809,7 @@ Output
 Script
 ```
 
----
+
 
 ## Negative Index
 
@@ -825,7 +825,7 @@ Output
 Script
 ```
 
----
+
 
 ## Real Project Example
 
@@ -841,7 +841,7 @@ Output
 5678
 ```
 
----
+
 
 # 5. substring()
 
@@ -851,7 +851,7 @@ The `substring()` method extracts characters from a string.
 
 Unlike `slice()`, it does not accept negative indexes.
 
----
+
 
 ## Syntax
 
@@ -859,7 +859,7 @@ Unlike `slice()`, it does not accept negative indexes.
 string.substring(start,end)
 ```
 
----
+
 
 ## Example
 
@@ -875,7 +875,7 @@ console.log(language.substring(0,4));
 Java
 ```
 
----
+
 
 ## Example
 
@@ -889,16 +889,16 @@ Output
 Script
 ```
 
----
+
 
 ## Difference Between slice() and substring()
 
 | slice() | substring() |
-|-----------|-------------|
+|--|-|
 | Supports negative index | Does not support negative index |
 | More commonly used | Less commonly used |
 
----
+
 
 # 6. concat()
 
@@ -906,7 +906,7 @@ Script
 
 The `concat()` method joins two or more strings.
 
----
+
 
 ## Syntax
 
@@ -914,7 +914,7 @@ The `concat()` method joins two or more strings.
 string.concat(string2)
 ```
 
----
+
 
 ## Example
 
@@ -931,7 +931,7 @@ console.log(firstName.concat(" ",lastName));
 MD Rokon
 ```
 
----
+
 
 ## Another Way
 
@@ -945,7 +945,7 @@ Modern JavaScript usually uses:
 `${firstName} ${lastName}`
 ```
 
----
+
 
 # 7. includes()
 
@@ -958,7 +958,7 @@ It returns:
 - true
 - false
 
----
+
 
 ## Syntax
 
@@ -966,7 +966,7 @@ It returns:
 string.includes(searchValue)
 ```
 
----
+
 
 ## Example
 
@@ -982,7 +982,7 @@ console.log(language.includes("Script"));
 true
 ```
 
----
+
 
 ## Example
 
@@ -996,7 +996,7 @@ Output
 false
 ```
 
----
+
 
 ## Real Project Example
 
@@ -1012,7 +1012,7 @@ Output
 true
 ```
 
----
+
 
 # 8. startsWith()
 
@@ -1025,7 +1025,7 @@ Returns:
 - true
 - false
 
----
+
 
 ## Syntax
 
@@ -1033,7 +1033,7 @@ Returns:
 string.startsWith(value)
 ```
 
----
+
 
 ## Example
 
@@ -1049,7 +1049,7 @@ console.log(language.startsWith("Java"));
 true
 ```
 
----
+
 
 ## Example
 
@@ -1063,7 +1063,7 @@ Output
 false
 ```
 
----
+
 
 ## Real Project Example
 
@@ -1081,7 +1081,7 @@ Output
 true
 ```
 
----
+
 
 # 9. endsWith()
 
@@ -1094,7 +1094,7 @@ Returns:
 - true
 - false
 
----
+
 
 ## Syntax
 
@@ -1102,7 +1102,7 @@ Returns:
 string.endsWith(value)
 ```
 
----
+
 
 ## Example
 
@@ -1118,7 +1118,7 @@ console.log(language.endsWith("Script"));
 true
 ```
 
----
+
 
 ## Example
 
@@ -1132,7 +1132,7 @@ Output
 false
 ```
 
----
+
 
 ## Real Project Example
 
@@ -1150,12 +1150,12 @@ Output
 true
 ```
 
----
+
 
 # Summary Table
 
 | Method | Purpose | Returns |
-|---------|---------|----------|
+|||-|
 | toLowerCase() | Converts to lowercase | New String |
 | toUpperCase() | Converts to uppercase | New String |
 | trim() | Removes leading and trailing spaces | New String |
@@ -1166,7 +1166,7 @@ true
 | startsWith() | Checks starting text | Boolean |
 | endsWith() | Checks ending text | Boolean |
 
----
+
 
 # Most Frequently Used Methods
 
@@ -1187,18 +1187,18 @@ true
 
 - substring()
 
----
+
 
 # Interview Questions
 
 ## Q1. What is the difference between slice() and substring()?
 
 | slice() | substring() |
-|-----------|-------------|
+|--|-|
 | Supports negative index | Does not support negative index |
 | More flexible | Simpler |
 
----
+
 
 ## Q2. Which method removes extra spaces?
 
@@ -1206,7 +1206,7 @@ true
 trim()
 ```
 
----
+
 
 ## Q3. Which method checks whether a string contains another string?
 
@@ -1214,7 +1214,7 @@ trim()
 includes()
 ```
 
----
+
 
 ## Q4. Which method converts a string to lowercase?
 
@@ -1222,7 +1222,7 @@ includes()
 toLowerCase()
 ```
 
----
+
 
 ## Q5. Which method checks the beginning of a string?
 
@@ -1230,7 +1230,7 @@ toLowerCase()
 startsWith()
 ```
 
----
+
 
 ## Q6. Which method checks the ending of a string?
 

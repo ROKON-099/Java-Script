@@ -17,7 +17,7 @@ Variables can store different types of data, such as:
 
 Instead of writing the same value repeatedly, you can store it inside a variable and use it whenever needed.
 
----
+
 
 ## Example
 
@@ -36,7 +36,7 @@ Rokon
 23
 ```
 
----
+
 
 # Why Do We Use Variables?
 
@@ -50,7 +50,6 @@ They help us to:
 - Make code clean and readable
 - Reduce duplicate code
 
----
 
 ## Without Variables
 
@@ -73,7 +72,6 @@ Rokon
 The same value is written multiple times.
 If you want to change the name later, you must change every occurrence manually.
 
----
 
 ## With Variables
 
@@ -98,7 +96,7 @@ Rokon
 The value is stored only once.
 If you change the variable, every place using that variable automatically gets the updated value.
 
----
+
 
 # Variable Naming Rules
 
@@ -110,7 +108,7 @@ A variable name must follow JavaScript rules.
 - Is case-sensitive
 - Cannot use JavaScript reserved keywords
 
----
+
 
 ## Valid Variable Names
 
@@ -131,7 +129,7 @@ No Output
 
 These are valid variable names because they follow JavaScript naming rules.
 
----
+
 
 ## Invalid Variable Names
 
@@ -153,7 +151,7 @@ SyntaxError
 - `first name` contains a space.
 - `let` is a reserved keyword.
 
----
+
 
 # JavaScript is Case-Sensitive
 
@@ -181,7 +179,7 @@ Karim
 
 These are three different variables.
 
----
+
 
 # Variable Declaration
 
@@ -193,7 +191,7 @@ JavaScript provides three keywords to declare variables.
 
 Each behaves differently.
 
----
+
 
 # var
 
@@ -207,7 +205,7 @@ Features:
 - Can be redeclared
 - Can be reassigned
 
----
+
 
 ## Syntax
 
@@ -215,7 +213,7 @@ Features:
 var variableName = value;
 ```
 
----
+
 
 ## Example
 
@@ -243,7 +241,6 @@ Karim
 
 Final value becomes **Karim**.
 
----
 
 ## Scope Example
 
@@ -265,7 +262,7 @@ Dhaka
 
 Because `var` is function scoped, it ignores block scope.
 
----
+
 
 # let
 
@@ -279,7 +276,7 @@ Features:
 - Cannot be redeclared
 - Can be reassigned
 
----
+
 
 ## Syntax
 
@@ -287,7 +284,7 @@ Features:
 let variableName = value;
 ```
 
----
+
 
 ## Example
 
@@ -309,7 +306,7 @@ console.log(age);
 
 The variable value changes from **23** to **24**.
 
----
+
 
 ## Redeclaration Error
 
@@ -329,7 +326,7 @@ SyntaxError
 
 A `let` variable cannot be declared twice in the same block.
 
----
+
 
 ## Scope Example
 
@@ -351,7 +348,7 @@ ReferenceError
 
 `city` exists only inside the block.
 
----
+
 
 # const
 
@@ -366,7 +363,7 @@ Features
 - Cannot be reassigned
 - Must be initialized
 
----
+
 
 ## Syntax
 
@@ -374,7 +371,7 @@ Features
 const variableName = value;
 ```
 
----
+
 
 ## Example
 
@@ -390,7 +387,7 @@ console.log(PI);
 3.1416
 ```
 
----
+
 
 ## Reassignment Error
 
@@ -410,7 +407,6 @@ TypeError
 
 A constant variable cannot be assigned a new value.
 
----
 
 # const with Objects
 
@@ -438,7 +434,7 @@ console.log(person);
 
 The object itself is constant, but its properties can still be modified.
 
----
+
 
 # const with Arrays
 
@@ -460,7 +456,7 @@ console.log(numbers);
 
 You cannot replace the array, but you can change its elements.
 
----
+
 
 # Primitive Data Types
 
@@ -490,7 +486,7 @@ null
 undefined
 ```
 
----
+
 
 # Non-Primitive Data Types
 
@@ -521,7 +517,7 @@ greet();
 Hello
 ```
 
----
+
 
 # Variable Scope
 
@@ -533,7 +529,7 @@ JavaScript has three scopes.
 - Function Scope
 - Block Scope
 
----
+
 
 # Global Scope
 
@@ -557,7 +553,7 @@ Rokon
 
 Global variables are accessible from anywhere.
 
----
+
 
 # Function Scope
 
@@ -584,7 +580,7 @@ ReferenceError
 
 The variable exists only inside the function.
 
----
+
 
 # Block Scope
 
@@ -609,13 +605,13 @@ ReferenceError
 
 Both variables exist only inside the block.
 
----
+
 
 # Hoisting
 
 Hoisting moves declarations to the top before execution.
 
----
+
 
 ## var
 
@@ -635,7 +631,7 @@ undefined
 
 The declaration is hoisted, but the value is assigned later.
 
----
+
 
 ## let
 
@@ -655,7 +651,7 @@ ReferenceError
 
 `let` is hoisted but remains inside the Temporal Dead Zone until initialization.
 
----
+
 
 ## const
 
@@ -675,7 +671,7 @@ ReferenceError
 
 `const` also stays inside the Temporal Dead Zone before initialization.
 
----
+
 
 # Temporal Dead Zone (TDZ)
 
@@ -699,7 +695,7 @@ The **Temporal Dead Zone (TDZ)** is the period between entering a block and the 
 
 The variable can only be used after its declaration.
 
----
+
 
 # Comparison Table
 
@@ -712,7 +708,7 @@ The variable can only be used after its declaration.
 | Must Initialize |  No |  No |  Yes |
 | Modern Use | Rare | Common | Most Preferred |
 
----
+
 
 # Best Practices
 
@@ -730,7 +726,7 @@ console.log(company);
 Google
 ```
 
----
+
 
 ## Use `let` when the value changes
 
@@ -748,13 +744,12 @@ console.log(score);
 1
 ```
 
----
+
 
 ## Avoid using `var`
 
 Modern JavaScript projects rarely use `var` because it can introduce bugs due to function scope and redeclaration.
 
----
 
 # Summary
 
@@ -788,7 +783,7 @@ Here:
 - `10` and `5` are **operands**.
 - `+` is the **operator**.
 
----
+
 
 # Types of Operators
 
@@ -801,7 +796,7 @@ Here:
 7. Ternary Operator
 8. Type Operators
 
----
+
 
 # 1. Arithmetic Operators
 
@@ -830,7 +825,7 @@ console.log(a % b);
 console.log(a ** b);
 ```
 
----
+
 
 # 2. Assignment Operators
 
@@ -857,7 +852,6 @@ x -= 3;
 console.log(x); // 12
 ```
 
----
 
 # 3. Comparison Operators
 
@@ -882,7 +876,6 @@ console.log(10 === "10");
 console.log(10 == "10");
 ```
 
----
 
 # 4. Logical Operators
 
@@ -905,7 +898,6 @@ console.log(age < 18 || hasID);
 console.log(!hasID);
 ```
 
----
 
 # 5. Increment & Decrement Operators
 
@@ -928,7 +920,6 @@ count--;
 console.log(count); // 5
 ```
 
----
 
 # 6. String Operator
 
@@ -949,7 +940,6 @@ Output
 MD Rokonuzzaman
 ```
 
----
 
 # 7. Ternary Operator
 
@@ -971,7 +961,6 @@ let result = age >= 18 ? "Adult" : "Minor";
 console.log(result);
 ```
 
----
 
 # 8. Type Operator
 
@@ -987,7 +976,6 @@ console.log(typeof []);
 console.log(typeof {});
 ```
 
----
 
 # Operator Priority (Precedence)
 
@@ -1004,7 +992,6 @@ Output
 
 Because multiplication (`*`) has higher precedence than addition (`+`).
 
----
 
 # Summary
 
@@ -1019,7 +1006,6 @@ Because multiplication (`*`) has higher precedence than addition (`+`).
 | Ternary | Short if...else |
 | Type | Check data type |
 
----
 
 # Easy Way to Remember
 
@@ -1032,7 +1018,6 @@ Because multiplication (`*`) has higher precedence than addition (`+`).
 - ? : → **Ternary**
 - typeof → **Type Checking**
 
----
 
 # Interview Questions
 
@@ -1046,7 +1031,6 @@ console.log(5 == "5");   // true
 console.log(5 === "5");  // false
 ```
 
----
 
 ### Q2. What is the difference between `&&` and `||`?
 
@@ -1070,7 +1054,6 @@ let name = "Rokon"; // String
 let age = 23;       // Number
 ```
 
----
 
 # Types of Data
 
@@ -1079,7 +1062,6 @@ JavaScript has **2 main types** of data.
 1. Primitive Data Types
 2. Non-Primitive (Reference) Data Types
 
----
 
 # 1. Primitive Data Types
 
@@ -1099,7 +1081,6 @@ There are **7 Primitive Data Types** in JavaScript.
 | BigInt | Very large integer | `12345678901234567890n` |
 | Symbol | Unique identifier | `Symbol("id")` |
 
----
 
 ## Examples
 
@@ -1148,7 +1129,6 @@ let bigNumber = 123456789012345678901234567890n;
 let id = Symbol("userId");
 ```
 
----
 
 # 2. Non-Primitive (Reference) Data Types
 
@@ -1164,7 +1144,6 @@ Examples include:
 - Array
 - Function
 
----
 
 ## Object
 
@@ -1180,7 +1159,6 @@ let student = {
 console.log(student.name);
 ```
 
----
 
 ## Array
 
@@ -1192,7 +1170,6 @@ let fruits = ["Apple", "Mango", "Orange"];
 console.log(fruits[0]);
 ```
 
----
 
 ## Function
 
@@ -1206,7 +1183,6 @@ function greet() {
 greet();
 ```
 
----
 
 # Primitive vs Non-Primitive
 
@@ -1218,7 +1194,6 @@ greet();
 | Size | Fixed | Dynamic |
 | Examples | String, Number, Boolean | Object, Array, Function |
 
----
 
 # Easy Example
 
@@ -1238,7 +1213,6 @@ console.log(b); // 20
 - `b` gets a **copy** of `a`.
 - Changing `b` does **not** change `a`.
 
----
 
 ## Non-Primitive
 
@@ -1259,7 +1233,6 @@ console.log(person2.name); // Rahim
 - `person1` and `person2` point to the **same object**.
 - Changing one also changes the other.
 
----
 
 # Easy Way to Remember
 
@@ -1271,7 +1244,6 @@ age = 23
 
 Each variable has its **own copy**.
 
----
 
 ## Non-Primitive = 📍 Address
 
@@ -1283,7 +1255,7 @@ friend ------/
 
 Both variables point to the **same object** in memory.
 
----
+
 
 # Interview Question
 

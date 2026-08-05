@@ -614,7 +614,7 @@ It adds one or more elements to the **end** of an array.
 
 ## Does `push()` modify the original array?
 
-✅ Yes.
+ Yes.
 
 ---
 
@@ -626,7 +626,7 @@ It returns the **new length** of the array.
 
 ## Can `push()` add multiple elements?
 
-✅ Yes.
+ Yes.
 
 ```javascript
 numbers.push(4,5,6);
@@ -664,7 +664,7 @@ unshift()
 | Purpose | Add element(s) to the end of an array |
 | Parameters | One or more elements |
 | Returns | New array length |
-| Changes Original Array | ✅ Yes |
+| Changes Original Array |  Yes |
 | Adds To | End of the array |
 | Common Uses | Shopping Cart, Todo List, Chat Messages, Notifications |
 
@@ -674,10 +674,10 @@ unshift()
 
 | Method | Action | Returns | Changes Original Array |
 |---------|--------|---------|------------------------|
-| `push()` | Add to end | New length | ✅ Yes |
-| `pop()` | Remove from end | Removed element | ✅ Yes |
-| `unshift()` | Add to beginning | New length | ✅ Yes |
-| `shift()` | Remove from beginning | Removed element | ✅ Yes |
+| `push()` | Add to end | New length |  Yes |
+| `pop()` | Remove from end | Removed element |  Yes |
+| `unshift()` | Add to beginning | New length |  Yes |
+| `shift()` | Remove from beginning | Removed element |  Yes |
 
 ---
 
@@ -685,12 +685,12 @@ unshift()
 
 `push()` is one of the most frequently used array methods in JavaScript. It is widely used in:
 
-- ✅ React state updates (when creating new arrays)
-- ✅ Shopping carts
-- ✅ Todo applications
-- ✅ Chat systems
-- ✅ Notifications
-- ✅ API data processing
-- ✅ Dynamic lists
+-  React state updates (when creating new arrays)
+-  Shopping carts
+-  Todo applications
+-  Chat systems
+-  Notifications
+-  API data processing
+-  Dynamic lists
 
 Mastering `push()` is essential before learning other array methods like `pop()`, `shift()`, `unshift()`, `splice()`, and `concat()`.
