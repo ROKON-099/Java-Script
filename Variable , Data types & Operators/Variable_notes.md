@@ -379,3 +379,272 @@ const user = {
 | Object | Collection of key-value pairs | `{ name: "Rokon" }` |
 
 
+# JavaScript Hoisting
+
+Hoisting is JavaScript's behavior of moving **declarations** to the top of their scope before code execution. Only declarations are hoisted, **not initializations**.
+
+```javascript
+console.log(name);
+var name = "Rokon";
+```
+
+Output:
+
+```javascript
+undefined
+```
+
+Because JavaScript treats it like:
+
+```javascript
+var name;
+console.log(name);
+name = "Rokon";
+```
+
+## var Hoisting
+
+`var` is hoisted and initialized with `undefined`.
+
+```javascript
+console.log(message);
+
+var message = "Hello";
+```
+
+Output:
+
+```javascript
+undefined
+```
+
+## let and const Hoisting
+
+`let` and `const` are also hoisted, but they are **not initialized** immediately. Accessing them before declaration causes an error.
+
+```javascript
+console.log(age);
+
+let age = 23;
+```
+
+Output:
+
+```javascript
+ReferenceError
+```
+
+## Temporal Dead Zone (TDZ)
+
+The **Temporal Dead Zone (TDZ)** is the time between entering a scope and declaring a `let` or `const` variable. During this period, the variable exists but cannot be accessed.
+
+```javascript
+{
+  console.log(name);
+
+  let name = "Rokon";
+}
+```
+
+Output:
+
+```javascript
+ReferenceError
+```
+
+## Key Points
+
+- Hoisting moves declarations to the top of their scope.
+- `var` is hoisted and initialized with `undefined`.
+- `let` and `const` are hoisted but remain in the **Temporal Dead Zone (TDZ)** until declared.
+- Accessing `let` or `const` before declaration throws a `ReferenceError`.
+
+# JavaScript ES6 Features
+
+## Type Conversion
+
+Type Conversion means changing one data type into another.
+
+### String to Number
+
+```javascript
+let age = "23";
+
+console.log(Number(age)); // 23
+console.log(parseInt(age)); // 23
+console.log(parseFloat("23.5")); // 23.5
+```
+
+### Number to String
+
+```javascript
+let num = 100;
+
+console.log(String(num)); // "100"
+console.log(num.toString()); // "100"
+```
+
+### Boolean Conversion
+
+```javascript
+console.log(Boolean(1)); // true
+console.log(Boolean(0)); // false
+console.log(Boolean("Hello")); // true
+console.log(Boolean("")); // false
+```
+
+## Template Literals
+
+Template Literals use **backticks (` `)** instead of quotes. They allow string interpolation and multi-line strings.
+
+### Without Template Literal
+
+```javascript
+let name = "Rokon";
+let age = 23;
+
+console.log("My name is " + name + " and I am " + age + " years old.");
+```
+
+### With Template Literal
+
+```javascript
+let name = "Rokon";
+let age = 23;
+
+console.log(`My name is ${name} and I am ${age} years old.`);
+```
+
+### Multi-line String
+
+```javascript
+let message = `Hello
+Welcome to JavaScript
+Have a nice day`;
+
+console.log(message);
+```
+
+## Destructuring
+
+Destructuring extracts values from arrays or objects into variables.
+
+### Array Destructuring
+
+```javascript
+const colors = ["Red", "Green", "Blue"];
+
+const [first, second, third] = colors;
+
+console.log(first); // Red
+console.log(second); // Green
+console.log(third); // Blue
+```
+
+### Object Destructuring
+
+```javascript
+const user = {
+  name: "Rokon",
+  age: 23,
+  country: "Bangladesh",
+};
+
+const { name, age, country } = user;
+
+console.log(name);
+console.log(age);
+console.log(country);
+```
+
+## Spread Operator (...)
+
+The **Spread Operator (`...`)** expands an array or object into individual elements.
+
+### Copy an Array
+
+```javascript
+const numbers = [1, 2, 3];
+
+const copy = [...numbers];
+
+console.log(copy);
+```
+
+### Merge Arrays
+
+```javascript
+const arr1 = [1, 2];
+const arr2 = [3, 4];
+
+const result = [...arr1, ...arr2];
+
+console.log(result);
+```
+
+### Copy an Object
+
+```javascript
+const user = {
+  name: "Rokon",
+  age: 23,
+};
+
+const newUser = {
+  ...user,
+};
+
+console.log(newUser);
+```
+
+## Rest Operator (...)
+
+The **Rest Operator (`...`)** collects multiple values into a single array.
+
+### Function Parameters
+
+```javascript
+function sum(...numbers) {
+  console.log(numbers);
+}
+
+sum(10, 20, 30, 40);
+```
+
+Output:
+
+```javascript
+[10, 20, 30, 40]
+```
+
+### Destructuring with Rest
+
+```javascript
+const numbers = [10, 20, 30, 40, 50];
+
+const [first, second, ...others] = numbers;
+
+console.log(first); // 10
+console.log(second); // 20
+console.log(others); // [30, 40, 50]
+```
+
+## Spread vs Rest
+
+| Feature | Spread Operator | Rest Operator |
+| -------- | --------------- | ------------- |
+| Purpose | Expands values | Collects values |
+| Used In | Arrays, Objects, Function Calls | Function Parameters, Destructuring |
+| Symbol | `...` | `...` |
+| Example | `[...arr1, ...arr2]` | `function sum(...nums)` |
+
+## Key Points
+
+- **Type Conversion** changes one data type into another.
+- **Template Literals** use backticks and `${}` for string interpolation.
+- **Destructuring** extracts values from arrays and objects.
+- **Spread Operator (`...`)** expands arrays or objects.
+- **Rest Operator (`...`)** collects multiple values into a single array.
+- Both Spread and Rest use the same syntax (`...`), but their behavior depends on where they are used.
+
+
