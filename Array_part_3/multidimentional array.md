@@ -4,7 +4,7 @@ The **`for...of` loop** is a modern JavaScript loop introduced in **ES6**. It is
 
 Unlike the `for` loop, you do not need to use an index.
 
----
+
 
 # Table of Contents
 
@@ -19,7 +19,7 @@ Unlike the `for` loop, you do not need to use an index.
 - Interview Questions
 - Summary Table
 
----
+
 
 # What is `for...of`?
 
@@ -27,7 +27,7 @@ Unlike the `for` loop, you do not need to use an index.
 
 The `for...of` loop iterates over the **values** of an iterable object such as an array.
 
----
+
 
 # Why Use `for...of`?
 
@@ -38,7 +38,7 @@ We use `for...of` to:
 - Write cleaner code
 - Improve readability
 
----
+
 
 # Syntax
 
@@ -50,7 +50,7 @@ for(const element of array){
 }
 ```
 
----
+
 
 # Example 1 (Print Array)
 
@@ -80,7 +80,7 @@ Mango
 Orange
 ```
 
----
+
 
 # Example 2 (Numbers)
 
@@ -110,7 +110,7 @@ for(const number of numbers){
 30
 ```
 
----
+
 
 # Example 3 (Sum of Numbers)
 
@@ -142,7 +142,7 @@ console.log(sum);
 60
 ```
 
----
+
 
 # Example 4 (Objects)
 
@@ -177,7 +177,7 @@ John
 Sara
 ```
 
----
+
 
 # Real Project Example
 
@@ -201,15 +201,15 @@ for(const item of cart){
 }
 ```
 
----
+
 
 # Best Practices
 
-- ✅ Use `for...of` when you only need array values.
-- ✅ Use meaningful variable names.
-- ✅ Prefer `const` if the value will not change.
+-  Use `for...of` when you only need array values.
+-  Use meaningful variable names.
+-  Prefer `const` if the value will not change.
 
----
+
 
 # Common Mistakes
 
@@ -229,7 +229,7 @@ for(const item of array){
 
 `for...of` gives values, **not indexes**.
 
----
+
 
 ## Mistake 2
 
@@ -247,7 +247,7 @@ for...of
 
 returns values.
 
----
+
 
 # Interview Questions
 
@@ -255,19 +255,19 @@ returns values.
 
 Array values.
 
----
+
 
 ### Does `for...of` provide indexes?
 
-❌ No.
+ No.
 
----
+
 
 ### Which version of JavaScript introduced `for...of`?
 
 ES6.
 
----
+
 
 # Summary Table
 
@@ -275,11 +275,11 @@ ES6.
 |---------|-------------|
 | Loop | `for...of` |
 | Iterates Over | Values |
-| Index Available | ❌ No |
+| Index Available |  No |
 | Introduced In | ES6 |
 | Best Use | Simple array traversal |
 
----
+
 
 # Final Notes
 
@@ -291,7 +291,7 @@ The **`for...of` loop** is a modern JavaScript loop introduced in **ES6**. It is
 
 Unlike the `for` loop, you do not need to use an index.
 
----
+
 
 # Table of Contents
 
@@ -306,7 +306,7 @@ Unlike the `for` loop, you do not need to use an index.
 - Interview Questions
 - Summary Table
 
----
+
 
 # What is `for...of`?
 
@@ -314,7 +314,7 @@ Unlike the `for` loop, you do not need to use an index.
 
 The `for...of` loop iterates over the **values** of an iterable object such as an array.
 
----
+
 
 # Why Use `for...of`?
 
@@ -325,7 +325,7 @@ We use `for...of` to:
 - Write cleaner code
 - Improve readability
 
----
+
 
 # Syntax
 
@@ -337,7 +337,7 @@ for(const element of array){
 }
 ```
 
----
+
 
 # Example 1 (Print Array)
 
@@ -367,7 +367,7 @@ Mango
 Orange
 ```
 
----
+
 
 # Example 2 (Numbers)
 
@@ -397,7 +397,7 @@ for(const number of numbers){
 30
 ```
 
----
+
 
 # Example 3 (Sum of Numbers)
 
@@ -429,7 +429,7 @@ console.log(sum);
 60
 ```
 
----
+
 
 # Example 4 (Objects)
 
@@ -464,7 +464,7 @@ John
 Sara
 ```
 
----
+
 
 # Real Project Example
 
@@ -488,15 +488,15 @@ for(const item of cart){
 }
 ```
 
----
+
 
 # Best Practices
 
-- ✅ Use `for...of` when you only need array values.
-- ✅ Use meaningful variable names.
-- ✅ Prefer `const` if the value will not change.
+-  Use `for...of` when you only need array values.
+-  Use meaningful variable names.
+-  Prefer `const` if the value will not change.
 
----
+
 
 # Common Mistakes
 
@@ -516,7 +516,7 @@ for(const item of array){
 
 `for...of` gives values, **not indexes**.
 
----
+
 
 ## Mistake 2
 
@@ -534,7 +534,7 @@ for...of
 
 returns values.
 
----
+
 
 # Interview Questions
 
@@ -542,19 +542,19 @@ returns values.
 
 Array values.
 
----
+
 
 ### Does `for...of` provide indexes?
 
-❌ No.
+ No.
 
----
+
 
 ### Which version of JavaScript introduced `for...of`?
 
 ES6.
 
----
+
 
 # Summary Table
 
@@ -562,11 +562,11 @@ ES6.
 |---------|-------------|
 | Loop | `for...of` |
 | Iterates Over | Values |
-| Index Available | ❌ No |
+| Index Available |  No |
 | Introduced In | ES6 |
 | Best Use | Simple array traversal |
 
----
+
 
 # Final Notes
 
@@ -587,7 +587,7 @@ They are commonly used to represent:
 - Seating Arrangements
 - Student Mark Sheets
 
----
+
 
 # Table of Contents
 
@@ -605,7 +605,7 @@ They are commonly used to represent:
 - Interview Questions
 - Summary Table
 
----
+
 
 # What is a Multidimensional Array?
 
@@ -615,7 +615,7 @@ A multidimensional array is an array whose elements are themselves arrays.
 
 It allows data to be organized into rows and columns.
 
----
+
 
 # Why Use Multidimensional Arrays?
 
@@ -628,7 +628,7 @@ We use multidimensional arrays to:
 - Store student marks
 - Process spreadsheet-like data
 
----
+
 
 # Types of Multidimensional Arrays
 
@@ -642,7 +642,7 @@ We use multidimensional arrays to:
 ]
 ```
 
----
+
 
 ## 2. Three-Dimensional (3D) Array
 
@@ -659,7 +659,7 @@ We use multidimensional arrays to:
 ]
 ```
 
----
+
 
 # Syntax
 
@@ -673,7 +673,7 @@ const matrix = [
 ];
 ```
 
----
+
 
 # Accessing Elements
 
@@ -683,7 +683,7 @@ Use multiple indexes.
 array[row][column]
 ```
 
----
+
 
 # Example 1 (Access Values)
 
@@ -711,7 +711,7 @@ console.log(matrix[2][1]);
 80
 ```
 
----
+
 
 # Example 2 (Update Values)
 
@@ -738,7 +738,7 @@ console.log(matrix);
 ]
 ```
 
----
+
 
 # Example 3 (Loop Through 2D Array)
 
@@ -775,7 +775,7 @@ for(const row of matrix){
 6
 ```
 
----
+
 
 # Example 4 (Using for Loop)
 
@@ -808,7 +808,7 @@ for(let i = 0; i < matrix.length; i++){
 40
 ```
 
----
+
 
 # Example 5 (Find Total Sum)
 
@@ -842,7 +842,7 @@ console.log(sum);
 21
 ```
 
----
+
 
 # Example 6 (3D Array)
 
@@ -876,7 +876,7 @@ console.log(cube[1][0][1]);
 6
 ```
 
----
+
 
 # Real Project Example 1
 
@@ -902,7 +902,7 @@ console.log(marks[2][1]);
 91
 ```
 
----
+
 
 # Real Project Example 2
 
@@ -926,7 +926,7 @@ console.log(chessBoard[0][3]);
 ♛
 ```
 
----
+
 
 # Real Project Example 3
 
@@ -952,7 +952,7 @@ console.log(seats[1][2]);
 B3
 ```
 
----
+
 
 # Real Project Example 4
 
@@ -978,11 +978,11 @@ console.log(board[2][0]);
 X
 ```
 
----
+
 
 # Best Practices
 
-- ✅ Use meaningful variable names.
+-  Use meaningful variable names.
 
 ```javascript
 matrix
@@ -994,19 +994,19 @@ students
 marks
 ```
 
----
 
-- ✅ Use nested loops for traversal.
 
----
+-  Use nested loops for traversal.
 
-- ✅ Keep the number of dimensions as low as possible for better readability.
 
----
 
-- ✅ Check indexes before accessing elements.
+-  Keep the number of dimensions as low as possible for better readability.
 
----
+
+
+-  Check indexes before accessing elements.
+
+
 
 # Common Mistakes
 
@@ -1038,7 +1038,7 @@ Output
 60
 ```
 
----
+
 
 ## Mistake 2
 
@@ -1056,7 +1056,7 @@ matrix[10]
 
 is `undefined`.
 
----
+
 
 ## Mistake 3
 
@@ -1094,7 +1094,7 @@ for(const row of matrix){
 }
 ```
 
----
+
 
 # Interview Questions
 
@@ -1102,13 +1102,13 @@ for(const row of matrix){
 
 An array that contains one or more arrays as its elements.
 
----
+
 
 ### What is the most common multidimensional array?
 
 A **2D Array**.
 
----
+
 
 ### How do you access an element?
 
@@ -1116,19 +1116,19 @@ A **2D Array**.
 array[row][column]
 ```
 
----
+
 
 ### How do you traverse a multidimensional array?
 
 Using nested loops.
 
----
+
 
 ### Can JavaScript create a 3D array?
 
-✅ Yes.
+ Yes.
 
----
+
 
 ### Where are multidimensional arrays used?
 
@@ -1139,7 +1139,7 @@ Using nested loops.
 - Seating Charts
 - Tables
 
----
+
 
 # Summary Table
 
@@ -1152,7 +1152,7 @@ Using nested loops.
 | Update | `array[row][column] = value` |
 | Common Uses | Matrix, Games, Tables, Marksheets |
 
----
+
 
 # Quick Comparison
 
@@ -1163,18 +1163,18 @@ Using nested loops.
 | Access | `array[0][1]` | `array[row][column]` or `array[x][y][z]` |
 | Examples | `[[1,2],[3,4]]` | `[[[1,2],[3,4]],[[5,6],[7,8]]]` |
 
----
+
 
 # Final Notes
 
 Multidimensional arrays are an extension of nested arrays and are essential for representing structured data. They are widely used in:
 
-- ✅ Matrices
-- ✅ Chess Boards
-- ✅ Tic-Tac-Toe Games
-- ✅ Student Mark Sheets
-- ✅ Seating Arrangements
-- ✅ Spreadsheet-like Applications
-- ✅ Grid-based Games
+-  Matrices
+-  Chess Boards
+-  Tic-Tac-Toe Games
+-  Student Mark Sheets
+-  Seating Arrangements
+-  Spreadsheet-like Applications
+-  Grid-based Games
 
 Mastering multidimensional arrays will make it much easier to work with complex data structures and prepare you for advanced JavaScript concepts and real-world projects.
