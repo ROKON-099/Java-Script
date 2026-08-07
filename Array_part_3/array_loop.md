@@ -4,7 +4,7 @@ The **`for` loop** is the most commonly used loop for traversing (iterating thro
 
 It allows you to access every element one by one using its **index**.
 
----
+
 
 # Table of Contents
 
@@ -21,7 +21,7 @@ It allows you to access every element one by one using its **index**.
 - Interview Questions
 - Summary Table
 
----
+
 
 # What is a for Loop?
 
@@ -31,7 +31,7 @@ A `for` loop repeatedly executes a block of code until a specified condition bec
 
 When working with arrays, it is mainly used to access every element using its index.
 
----
+
 
 # Why Use a for Loop?
 
@@ -44,7 +44,7 @@ We use a `for` loop to:
 - Update array values
 - Process API data
 
----
+
 
 # Syntax
 
@@ -56,7 +56,7 @@ for(initialization; condition; update){
 }
 ```
 
----
+
 
 ## Array Syntax
 
@@ -68,7 +68,7 @@ for(let i = 0; i < array.length; i++){
 }
 ```
 
----
+
 
 # Understanding the Loop
 
@@ -85,7 +85,7 @@ const fruits = [
 ```
 
 | Iteration | i | fruits[i] |
-|-----------|---|-----------|
+|----------|----|-----------|
 | 1 | 0 | Apple |
 | 2 | 1 | Mango |
 | 3 | 2 | Orange |
@@ -104,7 +104,7 @@ becomes
 
 which is `false`, so the loop stops.
 
----
+
 
 # Example 1 (Print All Elements)
 
@@ -134,7 +134,7 @@ Mango
 Orange
 ```
 
----
+
 
 # Example 2 (Numbers)
 
@@ -167,7 +167,7 @@ for(let i = 0; i < numbers.length; i++){
 40
 ```
 
----
+
 
 # Example 3 (Using Index)
 
@@ -199,7 +199,7 @@ for(let i = 0; i < colors.length; i++){
 2 Blue
 ```
 
----
+
 
 # Example 4 (Sum of Array)
 
@@ -233,7 +233,7 @@ console.log(sum);
 100
 ```
 
----
+
 
 # Example 5 (Find Largest Number)
 
@@ -273,7 +273,7 @@ console.log(largest);
 80
 ```
 
----
+
 
 # Example 6 (Print Even Numbers)
 
@@ -311,7 +311,7 @@ for(let i = 0; i < numbers.length; i++){
 20
 ```
 
----
+
 
 # Example 7 (Update Every Element)
 
@@ -341,7 +341,7 @@ console.log(prices);
 [150,250,350]
 ```
 
----
+
 
 # Example 8 (Reverse Traversal)
 
@@ -371,7 +371,7 @@ Mango
 Apple
 ```
 
----
+
 
 # Example 9 (Search an Element)
 
@@ -409,7 +409,7 @@ console.log(found);
 true
 ```
 
----
+
 
 # Example 10 (Count Elements)
 
@@ -443,7 +443,7 @@ console.log(count);
 4
 ```
 
----
+
 
 # Real Project Example 1
 
@@ -467,7 +467,7 @@ for(let i = 0; i < cart.length; i++){
 }
 ```
 
----
+
 
 # Real Project Example 2
 
@@ -501,7 +501,7 @@ console.log(total);
 250
 ```
 
----
+
 
 # Real Project Example 3
 
@@ -525,7 +525,7 @@ for(let i = 0; i < prices.length; i++){
 }
 ```
 
----
+
 
 # Real Project Example 4
 
@@ -549,19 +549,19 @@ for(let i = 0; i < students.length; i++){
 }
 ```
 
----
+
 
 # Best Practices
 
-✅ Use `array.length` instead of writing fixed numbers.
+ Use `array.length` instead of writing fixed numbers.
 
 ```javascript
 for(let i = 0; i < array.length; i++)
 ```
 
----
 
-✅ Use meaningful variable names.
+
+ Use meaningful variable names.
 
 ```javascript
 students
@@ -573,11 +573,11 @@ prices
 marks
 ```
 
----
 
-✅ Keep loop logic simple and readable.
 
----
+ Keep loop logic simple and readable.
+
+
 
 # Common Mistakes
 
@@ -597,7 +597,7 @@ Correct
 for(let i = 0; i < array.length; i++)
 ```
 
----
+
 
 ## Mistake 2
 
@@ -613,7 +613,7 @@ for(let i = 0; i < array.length;){
 
 This creates an infinite loop.
 
----
+
 
 ## Mistake 3
 
@@ -627,7 +627,7 @@ for(let i = 1; i < array.length; i++)
 
 This skips the first element.
 
----
+
 
 ## Mistake 4
 
@@ -643,7 +643,7 @@ returns
 undefined
 ```
 
----
+
 
 # Interview Questions
 
@@ -651,13 +651,13 @@ undefined
 
 It repeats a block of code until a condition becomes false.
 
----
+
 
 ### Why is `array.length` used?
 
 To avoid going beyond the last element.
 
----
+
 
 ### Which index does an array start from?
 
@@ -665,7 +665,7 @@ To avoid going beyond the last element.
 0
 ```
 
----
+
 
 ### How do you print an array in reverse order?
 
@@ -677,13 +677,13 @@ for(let i = array.length - 1; i >= 0; i--){
 }
 ```
 
----
+
 
 ### How do you find the sum of all elements?
 
 Use a variable and add each element inside the loop.
 
----
+
 
 # Summary Table
 
@@ -697,7 +697,7 @@ Use a variable and add each element inside the loop.
 | Changes Array | Optional |
 | Common Uses | Print, Search, Sum, Update, Traverse |
 
----
+
 
 # Final Notes
 

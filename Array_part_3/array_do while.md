@@ -4,7 +4,7 @@ The **`while` loop** is used to traverse an array when you want to repeat a bloc
 
 Unlike the `for` loop, the initialization and update are written separately.
 
----
+
 
 # Table of Contents
 
@@ -19,7 +19,7 @@ Unlike the `for` loop, the initialization and update are written separately.
 - Interview Questions
 - Summary Table
 
----
+
 
 # What is a while Loop?
 
@@ -27,7 +27,7 @@ Unlike the `for` loop, the initialization and update are written separately.
 
 A `while` loop repeatedly executes a block of code while the specified condition is `true`.
 
----
+
 
 # Why Use a while Loop?
 
@@ -38,7 +38,7 @@ We use a `while` loop to:
 - Handle dynamic iterations
 - Read unknown-length data
 
----
+
 
 # Syntax
 
@@ -54,7 +54,7 @@ while(i < array.length){
 }
 ```
 
----
+
 
 # Example 1 (Print Array)
 
@@ -88,7 +88,7 @@ Mango
 Orange
 ```
 
----
+
 
 # Example 2 (Sum of Numbers)
 
@@ -126,7 +126,7 @@ console.log(sum);
 100
 ```
 
----
+
 
 # Example 3 (Reverse Traversal)
 
@@ -160,7 +160,7 @@ Green
 Red
 ```
 
----
+
 
 # Real Project Example
 
@@ -188,15 +188,15 @@ while(i < cart.length){
 }
 ```
 
----
+
 
 # Best Practices
 
-- ✅ Always update the loop variable.
-- ✅ Use `array.length` instead of fixed numbers.
-- ✅ Keep the condition simple.
+-  Always update the loop variable.
+-  Use `array.length` instead of fixed numbers.
+-  Keep the condition simple.
 
----
+
 
 # Common Mistakes
 
@@ -214,7 +214,7 @@ while(i < array.length){
 
 This creates an **infinite loop**.
 
----
+
 
 # Interview Questions
 
@@ -222,13 +222,13 @@ This creates an **infinite loop**.
 
 When the number of iterations is not known beforehand.
 
----
+
 
 ### Does a `while` loop check the condition first?
 
-✅ Yes.
+ Yes.
 
----
+
 
 # Summary Table
 
@@ -236,10 +236,10 @@ When the number of iterations is not known beforehand.
 |---------|-------------|
 | Loop | `while` |
 | Checks Condition | Before execution |
-| Runs At Least Once | ❌ No |
+| Runs At Least Once |  No |
 | Best Use | Unknown number of iterations |
 
----
+
 
 # Final Notes
 
@@ -250,7 +250,7 @@ The `while` loop is useful when the number of iterations is dynamic. For array t
 
 The **`do...while` loop** is similar to the `while` loop, but it executes the code **at least once** before checking the condition.
 
----
+
 
 # Table of Contents
 
@@ -265,7 +265,7 @@ The **`do...while` loop** is similar to the `while` loop, but it executes the co
 - Interview Questions
 - Summary Table
 
----
+
 
 # What is do...while?
 
@@ -275,7 +275,7 @@ A `do...while` loop executes the code first and then checks the condition.
 
 Even if the condition is `false`, the loop runs **one time**.
 
----
+
 
 # Why Use do...while?
 
@@ -286,7 +286,7 @@ We use a `do...while` loop when:
 - Menu-driven programs.
 - Retry operations.
 
----
+
 
 # Syntax
 
@@ -302,7 +302,7 @@ do{
 }while(i < array.length);
 ```
 
----
+
 
 # Example 1 (Print Array)
 
@@ -336,7 +336,7 @@ Mango
 Orange
 ```
 
----
+
 
 # Example 2 (Sum of Numbers)
 
@@ -372,7 +372,7 @@ console.log(sum);
 60
 ```
 
----
+
 
 # Example 3 (Runs At Least Once)
 
@@ -394,7 +394,7 @@ do{
 Loop Executed
 ```
 
----
+
 
 # Real Project Example
 
@@ -422,15 +422,15 @@ do{
 }while(i < menu.length);
 ```
 
----
+
 
 # Best Practices
 
-- ✅ Use `do...while` only when the loop must run at least once.
-- ✅ Always update the loop variable.
-- ✅ Use `array.length` for the stopping condition.
+-  Use `do...while` only when the loop must run at least once.
+-  Always update the loop variable.
+-  Use `array.length` for the stopping condition.
 
----
+
 
 # Common Mistakes
 
@@ -448,13 +448,13 @@ do{
 
 This creates an **infinite loop**.
 
----
+
 
 ## Using `do...while` unnecessarily
 
 If the loop does **not** need to execute at least once, prefer a `for` or `while` loop.
 
----
+
 
 # Interview Questions
 
@@ -464,13 +464,13 @@ If the loop does **not** need to execute at least once, prefer a `for` or `while
 
 `do...while` executes the code first and then checks the condition.
 
----
+
 
 ### Does `do...while` always execute once?
 
-✅ Yes.
+ Yes.
 
----
+
 
 # Summary Table
 
@@ -478,10 +478,10 @@ If the loop does **not** need to execute at least once, prefer a `for` or `while
 |---------|-------------|
 | Loop | `do...while` |
 | Checks Condition | After execution |
-| Runs At Least Once | ✅ Yes |
+| Runs At Least Once |  Yes |
 | Best Use | Menus, Validation, Retry Logic |
 
----
+
 
 # Final Notes
 
