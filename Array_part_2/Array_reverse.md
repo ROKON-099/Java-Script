@@ -4,7 +4,7 @@ The `reverse()` method is one of the most commonly used array methods in JavaScr
 
 Unlike `slice()` and `concat()`, the `reverse()` method **modifies the original array**.
 
----
+
 
 # Table of Contents
 
@@ -22,7 +22,7 @@ Unlike `slice()` and `concat()`, the `reverse()` method **modifies the original 
 - Interview Questions
 - Summary Table
 
----
+
 
 # What is reverse()?
 
@@ -32,7 +32,7 @@ The `reverse()` method reverses the order of the elements in an array.
 
 It changes the **original array** and also returns the reversed array.
 
----
+
 
 # Why Use reverse()?
 
@@ -44,7 +44,7 @@ We use `reverse()` when we need to:
 - Reverse search history
 - Process data from last to first
 
----
+
 
 # Syntax
 
@@ -52,7 +52,7 @@ We use `reverse()` when we need to:
 array.reverse();
 ```
 
----
+
 
 # Parameters
 
@@ -62,7 +62,7 @@ The `reverse()` method does **not** take any parameters.
 array.reverse();
 ```
 
----
+
 
 # Return Value
 
@@ -70,7 +70,7 @@ Returns the **same array** after reversing its elements.
 
 The original array is modified.
 
----
+
 
 # How reverse() Works
 
@@ -94,7 +94,7 @@ Result
 ["Orange","Mango","Apple"]
 ```
 
----
+
 
 # Example 1 (Basic)
 
@@ -124,7 +124,7 @@ console.log(fruits);
 
 The elements are reversed in place.
 
----
+
 
 # Example 2 (Numbers)
 
@@ -152,7 +152,7 @@ console.log(numbers);
 [40,30,20,10]
 ```
 
----
+
 
 # Example 3 (Store Return Value)
 
@@ -184,7 +184,7 @@ console.log(colors);
 
 Both variables reference the same reversed array.
 
----
+
 
 # Example 4 (Single Element)
 
@@ -206,7 +206,7 @@ console.log(items);
 ["Laptop"]
 ```
 
----
+
 
 # Example 5 (Empty Array)
 
@@ -224,7 +224,7 @@ console.log(data);
 []
 ```
 
----
+
 
 # Example 6 (Mixed Data Types)
 
@@ -252,7 +252,7 @@ console.log(values);
 [null,true,100,"JavaScript"]
 ```
 
----
+
 
 # Example 7 (Objects)
 
@@ -294,7 +294,7 @@ console.log(users);
 ]
 ```
 
----
+
 
 # Example 8 (Reverse Without Changing Original Array)
 
@@ -332,7 +332,7 @@ console.log(numbers);
 - `reverse()` reverses the copied array.
 - The original array remains unchanged.
 
----
+
 
 # Real Project Example 1
 
@@ -364,7 +364,7 @@ console.log(notifications);
 ]
 ```
 
----
+
 
 # Real Project Example 2
 
@@ -396,7 +396,7 @@ console.log(messages);
 ]
 ```
 
----
+
 
 # Real Project Example 3
 
@@ -428,7 +428,7 @@ console.log(playlist);
 ]
 ```
 
----
+
 
 # Real Project Example 4
 
@@ -460,7 +460,7 @@ console.log(rankings);
 ]
 ```
 
----
+
 
 # Real Project Example 5
 
@@ -492,23 +492,23 @@ console.log(history);
 ]
 ```
 
----
+
 
 # Best Practices
 
-✅ Use `reverse()` when you intentionally want to modify the original array.
+ Use `reverse()` when you intentionally want to modify the original array.
 
----
 
-✅ Create a copy if you want to preserve the original array.
+
+ Create a copy if you want to preserve the original array.
 
 ```javascript
 const reversed = array.slice().reverse();
 ```
 
----
 
-✅ Use meaningful variable names.
+
+ Use meaningful variable names.
 
 ```javascript
 reversedList
@@ -518,7 +518,7 @@ latestMessages
 recentNotifications
 ```
 
----
+
 
 # Common Mistakes
 
@@ -544,7 +544,7 @@ Output
 
 The original array changes.
 
----
+
 
 ## Mistake 2
 
@@ -560,7 +560,7 @@ const reversed = original.reverse();
 
 Both variables now reference the same reversed array.
 
----
+
 
 ## Mistake 3
 
@@ -572,7 +572,7 @@ Correct
 const reversed = array.slice().reverse();
 ```
 
----
+
 
 ## Mistake 4
 
@@ -602,7 +602,7 @@ If you want ascending or descending order, use
 sort()
 ```
 
----
+
 
 # Interview Questions
 
@@ -610,25 +610,25 @@ sort()
 
 It reverses the order of array elements.
 
----
+
 
 ## Does `reverse()` modify the original array?
 
-✅ Yes.
+ Yes.
 
----
+
 
 ## What does `reverse()` return?
 
 The reversed array.
 
----
+
 
 ## Does `reverse()` take any parameters?
 
-❌ No.
+ No.
 
----
+
 
 ## How can you reverse an array without modifying the original?
 
@@ -636,7 +636,7 @@ The reversed array.
 const reversed = array.slice().reverse();
 ```
 
----
+
 
 ## Which method copies an array?
 
@@ -644,11 +644,11 @@ const reversed = array.slice().reverse();
 slice()
 ```
 
----
+
 
 ## Does `reverse()` sort an array?
 
-❌ No.
+ No.
 
 Use
 
@@ -658,7 +658,7 @@ sort()
 
 for sorting.
 
----
+
 
 # Summary Table
 
@@ -668,30 +668,30 @@ for sorting.
 | Purpose | Reverse the order of elements |
 | Parameters | None |
 | Returns | Reversed array |
-| Changes Original Array | ✅ Yes |
+| Changes Original Array |  Yes |
 | Common Uses | Notifications, Chat, Playlist, History |
 
----
+
 
 # Quick Comparison
 
 | Method | Purpose | Returns | Changes Original Array |
-|---------|---------|---------|------------------------|
-| `reverse()` | Reverse order | Reversed Array | ✅ Yes |
-| `slice()` | Copy array | New Array | ❌ No |
-| `sort()` | Sort array | Sorted Array | ✅ Yes |
+|--------|---------|---------|------------------------|
+| `reverse()` | Reverse order | Reversed Array |  Yes |
+| `slice()` | Copy array | New Array |  No |
+| `sort()` | Sort array | Sorted Array |  Yes |
 
----
+
 
 # Final Notes
 
 The `reverse()` method is a simple but powerful array method used to display data in the opposite order. It is commonly used in:
 
-- ✅ Chat applications
-- ✅ Notification systems
-- ✅ Browser history
-- ✅ Music playlists
-- ✅ Activity feeds
-- ✅ Timeline displays
+-  Chat applications
+-  Notification systems
+-  Browser history
+-  Music playlists
+-  Activity feeds
+-  Timeline displays
 
 Mastering `reverse()` will help you manipulate array order efficiently and prepare you for advanced data handling in JavaScript.

@@ -6,7 +6,7 @@ By default, `sort()` arranges elements in **ascending alphabetical (Unicode) ord
 
 It **modifies the original array**.
 
----
+
 
 # Table of Contents
 
@@ -26,7 +26,7 @@ It **modifies the original array**.
 - Interview Questions
 - Summary Table
 
----
+
 
 # What is sort()?
 
@@ -41,7 +41,7 @@ By default:
 
 It modifies the **original array**.
 
----
+
 
 # Why Use sort()?
 
@@ -54,7 +54,7 @@ We use `sort()` when we need to:
 - Display rankings
 - Arrange data before showing it to users
 
----
+
 
 # Syntax
 
@@ -64,7 +64,7 @@ array.sort();
 array.sort(compareFunction);
 ```
 
----
+
 
 # Parameters
 
@@ -72,7 +72,7 @@ array.sort(compareFunction);
 |-----------|-------------|
 | compareFunction | Optional function used for custom sorting |
 
----
+
 
 # Return Value
 
@@ -80,7 +80,7 @@ Returns the **sorted array**.
 
 The original array is modified.
 
----
+
 
 # How sort() Works
 
@@ -104,7 +104,7 @@ After
 ["Apple","Banana","Orange"]
 ```
 
----
+
 
 # Example 1 (Basic String Sorting)
 
@@ -134,7 +134,7 @@ console.log(fruits);
 
 Strings are sorted alphabetically.
 
----
+
 
 # Example 2 (Numbers Without Compare Function)
 
@@ -178,7 +178,7 @@ JavaScript compares numbers as **strings** by default.
 
 are sorted alphabetically, not numerically.
 
----
+
 
 # Example 3 (Ascending Numbers)
 
@@ -222,7 +222,7 @@ is negative,
 
 `a` comes before `b`.
 
----
+
 
 # Example 4 (Descending Numbers)
 
@@ -254,7 +254,7 @@ console.log(numbers);
 [100,40,20,5]
 ```
 
----
+
 
 # Example 5 (Case Sensitive)
 
@@ -282,7 +282,7 @@ console.log(names);
 
 Uppercase letters come before lowercase letters.
 
----
+
 
 # Example 6 (Copy Before Sorting)
 
@@ -318,7 +318,7 @@ console.log(numbers);
 
 The original array remains unchanged because `slice()` creates a copy.
 
----
+
 
 # Example 7 (Sort Objects)
 
@@ -370,7 +370,7 @@ console.log(students);
 ]
 ```
 
----
+
 
 # Example 8 (Sort by String Length)
 
@@ -407,7 +407,7 @@ console.log(words);
 ]
 ```
 
----
+
 
 # Real Project Example 1
 
@@ -441,7 +441,7 @@ console.log(prices);
 [200,300,500,800]
 ```
 
----
+
 
 # Real Project Example 2
 
@@ -475,7 +475,7 @@ console.log(marks);
 [92,88,75,60]
 ```
 
----
+
 
 # Real Project Example 3
 
@@ -507,7 +507,7 @@ console.log(products);
 ]
 ```
 
----
+
 
 # Real Project Example 4
 
@@ -539,7 +539,7 @@ console.log(scores);
 [1200,900,700]
 ```
 
----
+
 
 # Real Project Example 5
 
@@ -571,27 +571,27 @@ console.log(salaries);
 [30000,45000,60000]
 ```
 
----
+
 
 # Best Practices
 
-✅ Always use a compare function when sorting numbers.
+ Always use a compare function when sorting numbers.
 
 ```javascript
 numbers.sort((a,b)=>a-b);
 ```
 
----
 
-✅ Use `slice()` before `sort()` if you don't want to modify the original array.
+
+ Use `slice()` before `sort()` if you don't want to modify the original array.
 
 ```javascript
 const sorted = array.slice().sort();
 ```
 
----
 
-✅ Use meaningful variable names.
+
+ Use meaningful variable names.
 
 ```javascript
 sortedProducts
@@ -601,7 +601,7 @@ sortedMarks
 sortedStudents
 ```
 
----
+
 
 # Common Mistakes
 
@@ -633,7 +633,7 @@ Output
 [5,20,100]
 ```
 
----
+
 
 ## Mistake 2
 
@@ -655,7 +655,7 @@ Output
 
 The original array changes.
 
----
+
 
 ## Mistake 3
 
@@ -671,7 +671,7 @@ Output
 ["Banana","apple"]
 ```
 
----
+
 
 ## Mistake 4
 
@@ -689,7 +689,7 @@ Correct
 numbers.sort((a,b)=>b-a);
 ```
 
----
+
 
 # Interview Questions
 
@@ -697,25 +697,25 @@ numbers.sort((a,b)=>b-a);
 
 It sorts the elements of an array.
 
----
+
 
 ## Does `sort()` modify the original array?
 
-✅ Yes.
+ Yes.
 
----
+
 
 ## What does `sort()` return?
 
 The sorted array.
 
----
+
 
 ## Why should we use a compare function for numbers?
 
 Because JavaScript sorts numbers as strings by default.
 
----
+
 
 ## How do you sort numbers in ascending order?
 
@@ -723,7 +723,7 @@ Because JavaScript sorts numbers as strings by default.
 numbers.sort((a,b)=>a-b);
 ```
 
----
+
 
 ## How do you sort numbers in descending order?
 
@@ -731,7 +731,7 @@ numbers.sort((a,b)=>a-b);
 numbers.sort((a,b)=>b-a);
 ```
 
----
+
 
 ## How can you sort without modifying the original array?
 
@@ -739,31 +739,31 @@ numbers.sort((a,b)=>b-a);
 const sorted = array.slice().sort((a,b)=>a-b);
 ```
 
----
+
 
 # Summary Table
 
 | Feature | Description |
-|---------|-------------|
+||-|
 | Method | `sort()` |
 | Purpose | Sort array elements |
 | Parameters | compareFunction (optional) |
 | Returns | Sorted array |
-| Changes Original Array | ✅ Yes |
+| Changes Original Array |  Yes |
 | Default Sort | Unicode (Alphabetical) |
 | Common Uses | Products, Prices, Rankings, Leaderboards |
 
----
+
 
 # Quick Comparison
 
 | Method | Purpose | Returns | Changes Original Array |
-|---------|---------|---------|------------------------|
-| `sort()` | Sort elements | Sorted Array | ✅ Yes |
-| `reverse()` | Reverse order | Reversed Array | ✅ Yes |
-| `slice()` | Copy array | New Array | ❌ No |
+|--------|---------|---------|------------------------|
+| `sort()` | Sort elements | Sorted Array |  Yes |
+| `reverse()` | Reverse order | Reversed Array |  Yes |
+| `slice()` | Copy array | New Array |  No |
 
----
+
 
 # Final Notes
 
@@ -771,12 +771,12 @@ The `sort()` method is one of the most frequently used array methods in JavaScri
 
 Common real-world uses include:
 
-- ✅ Product sorting (Price Low → High)
-- ✅ Student ranking
-- ✅ Leaderboards
-- ✅ Alphabetical lists
-- ✅ Employee salary sorting
-- ✅ Search results
-- ✅ E-commerce product filtering
+-  Product sorting (Price Low → High)
+-  Student ranking
+-  Leaderboards
+-  Alphabetical lists
+-  Employee salary sorting
+-  Search results
+-  E-commerce product filtering
 
 > **Remember:** Always use a **compare function** when sorting numbers. Otherwise, JavaScript sorts them as strings, which can produce unexpected results.

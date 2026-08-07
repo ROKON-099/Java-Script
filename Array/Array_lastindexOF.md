@@ -4,7 +4,7 @@ The `indexOf()` method is one of the most commonly used array methods in JavaScr
 
 If the element is not found, it returns **-1**.
 
----
+
 
 # Table of Contents
 
@@ -22,7 +22,7 @@ If the element is not found, it returns **-1**.
 - Interview Questions
 - Summary Table
 
----
+
 
 # What is indexOf()?
 
@@ -38,7 +38,7 @@ If the element does not exist, it returns
 
 It **does not modify** the original array.
 
----
+
 
 # Why Use indexOf()?
 
@@ -50,7 +50,7 @@ We use `indexOf()` when we need to:
 - Update an element
 - Search data inside an array
 
----
+
 
 # Syntax
 
@@ -60,16 +60,16 @@ array.indexOf(value);
 array.indexOf(value, startIndex);
 ```
 
----
+
 
 # Parameters
 
 | Parameter | Description |
-|-----------|-------------|
+|--|-|
 | value | The value to search for |
 | startIndex | Optional. The index to start searching from |
 
----
+
 
 # Return Value
 
@@ -78,7 +78,7 @@ Returns
 - Index of the first matching element
 - `-1` if the value is not found
 
----
+
 
 # How indexOf() Works
 
@@ -102,7 +102,7 @@ Result
 1
 ```
 
----
+
 
 Array
 
@@ -124,7 +124,7 @@ Result
 -1
 ```
 
----
+
 
 # Example 1 (Basic)
 
@@ -152,7 +152,7 @@ console.log(fruits.indexOf("Mango"));
 
 "Mango" is located at index **1**.
 
----
+
 
 # Example 2 (Value Not Found)
 
@@ -176,7 +176,7 @@ console.log(fruits.indexOf("Banana"));
 -1
 ```
 
----
+
 
 # Example 3 (Numbers)
 
@@ -202,7 +202,7 @@ console.log(numbers.indexOf(30));
 2
 ```
 
----
+
 
 # Example 4 (Duplicate Values)
 
@@ -232,7 +232,7 @@ console.log(numbers.indexOf(20));
 
 `indexOf()` always returns the **first matching index**.
 
----
+
 
 # Example 5 (Using startIndex)
 
@@ -262,7 +262,7 @@ console.log(numbers.indexOf(20,2));
 
 Searching starts from index **2**, so the second `20` is found.
 
----
+
 
 # Example 6 (Empty Array)
 
@@ -278,7 +278,7 @@ console.log(data.indexOf(100));
 -1
 ```
 
----
+
 
 # Example 7 (Case Sensitive)
 
@@ -304,7 +304,7 @@ console.log(fruits.indexOf("apple"));
 
 JavaScript is case-sensitive.
 
----
+
 
 # Example 8 (Store Index)
 
@@ -330,7 +330,7 @@ console.log(index);
 2
 ```
 
----
+
 
 # Real Project Example 1
 
@@ -360,7 +360,7 @@ console.log(cart);
 ["Laptop","Keyboard"]
 ```
 
----
+
 
 # Real Project Example 2
 
@@ -386,7 +386,7 @@ console.log(students.indexOf("Karim"));
 1
 ```
 
----
+
 
 # Real Project Example 3
 
@@ -420,7 +420,7 @@ console.log(status);
 ]
 ```
 
----
+
 
 # Real Project Example 4
 
@@ -446,7 +446,7 @@ console.log(categories.indexOf("CSS"));
 1
 ```
 
----
+
 
 # Real Project Example 5
 
@@ -472,15 +472,15 @@ console.log(roles.indexOf("Admin"));
 2
 ```
 
----
+
 
 # Best Practices
 
-✅ Use `indexOf()` when you need the position of an element.
+ Use `indexOf()` when you need the position of an element.
 
----
 
-✅ Always check for `-1`.
+
+ Always check for `-1`.
 
 ```javascript
 const index = array.indexOf(value);
@@ -492,9 +492,9 @@ if(index !== -1){
 }
 ```
 
----
 
-✅ Use meaningful variable names.
+
+ Use meaningful variable names.
 
 ```javascript
 productIndex
@@ -504,7 +504,7 @@ studentIndex
 userIndex
 ```
 
----
+
 
 # Common Mistakes
 
@@ -526,7 +526,7 @@ Always check
 if(index !== -1)
 ```
 
----
+
 
 ## Mistake 2
 
@@ -546,7 +546,7 @@ Output
 
 Use `lastIndexOf()` for the last occurrence.
 
----
+
 
 ## Mistake 3
 
@@ -578,7 +578,7 @@ Output
 
 Objects are compared by reference.
 
----
+
 
 ## Mistake 4
 
@@ -594,7 +594,7 @@ Output
 -1
 ```
 
----
+
 
 # Interview Questions
 
@@ -602,7 +602,7 @@ Output
 
 The index of the first matching element.
 
----
+
 
 ## What does it return if the element is not found?
 
@@ -610,29 +610,29 @@ The index of the first matching element.
 -1
 ```
 
----
+
 
 ## Does `indexOf()` modify the original array?
 
-❌ No.
+ No.
 
----
+
 
 ## Can it search from a specific index?
 
-✅ Yes.
+ Yes.
 
 ```javascript
 array.indexOf(value,startIndex);
 ```
 
----
+
 
 ## Does `indexOf()` return the first or last occurrence?
 
 The **first** occurrence.
 
----
+
 
 ## Which method returns the last occurrence?
 
@@ -640,7 +640,7 @@ The **first** occurrence.
 lastIndexOf()
 ```
 
----
+
 
 ## Which method returns `true` or `false` instead of an index?
 
@@ -648,7 +648,7 @@ lastIndexOf()
 includes()
 ```
 
----
+
 
 # Summary Table
 
@@ -661,17 +661,17 @@ includes()
 | Changes Original Array |  No |
 | Common Uses | Search, Update, Remove, Validation |
 
----
+
 
 # Quick Comparison
 
 | Method | Returns | Modifies Array |
-|---------|----------|----------------|
+|--------|---------|----------------|
 | `includes()` | `true` / `false` |  No |
 | `indexOf()` | First Index / `-1` |  No |
 | `lastIndexOf()` | Last Index / `-1` |  No |
 
----
+
 
 # Final Notes
 

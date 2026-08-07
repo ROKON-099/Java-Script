@@ -4,7 +4,7 @@ The `splice()` method is one of the most powerful array methods in JavaScript. I
 
 Unlike `slice()`, the `splice()` method **modifies the original array**.
 
----
+
 
 # Table of Contents
 
@@ -22,7 +22,7 @@ Unlike `slice()`, the `splice()` method **modifies the original array**.
 - Interview Questions
 - Summary Table
 
----
+
 
 # What is splice()?
 
@@ -36,7 +36,7 @@ The `splice()` method changes the contents of an array by:
 
 It modifies the **original array**.
 
----
+
 
 # Why Use splice()?
 
@@ -48,7 +48,7 @@ We use `splice()` when we need to:
 - Update array data
 - Manage dynamic lists
 
----
+
 
 # Syntax
 
@@ -60,7 +60,7 @@ array.splice(start, deleteCount, item1);
 array.splice(start, deleteCount, item1, item2, ...);
 ```
 
----
+
 
 # Parameters
 
@@ -70,7 +70,7 @@ array.splice(start, deleteCount, item1, item2, ...);
 | deleteCount | Number of elements to remove |
 | item1, item2... | New elements to insert (Optional) |
 
----
+
 
 # Return Value
 
@@ -78,7 +78,7 @@ Returns an array containing the **removed elements**.
 
 The original array is modified.
 
----
+
 
 # How splice() Works
 
@@ -110,7 +110,7 @@ Remaining Array
 ["Apple","Banana"]
 ```
 
----
+
 
 # Example 1 (Remove Elements)
 
@@ -144,7 +144,7 @@ console.log(fruits);
 - Remove **2** elements
 - Original array changes
 
----
+
 
 # Example 2 (Store Removed Elements)
 
@@ -176,7 +176,7 @@ console.log(numbers);
 [10,40]
 ```
 
----
+
 
 # Example 3 (Add Elements)
 
@@ -206,7 +206,7 @@ console.log(colors);
 - Remove **0** elements
 - Insert `"Green"`
 
----
+
 
 # Example 4 (Replace Elements)
 
@@ -232,7 +232,7 @@ console.log(fruits);
 ["Apple","Banana","Orange"]
 ```
 
----
+
 
 # Example 5 (Replace Multiple Elements)
 
@@ -260,7 +260,7 @@ console.log(numbers);
 [10,100,200,40]
 ```
 
----
+
 
 # Example 6 (Insert Multiple Elements)
 
@@ -294,7 +294,7 @@ console.log(letters);
 ["A","B","C","D"]
 ```
 
----
+
 
 # Example 7 (Remove All Elements After an Index)
 
@@ -328,7 +328,7 @@ console.log(data);
 
 Everything from index **2** onward is removed.
 
----
+
 
 # Example 8 (Negative Index)
 
@@ -356,7 +356,7 @@ console.log(numbers);
 [10,20,40]
 ```
 
----
+
 
 # Real Project Example 1
 
@@ -386,7 +386,7 @@ console.log(cart);
 ["Laptop","Keyboard"]
 ```
 
----
+
 
 # Real Project Example 2
 
@@ -414,7 +414,7 @@ console.log(students);
 ["Rahim","Rokon"]
 ```
 
----
+
 
 # Real Project Example 3
 
@@ -444,7 +444,7 @@ console.log(queue);
 ]
 ```
 
----
+
 
 # Real Project Example 4
 
@@ -476,7 +476,7 @@ console.log(notifications);
 ["New Message"]
 ```
 
----
+
 
 # Real Project Example 5
 
@@ -516,23 +516,23 @@ console.log(products);
 ]
 ```
 
----
+
 
 # Best Practices
 
-✅ Use `splice()` when you need to modify the original array.
+ Use `splice()` when you need to modify the original array.
 
----
 
-✅ Store removed elements if needed.
+
+ Store removed elements if needed.
 
 ```javascript
 const removed = array.splice(1,2);
 ```
 
----
 
-✅ Use `indexOf()` before `splice()` when removing a specific value.
+
+ Use `indexOf()` before `splice()` when removing a specific value.
 
 ```javascript
 const index = array.indexOf(value);
@@ -544,9 +544,9 @@ if(index !== -1){
 }
 ```
 
----
 
-✅ Use meaningful variable names.
+
+ Use meaningful variable names.
 
 ```javascript
 removedItems
@@ -556,7 +556,7 @@ updatedProducts
 deletedUsers
 ```
 
----
+
 
 # Common Mistakes
 
@@ -576,7 +576,7 @@ splice()
 
 Changes the original array.
 
----
+
 
 ## Mistake 2
 
@@ -596,7 +596,7 @@ Output
 [1,3]
 ```
 
----
+
 
 ## Mistake 3
 
@@ -608,7 +608,7 @@ const removed = arr.splice(1,2);
 
 The returned array contains the removed elements.
 
----
+
 
 ## Mistake 4
 
@@ -628,7 +628,7 @@ Output
 
 Nothing is removed.
 
----
+
 
 # Interview Questions
 
@@ -636,19 +636,19 @@ Nothing is removed.
 
 It adds, removes, or replaces elements in an array.
 
----
+
 
 ## Does `splice()` modify the original array?
 
-✅ Yes.
+ Yes.
 
----
+
 
 ## What does `splice()` return?
 
 An array containing the removed elements.
 
----
+
 
 ## Which parameter specifies where to start?
 
@@ -656,7 +656,7 @@ An array containing the removed elements.
 start
 ```
 
----
+
 
 ## Which parameter specifies how many elements to remove?
 
@@ -664,19 +664,19 @@ start
 deleteCount
 ```
 
----
+
 
 ## Can `splice()` insert elements?
 
-✅ Yes.
+ Yes.
 
----
+
 
 ## Can `splice()` replace elements?
 
-✅ Yes.
+ Yes.
 
----
+
 
 ## Which method copies an array without modifying it?
 
@@ -684,7 +684,7 @@ deleteCount
 slice()
 ```
 
----
+
 
 # Summary Table
 
@@ -694,20 +694,20 @@ slice()
 | Purpose | Add, remove, or replace elements |
 | Parameters | start, deleteCount, items |
 | Returns | Removed elements |
-| Changes Original Array | ✅ Yes |
-| Supports Negative Index | ✅ Yes |
+| Changes Original Array |  Yes |
+| Supports Negative Index |  Yes |
 | Common Uses | CRUD Operations, Shopping Cart, Todo List |
 
----
+
 
 # Quick Comparison
 
 | Method | Purpose | Returns | Changes Original Array |
-|---------|---------|---------|------------------------|
-| `slice()` | Copy elements | New Array | ❌ No |
-| `splice()` | Add / Remove / Replace | Removed Elements | ✅ Yes |
+|--------|---------|---------|------------------------|
+| `slice()` | Copy elements | New Array |  No |
+| `splice()` | Add / Remove / Replace | Removed Elements |  Yes |
 
----
+
 
 # Final Notes
 
@@ -715,11 +715,11 @@ The `splice()` method is one of the most important array methods in JavaScript b
 
 It is widely used in:
 
-- ✅ Shopping Cart Applications
-- ✅ Todo List Applications
-- ✅ CRUD Operations
-- ✅ Queue Management
-- ✅ Dynamic Tables
-- ✅ React State Updates (using copied arrays)
+-  Shopping Cart Applications
+-  Todo List Applications
+-  CRUD Operations
+-  Queue Management
+-  Dynamic Tables
+-  React State Updates (using copied arrays)
 
 Mastering `splice()` is essential before learning advanced array methods like `map()`, `filter()`, `find()`, and `reduce()`.

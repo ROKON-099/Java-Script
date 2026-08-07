@@ -4,7 +4,7 @@ The `slice()` method is one of the most useful array methods in JavaScript. It i
 
 Unlike `splice()`, the `slice()` method **does not change the original array**.
 
----
+
 
 # Table of Contents
 
@@ -22,7 +22,7 @@ Unlike `splice()`, the `slice()` method **does not change the original array**.
 - Interview Questions
 - Summary Table
 
----
+
 
 # What is slice()?
 
@@ -34,7 +34,7 @@ It copies elements from the original array into a **new array**.
 
 The original array remains unchanged.
 
----
+
 
 # Why Use slice()?
 
@@ -46,7 +46,7 @@ We use `slice()` when we need to:
 - Display paginated data
 - Avoid modifying the original array
 
----
+
 
 # Syntax
 
@@ -56,7 +56,7 @@ array.slice(start);
 array.slice(start, end);
 ```
 
----
+
 
 # Parameters
 
@@ -65,7 +65,7 @@ array.slice(start, end);
 | start | Starting index (included) |
 | end | Ending index (excluded, optional) |
 
----
+
 
 # Return Value
 
@@ -73,7 +73,7 @@ Returns a **new array** containing the selected elements.
 
 The original array is **not modified**.
 
----
+
 
 # How slice() Works
 
@@ -103,7 +103,7 @@ Original Array
 ["Apple","Mango","Orange","Banana"]
 ```
 
----
+
 
 # Example 1 (Basic)
 
@@ -142,7 +142,7 @@ console.log(fruits);
 - Returns a new array
 - Original array remains unchanged
 
----
+
 
 # Example 2 (Only Start Index)
 
@@ -170,7 +170,7 @@ console.log(numbers.slice(2));
 [30,40,50]
 ```
 
----
+
 
 # Example 3 (Copy Entire Array)
 
@@ -196,7 +196,7 @@ console.log(copy);
 ["Red","Green","Blue"]
 ```
 
----
+
 
 # Example 4 (Negative Index)
 
@@ -234,7 +234,7 @@ Negative indexes count from the end.
 -2 → Second last element
 ```
 
----
+
 
 # Example 5 (Negative Start and End)
 
@@ -262,7 +262,7 @@ console.log(numbers.slice(-4,-1));
 [20,30,40]
 ```
 
----
+
 
 # Example 6 (Empty Result)
 
@@ -286,7 +286,7 @@ console.log(numbers.slice(5));
 []
 ```
 
----
+
 
 # Example 7 (Objects)
 
@@ -327,7 +327,7 @@ console.log(result);
 ]
 ```
 
----
+
 
 # Example 8 (Strings in Array)
 
@@ -353,7 +353,7 @@ console.log(cities.slice(1,3));
 ["Chattogram","Rajshahi"]
 ```
 
----
+
 
 # Real Project Example 1
 
@@ -385,7 +385,7 @@ console.log(pageOne);
 ["Laptop","Mouse"]
 ```
 
----
+
 
 # Real Project Example 2
 
@@ -413,7 +413,7 @@ console.log(backup);
 ["Rahim","Karim","Rokon"]
 ```
 
----
+
 
 # Real Project Example 3
 
@@ -443,7 +443,7 @@ console.log(latest);
 ["News 3","News 4"]
 ```
 
----
+
 
 # Real Project Example 4
 
@@ -473,7 +473,7 @@ console.log(featured);
 ["Laptop","Mouse","Keyboard"]
 ```
 
----
+
 
 # Real Project Example 5
 
@@ -505,31 +505,31 @@ console.log(topThree);
 [98,95,90]
 ```
 
----
+
 
 # Best Practices
 
-✅ Use `slice()` when you don't want to modify the original array.
+Use `slice()` when you don't want to modify the original array.
 
----
 
-✅ Use `slice()` to create a copy of an array.
+
+Use `slice()` to create a copy of an array.
 
 ```javascript
 const copy = array.slice();
 ```
 
----
 
-✅ Use negative indexes to get the last elements.
+
+Use negative indexes to get the last elements.
 
 ```javascript
 array.slice(-3);
 ```
 
----
 
-✅ Use meaningful variable names.
+
+Use meaningful variable names.
 
 ```javascript
 copy
@@ -541,7 +541,7 @@ featuredProducts
 latestNews
 ```
 
----
+
 
 # Common Mistakes
 
@@ -567,7 +567,7 @@ Output
 
 The original array remains unchanged.
 
----
+
 
 ## Mistake 2
 
@@ -585,7 +585,7 @@ splice()
 
 Removes or inserts elements.
 
----
+
 
 ## Mistake 3
 
@@ -605,7 +605,7 @@ Output
 
 Index **3** is **not included**.
 
----
+
 
 ## Mistake 4
 
@@ -623,7 +623,7 @@ Output
 []
 ```
 
----
+
 
 # Interview Questions
 
@@ -631,33 +631,33 @@ Output
 
 It returns a copy of part of an array.
 
----
+
 
 ## Does `slice()` modify the original array?
 
-❌ No.
+ No.
 
----
+
 
 ## What does `slice()` return?
 
 A new array.
 
----
+
 
 ## Is the ending index included?
 
-❌ No.
+ No.
 
 The ending index is excluded.
 
----
+
 
 ## Can `slice()` use negative indexes?
 
-✅ Yes.
+Yes.
 
----
+
 
 ## Which method modifies the original array?
 
@@ -665,7 +665,7 @@ The ending index is excluded.
 splice()
 ```
 
----
+
 
 ## Which method copies an array?
 
@@ -673,7 +673,7 @@ splice()
 slice()
 ```
 
----
+
 
 # Summary Table
 
@@ -683,30 +683,30 @@ slice()
 | Purpose | Copy part of an array |
 | Parameters | start, end (optional) |
 | Returns | New array |
-| Changes Original Array | ❌ No |
-| Supports Negative Index | ✅ Yes |
+| Changes Original Array |  No |
+| Supports Negative Index | Yes |
 | Common Uses | Copy, Backup, Pagination, Filtering |
 
----
+
 
 # Quick Comparison
 
 | Method | Returns | Changes Original Array |
-|---------|----------|------------------------|
-| `slice()` | New Array | ❌ No |
-| `splice()` | Removed Elements | ✅ Yes |
+|--------|---------|------------------------|
+| `slice()` | New Array |  No |
+| `splice()` | Removed Elements | Yes |
 
----
+
 
 # Final Notes
 
 The `slice()` method is one of the safest array methods because it **never changes the original array**. It is widely used in:
 
-- ✅ React applications
-- ✅ Pagination
-- ✅ Data backup
-- ✅ Copying arrays
-- ✅ Filtering displayed data
-- ✅ API response handling
+-  React applications
+-  Pagination
+-  Data backup
+-  Copying arrays
+-  Filtering displayed data
+-  API response handling
 
 Mastering `slice()` is essential before learning `splice()`, `map()`, `filter()`, and other advanced array methods.

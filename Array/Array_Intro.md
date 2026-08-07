@@ -1,30 +1,30 @@
 
 
-# JavaScript Array Method - indexOf()
+# JavaScript Array Method  indexOf()
 
 The `indexOf()` method is one of the most commonly used array methods in JavaScript. It is used to find the **index (position)** of a specific element in an array.
 
-If the element is not found, it returns **-1**.
+If the element is not found, it returns **1**.
 
----
+
 
 # Table of Contents
 
-- What is indexOf()?
-- Why Use indexOf()?
-- Syntax
-- Parameters
-- Return Value
-- How indexOf() Works
-- Basic Examples
-- Multiple Examples
-- Real Project Examples
-- Best Practices
-- Common Mistakes
-- Interview Questions
-- Summary Table
+ What is indexOf()?
+ Why Use indexOf()?
+ Syntax
+ Parameters
+ Return Value
+ How indexOf() Works
+ Basic Examples
+ Multiple Examples
+ Real Project Examples
+ Best Practices
+ Common Mistakes
+ Interview Questions
+ Summary Table
 
----
+
 
 # What is indexOf()?
 
@@ -35,24 +35,24 @@ The `indexOf()` method searches an array for a specified element and returns the
 If the element does not exist, it returns
 
 ```javascript
--1
+1
 ```
 
 It **does not modify** the original array.
 
----
+
 
 # Why Use indexOf()?
 
 We use `indexOf()` when we need to:
 
-- Find an element's position
-- Check if a value exists
-- Remove an item using its index
-- Update an element
-- Search data inside an array
+ Find an element's position
+ Check if a value exists
+ Remove an item using its index
+ Update an element
+ Search data inside an array
 
----
+
 
 # Syntax
 
@@ -62,7 +62,7 @@ array.indexOf(value);
 array.indexOf(value, startIndex);
 ```
 
----
+
 
 # Parameters
 
@@ -71,16 +71,16 @@ array.indexOf(value, startIndex);
 | value | The value to search for |
 | startIndex | Optional. The index to start searching from |
 
----
+
 
 # Return Value
 
 Returns
 
-- Index of the first matching element
-- `-1` if the value is not found
+ Index of the first matching element
+ `1` if the value is not found
 
----
+
 
 # How indexOf() Works
 
@@ -104,7 +104,7 @@ Result
 1
 ```
 
----
+
 
 Array
 
@@ -123,10 +123,10 @@ indexOf("Banana")
 Result
 
 ```javascript
--1
+1
 ```
 
----
+
 
 # Example 1 (Basic)
 
@@ -154,7 +154,7 @@ console.log(fruits.indexOf("Mango"));
 
 "Mango" is located at index **1**.
 
----
+
 
 # Example 2 (Value Not Found)
 
@@ -175,10 +175,10 @@ console.log(fruits.indexOf("Banana"));
 ### Output
 
 ```javascript
--1
+1
 ```
 
----
+
 
 # Example 3 (Numbers)
 
@@ -204,7 +204,7 @@ console.log(numbers.indexOf(30));
 2
 ```
 
----
+
 
 # Example 4 (Duplicate Values)
 
@@ -234,7 +234,7 @@ console.log(numbers.indexOf(20));
 
 `indexOf()` always returns the **first matching index**.
 
----
+
 
 # Example 5 (Using startIndex)
 
@@ -264,7 +264,7 @@ console.log(numbers.indexOf(20,2));
 
 Searching starts from index **2**, so the second `20` is found.
 
----
+
 
 # Example 6 (Empty Array)
 
@@ -277,10 +277,10 @@ console.log(data.indexOf(100));
 ### Output
 
 ```javascript
--1
+1
 ```
 
----
+
 
 # Example 7 (Case Sensitive)
 
@@ -299,14 +299,14 @@ console.log(fruits.indexOf("apple"));
 ### Output
 
 ```javascript
--1
+1
 ```
 
 ### Explanation
 
-JavaScript is case-sensitive.
+JavaScript is casesensitive.
 
----
+
 
 # Example 8 (Store Index)
 
@@ -332,7 +332,7 @@ console.log(index);
 2
 ```
 
----
+
 # Real Project Example 1
 
 ## Remove a Product
@@ -361,7 +361,7 @@ console.log(cart);
 ["Laptop","Keyboard"]
 ```
 
----
+
 
 # Real Project Example 2
 
@@ -387,7 +387,7 @@ console.log(students.indexOf("Karim"));
 1
 ```
 
----
+
 
 # Real Project Example 3
 
@@ -421,7 +421,7 @@ console.log(status);
 ]
 ```
 
----
+
 
 # Real Project Example 4
 
@@ -447,7 +447,7 @@ console.log(categories.indexOf("CSS"));
 1
 ```
 
----
+
 
 # Real Project Example 5
 
@@ -473,29 +473,29 @@ console.log(roles.indexOf("Admin"));
 2
 ```
 
----
+
 
 # Best Practices
 
-✅ Use `indexOf()` when you need the position of an element.
+ Use `indexOf()` when you need the position of an element.
 
----
 
-✅ Always check for `-1`.
+
+ Always check for `1`.
 
 ```javascript
 const index = array.indexOf(value);
 
-if(index !== -1){
+if(index !== 1){
 
     console.log("Found");
 
 }
 ```
 
----
 
-✅ Use meaningful variable names.
+
+ Use meaningful variable names.
 
 ```javascript
 productIndex
@@ -505,13 +505,13 @@ studentIndex
 userIndex
 ```
 
----
+
 
 # Common Mistakes
 
 ## Mistake 1
 
-Ignoring `-1`.
+Ignoring `1`.
 
 Wrong
 
@@ -524,10 +524,10 @@ fruits[index] = "Apple";
 Always check
 
 ```javascript
-if(index !== -1)
+if(index !== 1)
 ```
 
----
+
 
 ## Mistake 2
 
@@ -547,7 +547,7 @@ Output
 
 Use `lastIndexOf()` for the last occurrence.
 
----
+
 
 ## Mistake 3
 
@@ -574,12 +574,12 @@ console.log(users.indexOf({
 Output
 
 ```javascript
--1
+1
 ```
 
 Objects are compared by reference.
 
----
+
 
 ## Mistake 4
 
@@ -592,10 +592,10 @@ Ignoring case sensitivity.
 Output
 
 ```javascript
--1
+1
 ```
 
----
+
 
 # Interview Questions
 
@@ -603,21 +603,21 @@ Output
 
 The index of the first matching element.
 
----
+
 
 ## What does it return if the element is not found?
 
 ```javascript
--1
+1
 ```
 
----
+
 
 ## Does `indexOf()` modify the original array?
 
  No.
 
----
+
 
 ## Can it search from a specific index?
 
@@ -627,13 +627,13 @@ The index of the first matching element.
 array.indexOf(value,startIndex);
 ```
 
----
+
 
 ## Does `indexOf()` return the first or last occurrence?
 
 The **first** occurrence.
 
----
+
 
 ## Which method returns the last occurrence?
 
@@ -641,7 +641,7 @@ The **first** occurrence.
 lastIndexOf()
 ```
 
----
+
 
 ## Which method returns `true` or `false` instead of an index?
 
@@ -649,7 +649,7 @@ lastIndexOf()
 includes()
 ```
 
----
+
 
 # Summary Table
 
@@ -658,31 +658,31 @@ includes()
 | Method | `indexOf()` |
 | Purpose | Find the first index of a value |
 | Parameters | value, startIndex (optional) |
-| Returns | Index or `-1` |
+| Returns | Index or `1` |
 | Changes Original Array |  No |
 | Common Uses | Search, Update, Remove, Validation |
 
----
+
 
 # Quick Comparison
 
 | Method | Returns | Modifies Array |
-|---------|----------|----------------|
+|--------|---------|----------------|
 | `includes()` | `true` / `false` |  No |
-| `indexOf()` | First Index / `-1` |  No |
-| `lastIndexOf()` | Last Index / `-1` |  No |
+| `indexOf()` | First Index / `1` |  No |
+| `lastIndexOf()` | Last Index / `1` |  No |
 
----
+
 
 # Final Notes
 
 The `indexOf()` method is essential when you need the **position** of an element rather than just checking if it exists. It is widely used in:
 
--  Search functionality
--  Updating array elements
--  Removing items with `splice()`
--  Data validation
--  Form processing
--  Menu and navigation systems
+  Search functionality
+  Updating array elements
+  Removing items with `splice()`
+  Data validation
+  Form processing
+  Menu and navigation systems
 
 Mastering `indexOf()` is an important step before learning more advanced array methods such as `find()`, `findIndex()`, and `filter()`.

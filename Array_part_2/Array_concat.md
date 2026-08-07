@@ -4,7 +4,7 @@ The `concat()` method is one of the most useful array methods in JavaScript. It 
 
 Unlike `push()` or `splice()`, the `concat()` method **does not modify the original array**.
 
----
+
 
 # Table of Contents
 
@@ -22,7 +22,7 @@ Unlike `push()` or `splice()`, the `concat()` method **does not modify the origi
 - Interview Questions
 - Summary Table
 
----
+
 
 # What is concat()?
 
@@ -32,7 +32,7 @@ The `concat()` method combines two or more arrays and returns a **new array**.
 
 The original arrays remain unchanged.
 
----
+
 
 # Why Use concat()?
 
@@ -44,7 +44,7 @@ We use `concat()` when we need to:
 - Merge student lists
 - Keep the original arrays unchanged
 
----
+
 
 # Syntax
 
@@ -56,17 +56,17 @@ array1.concat(array2, array3);
 array1.concat(value1, value2);
 ```
 
----
+
 
 # Parameters
 
 | Parameter | Description |
-|-----------|-------------|
+|--|-|
 | array2 | Another array to combine |
 | array3 | Additional array (Optional) |
 | value | Individual value(s) (Optional) |
 
----
+
 
 # Return Value
 
@@ -74,7 +74,7 @@ Returns a **new array** containing all merged values.
 
 The original arrays are **not modified**.
 
----
+
 
 # How concat() Works
 
@@ -106,7 +106,7 @@ New Array
 ["Apple","Mango","Orange","Banana"]
 ```
 
----
+
 
 # Example 1 (Basic)
 
@@ -144,7 +144,7 @@ console.log(allFruits);
 - A new array is created.
 - The original arrays remain unchanged.
 
----
+
 
 # Example 2 (Three Arrays)
 
@@ -166,7 +166,7 @@ console.log(result);
 [1,2,3,4,5,6]
 ```
 
----
+
 
 # Example 3 (Array + Values)
 
@@ -196,7 +196,7 @@ console.log(result);
 [10,20,30,40]
 ```
 
----
+
 
 # Example 4 (Empty Array)
 
@@ -220,7 +220,7 @@ console.log(result);
 [100,200]
 ```
 
----
+
 
 # Example 5 (Strings)
 
@@ -257,7 +257,7 @@ console.log(course);
 ]
 ```
 
----
+
 
 # Example 6 (Objects)
 
@@ -296,7 +296,7 @@ console.log(users);
 ]
 ```
 
----
+
 
 # Example 7 (Original Arrays Stay Unchanged)
 
@@ -324,7 +324,7 @@ console.log(result);
 [1,2,3,4]
 ```
 
----
+
 
 # Example 8 (Nested Arrays)
 
@@ -355,7 +355,7 @@ console.log(result);
 ]
 ```
 
----
+
 
 # Real Project Example 1
 
@@ -394,7 +394,7 @@ console.log(cart);
 ]
 ```
 
----
+
 
 # Real Project Example 2
 
@@ -433,7 +433,7 @@ console.log(students);
 ]
 ```
 
----
+
 
 # Real Project Example 3
 
@@ -471,7 +471,7 @@ console.log(data);
 [1,2,3,4,5,6]
 ```
 
----
+
 
 # Real Project Example 4
 
@@ -510,7 +510,7 @@ console.log(products);
 ]
 ```
 
----
+
 
 # Real Project Example 5
 
@@ -552,23 +552,23 @@ console.log(fullStack);
 ]
 ```
 
----
+
 
 # Best Practices
 
-✅ Use `concat()` when you want to keep the original arrays unchanged.
+ Use `concat()` when you want to keep the original arrays unchanged.
 
----
 
-✅ Store the returned array.
+
+ Store the returned array.
 
 ```javascript
 const result = arr1.concat(arr2);
 ```
 
----
 
-✅ Use meaningful variable names.
+
+ Use meaningful variable names.
 
 ```javascript
 mergedData
@@ -580,11 +580,11 @@ students
 users
 ```
 
----
 
-✅ Use `concat()` instead of manually looping when merging arrays.
 
----
+ Use `concat()` instead of manually looping when merging arrays.
+
+
 
 # Common Mistakes
 
@@ -608,7 +608,7 @@ Output
 [1,2]
 ```
 
----
+
 
 ## Mistake 2
 
@@ -626,7 +626,7 @@ Correct
 const merged = arr1.concat(arr2);
 ```
 
----
+
 
 ## Mistake 3
 
@@ -644,7 +644,7 @@ concat()
 
 Creates a **new array**.
 
----
+
 
 ## Mistake 4
 
@@ -666,7 +666,7 @@ const copy = users.concat();
 
 Objects are still copied by **reference**.
 
----
+
 
 # Interview Questions
 
@@ -674,39 +674,39 @@ Objects are still copied by **reference**.
 
 It combines two or more arrays into a new array.
 
----
+
 
 ## Does `concat()` modify the original array?
 
-❌ No.
+ No.
 
----
+
 
 ## What does `concat()` return?
 
 A new merged array.
 
----
+
 
 ## Can `concat()` merge multiple arrays?
 
-✅ Yes.
+ Yes.
 
 ```javascript
 arr1.concat(arr2,arr3);
 ```
 
----
+
 
 ## Can `concat()` combine values and arrays?
 
-✅ Yes.
+ Yes.
 
 ```javascript
 arr.concat(4,5);
 ```
 
----
+
 
 ## Which method modifies the original array?
 
@@ -720,7 +720,7 @@ or
 splice()
 ```
 
----
+
 
 ## Which method creates a new merged array?
 
@@ -728,7 +728,7 @@ splice()
 concat()
 ```
 
----
+
 
 # Summary Table
 
@@ -738,31 +738,31 @@ concat()
 | Purpose | Merge arrays |
 | Parameters | Arrays or values |
 | Returns | New merged array |
-| Changes Original Array | ❌ No |
-| Supports Multiple Arrays | ✅ Yes |
+| Changes Original Array |  No |
+| Supports Multiple Arrays |  Yes |
 | Common Uses | API Data, Shopping Cart, Student List, Products |
 
----
+
 
 # Quick Comparison
 
 | Method | Purpose | Returns | Changes Original Array |
-|---------|---------|---------|------------------------|
-| `concat()` | Merge arrays | New Array | ❌ No |
-| `push()` | Add to end | New Length | ✅ Yes |
-| `splice()` | Add/Remove/Replace | Removed Elements | ✅ Yes |
+|--------|---------|---------|------------------------|
+| `concat()` | Merge arrays | New Array |  No |
+| `push()` | Add to end | New Length |  Yes |
+| `splice()` | Add/Remove/Replace | Removed Elements |  Yes |
 
----
+
 
 # Final Notes
 
 The `concat()` method is one of the safest ways to merge arrays because it **never modifies the original arrays**. It is widely used in:
 
-- ✅ React state updates
-- ✅ API response merging
-- ✅ Shopping cart systems
-- ✅ Student management systems
-- ✅ Product catalogs
-- ✅ Data processing
+-  React state updates
+-  API response merging
+-  Shopping cart systems
+-  Student management systems
+-  Product catalogs
+-  Data processing
 
 Mastering `concat()` is essential before learning advanced array methods like `flat()`, `map()`, `filter()`, and `reduce()`.

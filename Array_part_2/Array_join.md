@@ -6,7 +6,7 @@ You can choose any separator such as a comma, space, dash, or any custom charact
 
 Unlike `splice()` or `push()`, the `join()` method **does not modify the original array**.
 
----
+
 
 # Table of Contents
 
@@ -24,7 +24,7 @@ Unlike `splice()` or `push()`, the `join()` method **does not modify the origina
 - Interview Questions
 - Summary Table
 
----
+
 
 # What is join()?
 
@@ -36,7 +36,7 @@ The elements are separated by a specified separator.
 
 If no separator is provided, JavaScript uses a comma (`,`).
 
----
+
 
 # Why Use join()?
 
@@ -49,7 +49,7 @@ We use `join()` when we need to:
 - Format user input
 - Build readable text
 
----
+
 
 # Syntax
 
@@ -59,12 +59,12 @@ array.join();
 array.join(separator);
 ```
 
----
+
 
 # Parameters
 
 | Parameter | Description |
-|-----------|-------------|
+|--|-|
 | separator | Optional. Character(s) placed between elements |
 
 Common separators
@@ -81,7 +81,7 @@ Common separators
 "/"
 ```
 
----
+
 
 # Return Value
 
@@ -89,7 +89,7 @@ Returns a **string**.
 
 The original array is **not modified**.
 
----
+
 
 # How join() Works
 
@@ -113,7 +113,7 @@ Result
 "Apple,Mango,Orange"
 ```
 
----
+
 
 Array
 
@@ -135,7 +135,7 @@ Result
 "Apple - Mango - Orange"
 ```
 
----
+
 
 # Example 1 (Default Separator)
 
@@ -163,7 +163,7 @@ Apple,Mango,Orange
 
 Since no separator is provided, JavaScript uses a comma (`,`).
 
----
+
 
 # Example 2 (Space Separator)
 
@@ -187,7 +187,7 @@ console.log(words.join(" "));
 I Love JavaScript
 ```
 
----
+
 
 # Example 3 (Dash Separator)
 
@@ -211,7 +211,7 @@ console.log(numbers.join("-"));
 10-20-30
 ```
 
----
+
 
 # Example 4 (Pipe Separator)
 
@@ -235,7 +235,7 @@ console.log(colors.join(" | "));
 Red | Green | Blue
 ```
 
----
+
 
 # Example 5 (Empty String)
 
@@ -261,7 +261,7 @@ JS
 
 No separator is added between the elements.
 
----
+
 
 # Example 6 (Single Element)
 
@@ -281,7 +281,7 @@ console.log(items.join());
 Laptop
 ```
 
----
+
 
 # Example 7 (Empty Array)
 
@@ -299,7 +299,7 @@ console.log(data.join(","));
 
 An empty string is returned.
 
----
+
 
 # Example 8 (Original Array)
 
@@ -329,7 +329,7 @@ Apple - Mango
 
 The original array remains unchanged.
 
----
+
 
 # Real Project Example 1
 
@@ -355,7 +355,7 @@ console.log(students.join(", "));
 Rahim, Karim, Rokon
 ```
 
----
+
 
 # Real Project Example 2
 
@@ -381,7 +381,7 @@ console.log(path.join("/"));
 users/profile/1
 ```
 
----
+
 
 # Real Project Example 3
 
@@ -407,7 +407,7 @@ console.log(row.join(","));
 John,25,Bangladesh
 ```
 
----
+
 
 # Real Project Example 4
 
@@ -433,7 +433,7 @@ console.log(tags.join(" | "));
 JavaScript | React | Node.js
 ```
 
----
+
 
 # Real Project Example 5
 
@@ -461,15 +461,15 @@ console.log(otp.join(""));
 4829
 ```
 
----
+
 
 # Best Practices
 
-✅ Use `join()` when converting an array into a readable string.
+ Use `join()` when converting an array into a readable string.
 
----
 
-✅ Choose an appropriate separator.
+
+ Choose an appropriate separator.
 
 ```javascript
 array.join(", ");
@@ -479,17 +479,17 @@ array.join(" ");
 array.join("-");
 ```
 
----
 
-✅ Store the returned string.
+
+ Store the returned string.
 
 ```javascript
 const text = array.join(", ");
 ```
 
----
 
-✅ Use meaningful variable names.
+
+ Use meaningful variable names.
 
 ```javascript
 studentList
@@ -501,7 +501,7 @@ urlPath
 otpCode
 ```
 
----
+
 
 # Common Mistakes
 
@@ -523,7 +523,7 @@ Output
 string
 ```
 
----
+
 
 ## Mistake 2
 
@@ -545,7 +545,7 @@ Output
 
 The original array remains unchanged.
 
----
+
 
 ## Mistake 3
 
@@ -563,7 +563,7 @@ Apple,Mango,Orange
 
 JavaScript uses a comma by default.
 
----
+
 
 ## Mistake 4
 
@@ -581,7 +581,7 @@ concat()
 
 Returns a **new array**.
 
----
+
 
 # Interview Questions
 
@@ -589,19 +589,19 @@ Returns a **new array**.
 
 It converts an array into a string.
 
----
+
 
 ## Does `join()` modify the original array?
 
-❌ No.
+ No.
 
----
+
 
 ## What does `join()` return?
 
 A string.
 
----
+
 
 ## What is the default separator?
 
@@ -611,23 +611,23 @@ A comma
 ","
 ```
 
----
+
 
 ## Can we use a custom separator?
 
-✅ Yes.
+ Yes.
 
 ```javascript
 array.join(" | ");
 ```
 
----
+
 
 ## What does `join("")` do?
 
 It joins all elements without any separator.
 
----
+
 
 ## Which method combines arrays?
 
@@ -635,7 +635,7 @@ It joins all elements without any separator.
 concat()
 ```
 
----
+
 
 # Summary Table
 
@@ -645,31 +645,31 @@ concat()
 | Purpose | Convert an array into a string |
 | Parameters | Separator (optional) |
 | Returns | String |
-| Changes Original Array | ❌ No |
+| Changes Original Array |  No |
 | Default Separator | Comma (`,`) |
 | Common Uses | CSV, URLs, OTP, Display Lists |
 
----
+
 
 # Quick Comparison
 
 | Method | Returns | Changes Original Array |
-|---------|----------|------------------------|
-| `join()` | String | ❌ No |
-| `concat()` | New Array | ❌ No |
-| `push()` | New Length | ✅ Yes |
+|--------|---------|------------------------|
+| `join()` | String |  No |
+| `concat()` | New Array |  No |
+| `push()` | New Length |  Yes |
 
----
+
 
 # Final Notes
 
 The `join()` method is one of the easiest ways to convert an array into a formatted string. It is commonly used in:
 
-- ✅ CSV file generation
-- ✅ URL creation
-- ✅ Displaying names
-- ✅ OTP generation
-- ✅ Tags and categories
-- ✅ Report generation
+-  CSV file generation
+-  URL creation
+-  Displaying names
+-  OTP generation
+-  Tags and categories
+-  Report generation
 
 Mastering `join()` will help you format array data efficiently and prepare you for working with strings, APIs, and file generation in JavaScript.
