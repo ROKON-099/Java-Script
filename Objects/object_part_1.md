@@ -8,7 +8,7 @@ An **Object** is a collection of related data stored as **key-value pairs**.
 
 Objects allow you to store multiple related values in a single variable.
 
----
+
 
 ## Why Do We Use Objects?
 
@@ -40,7 +40,7 @@ const user = {
 };
 ```
 
----
+
 
 # Object Structure
 
@@ -84,13 +84,13 @@ is called the **Key (Property)**
 
 is called the **Value**
 
----
+
 
 # Creating Objects
 
 There are several ways to create objects.
 
----
+
 
 ## Method 1 (Most Common)
 
@@ -118,7 +118,7 @@ console.log(student);
 }
 ```
 
----
+
 
 ## Method 2
 
@@ -142,7 +142,7 @@ console.log(person);
 }
 ```
 
----
+
 
 # Properties
 
@@ -150,7 +150,7 @@ console.log(person);
 
 A **Property** is a key-value pair inside an object.
 
----
+
 
 ## Example
 
@@ -166,17 +166,17 @@ const laptop = {
 };
 ```
 
----
+
 
 ### Properties
 
 | Property | Value |
-|------------|---------|
+|----------|-------|
 | brand | HP |
 | model | EliteBook |
 | ram | 16GB |
 
----
+
 
 Another Example
 
@@ -192,13 +192,13 @@ const car = {
 };
 ```
 
----
+
 
 # Accessing Properties
 
 There are two ways.
 
----
+
 
 ## 1. Dot Notation (Recommended)
 
@@ -223,7 +223,7 @@ Rokon
 23
 ```
 
----
+
 
 ## 2. Bracket Notation
 
@@ -240,7 +240,7 @@ Rokon
 23
 ```
 
----
+
 
 ## When to Use Bracket Notation?
 
@@ -266,7 +266,7 @@ console.log(student[key]);
 Rokon
 ```
 
----
+
 
 # Updating Properties
 
@@ -274,7 +274,7 @@ Rokon
 
 You can change the value of an existing property.
 
----
+
 
 ## Example
 
@@ -301,7 +301,7 @@ console.log(student);
 }
 ```
 
----
+
 
 ## Update Multiple Properties
 
@@ -330,7 +330,7 @@ console.log(product);
 }
 ```
 
----
+
 
 # Adding Properties
 
@@ -338,7 +338,7 @@ console.log(product);
 
 New properties can be added at any time.
 
----
+
 
 ## Example
 
@@ -366,7 +366,7 @@ console.log(student);
 }
 ```
 
----
+
 
 ## Real Project Example
 
@@ -384,7 +384,7 @@ user.role = "Admin";
 console.log(user);
 ```
 
----
+
 
 # Deleting Properties
 
@@ -392,7 +392,7 @@ console.log(user);
 
 The `delete` keyword removes a property from an object.
 
----
+
 
 ## Syntax
 
@@ -400,7 +400,7 @@ The `delete` keyword removes a property from an object.
 delete object.property;
 ```
 
----
+
 
 ## Example
 
@@ -429,7 +429,7 @@ console.log(student);
 }
 ```
 
----
+
 
 ## Another Example
 
@@ -458,12 +458,12 @@ console.log(car);
 }
 ```
 
----
+
 
 # CRUD Operations with Objects
 
 | Operation | Description |
-|------------|-------------|
+|-----------|-------------|
 | Create | Create a new object |
 | Read | Access properties |
 | Update | Change property values |
@@ -493,7 +493,7 @@ delete student.name;
 console.log(student);
 ```
 
----
+
 
 # Real Project Example
 
@@ -521,27 +521,27 @@ delete user.email;
 console.log(user);
 ```
 
----
+
 
 # Best Practices
 
-✅ Use `const` when creating objects.
+ Use `const` when creating objects.
 
 ```javascript
 const user = {};
 ```
 
----
 
-✅ Use **dot notation** whenever possible.
+
+ Use **dot notation** whenever possible.
 
 ```javascript
 user.name
 ```
 
----
 
-✅ Use meaningful property names.
+
+ Use meaningful property names.
 
 ```javascript
 firstName
@@ -553,7 +553,7 @@ email
 phone
 ```
 
----
+
 
 # Common Mistakes
 
@@ -575,23 +575,23 @@ Output
 undefined
 ```
 
----
+
 
 ## Forgetting Quotes in Bracket Notation
 
-❌
+
 
 ```javascript
 user[name]
 ```
 
-✅
+
 
 ```javascript
 user["name"]
 ```
 
----
+
 
 ## Deleting a Non-Existing Property
 
@@ -601,7 +601,7 @@ delete user.salary;
 
 No error occurs, but nothing is deleted.
 
----
+
 
 # Interview Questions
 
@@ -609,13 +609,13 @@ No error occurs, but nothing is deleted.
 
 An object is a collection of key-value pairs used to store related data.
 
----
+
 
 ## What is a Property?
 
 A property is a key-value pair inside an object.
 
----
+
 
 ## How do you access object properties?
 
@@ -631,7 +631,7 @@ user.name
 user["name"]
 ```
 
----
+
 
 ## How do you update a property?
 
@@ -639,7 +639,7 @@ user["name"]
 user.age = 24;
 ```
 
----
+
 
 ## How do you add a property?
 
@@ -647,7 +647,7 @@ user.age = 24;
 user.country = "Bangladesh";
 ```
 
----
+
 
 ## How do you delete a property?
 
@@ -655,12 +655,12 @@ user.country = "Bangladesh";
 delete user.age;
 ```
 
----
+
 
 # Summary Table
 
 | Topic | Description |
-|---------|-------------|
+|-------|-------------|
 | Object | Collection of key-value pairs |
 | Property | Key-value pair inside an object |
 | Create | `{}` |
@@ -681,7 +681,7 @@ This section covers:
 - Common Mistakes
 - Interview Questions
 
----
+
 
 # Object Methods
 
@@ -693,7 +693,7 @@ Methods allow an object to perform actions.
 
 Unlike properties, methods contain executable code.
 
----
+
 
 ## Object Structure
 
@@ -721,7 +721,7 @@ Here,
 | age | Property |
 | greet | Method |
 
----
+
 
 # Creating an Object Method
 
@@ -739,7 +739,7 @@ const object = {
 };
 ```
 
----
+
 
 ## Example
 
@@ -765,7 +765,7 @@ student.greet();
 Welcome!
 ```
 
----
+
 
 # ES6 Short Method Syntax
 
@@ -807,7 +807,7 @@ Hello
 
 This is the preferred syntax in modern JavaScript.
 
----
+
 
 # Methods Can Use Properties
 
@@ -833,7 +833,7 @@ Output
 Hello Rokon
 ```
 
----
+
 
 # Returning Values
 
@@ -859,7 +859,7 @@ Output
 50
 ```
 
----
+
 
 # Multiple Methods
 
@@ -893,7 +893,7 @@ Output
 10
 ```
 
----
+
 
 # Why Use Methods?
 
@@ -931,7 +931,7 @@ const user = {
 
 Everything related to the user stays inside one object.
 
----
+
 
 # The this Keyword
 
@@ -939,7 +939,7 @@ Everything related to the user stays inside one object.
 
 The **this** keyword refers to the object that is calling the method.
 
----
+
 
 ## Example
 
@@ -967,7 +967,7 @@ Output
 Rokon
 ```
 
----
+
 
 ## Explanation
 
@@ -999,7 +999,7 @@ means
 student.name
 ```
 
----
+
 
 # Access Multiple Properties
 
@@ -1037,7 +1037,7 @@ Rokon
 3.9
 ```
 
----
+
 
 # Without this
 
@@ -1071,7 +1071,7 @@ Correct
 this.name
 ```
 
----
+
 
 # this in Another Object
 
@@ -1103,7 +1103,7 @@ Toyota
 Corolla
 ```
 
----
+
 
 # Real Project Example 1
 
@@ -1133,7 +1133,7 @@ Output
 MD Rokon
 ```
 
----
+
 
 # Real Project Example 2
 
@@ -1165,7 +1165,7 @@ Output
 45000
 ```
 
----
+
 
 # Real Project Example 3
 
@@ -1197,7 +1197,7 @@ Output
 15000
 ```
 
----
+
 
 # Real Project Example 4
 
@@ -1227,11 +1227,11 @@ Output
 88.33333333333333
 ```
 
----
+
 
 # Best Practices
 
-✅ Use ES6 method syntax.
+ Use ES6 method syntax.
 
 ```javascript
 greet(){
@@ -1239,21 +1239,21 @@ greet(){
 }
 ```
 
----
 
-✅ Use `this` to access properties inside methods.
+
+ Use `this` to access properties inside methods.
 
 ```javascript
 this.name
 ```
 
----
 
-✅ Keep related data and functions inside one object.
 
----
+ Keep related data and functions inside one object.
 
-✅ Use meaningful method names.
+
+
+ Use meaningful method names.
 
 Examples
 
@@ -1269,7 +1269,7 @@ getFullName()
 addToCart()
 ```
 
----
+
 
 # Common Mistakes
 
@@ -1293,7 +1293,7 @@ Correct
 console.log(user.greet());
 ```
 
----
+
 
 ## Forgetting this
 
@@ -1309,7 +1309,7 @@ Correct
 console.log(this.name);
 ```
 
----
+
 
 ## Using Arrow Functions as Object Methods
 
@@ -1347,7 +1347,7 @@ const user = {
 };
 ```
 
----
+
 
 ## Typo in Property Names
 
@@ -1365,7 +1365,7 @@ this.fullName
 
 JavaScript property names are case-sensitive.
 
----
+
 
 # Interview Questions
 
@@ -1373,7 +1373,7 @@ JavaScript property names are case-sensitive.
 
 A method is a function stored inside an object.
 
----
+
 
 ## What is the difference between a Property and a Method?
 
@@ -1382,19 +1382,19 @@ A method is a function stored inside an object.
 | Stores data | Stores a function |
 | Example: `name` | Example: `greet()` |
 
----
+
 
 ## What does `this` refer to?
 
 `this` refers to the object that calls the method.
 
----
+
 
 ## Why should you use `this`?
 
 It allows a method to access the object's own properties.
 
----
+
 
 ## Can an object have multiple methods?
 
@@ -1414,7 +1414,7 @@ const calculator = {
 };
 ```
 
----
+
 
 ## Which syntax is preferred for object methods?
 
@@ -1432,7 +1432,7 @@ greet: function(){
 }
 ```
 
----
+
 
 ## Can methods return values?
 
@@ -1446,12 +1446,12 @@ square(n){
 }
 ```
 
----
+
 
 # Summary Table
 
 | Topic | Description |
-|--------|-------------|
+|-------|-------------|
 | Method | Function inside an object |
 | ES6 Method Syntax | `greet(){}` |
 | this | Refers to the current object |

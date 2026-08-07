@@ -10,7 +10,7 @@ This section covers:
 - Interview Questions
 - Summary Table
 
----
+
 
 # Looping Objects (for...in)
 
@@ -20,7 +20,7 @@ The **for...in** loop is used to iterate over the **keys (properties)** of an ob
 
 It executes once for each enumerable property.
 
----
+
 
 ## Syntax
 
@@ -32,7 +32,7 @@ for (const key in object) {
 }
 ```
 
----
+
 
 ## Example
 
@@ -64,7 +64,7 @@ age
 cgpa
 ```
 
----
+
 
 # Access Values
 
@@ -96,7 +96,7 @@ Rokon
 3.9
 ```
 
----
+
 
 # Access Keys and Values
 
@@ -128,7 +128,7 @@ age 23
 cgpa 3.9
 ```
 
----
+
 
 # Why Use Bracket Notation?
 
@@ -146,7 +146,7 @@ student.key
 
 Wrong
 
----
+
 
 # Object Destructuring
 
@@ -156,7 +156,7 @@ Object destructuring extracts properties from an object and stores them in varia
 
 It makes code shorter and easier to read.
 
----
+
 
 ## Without Destructuring
 
@@ -186,7 +186,7 @@ Rokon
 23
 ```
 
----
+
 
 ## With Destructuring
 
@@ -214,7 +214,7 @@ Rokon
 23
 ```
 
----
+
 
 # Rename Variables
 
@@ -248,7 +248,7 @@ Rokon
 23
 ```
 
----
+
 
 # Default Values
 
@@ -276,7 +276,7 @@ console.log(country);
 Bangladesh
 ```
 
----
+
 
 # Nested Object Destructuring
 
@@ -308,7 +308,7 @@ console.log(city);
 Dhaka
 ```
 
----
+
 
 # Spread Operator with Objects
 
@@ -316,7 +316,7 @@ Dhaka
 
 The spread operator (`...`) copies or merges object properties into a new object.
 
----
+
 
 ## Copy an Object
 
@@ -347,7 +347,7 @@ console.log(copy);
 }
 ```
 
----
+
 
 # Add New Property
 
@@ -381,7 +381,7 @@ console.log(updatedUser);
 }
 ```
 
----
+
 
 # Update Existing Property
 
@@ -414,7 +414,7 @@ console.log(updatedUser);
 }
 ```
 
----
+
 
 # Merge Objects
 
@@ -454,7 +454,7 @@ console.log(profile);
 }
 ```
 
----
+
 
 # Property Override
 
@@ -486,7 +486,7 @@ console.log(updated);
 
 The last property with the same key overrides the previous one.
 
----
+
 
 # Real Project Example 1
 
@@ -520,7 +520,7 @@ email: rokon@gmail.com
 role: Admin
 ```
 
----
+
 
 # Real Project Example 2
 
@@ -558,7 +558,7 @@ Output
 }
 ```
 
----
+
 
 # Real Project Example 3
 
@@ -596,7 +596,7 @@ Laptop
 70000
 ```
 
----
+
 
 # Real Project Example 4
 
@@ -638,23 +638,23 @@ Output
 }
 ```
 
----
+
 
 # Best Practices
 
-✅ Use `for...in` only for objects.
+ Use `for...in` only for objects.
 
----
 
-✅ Use object destructuring to reduce repetitive code.
 
----
+ Use object destructuring to reduce repetitive code.
 
-✅ Use the spread operator instead of manually copying properties.
 
----
 
-✅ Prefer immutable updates using the spread operator in React.
+ Use the spread operator instead of manually copying properties.
+
+
+
+ Prefer immutable updates using the spread operator in React.
 
 ```javascript
 const updatedUser = {
@@ -666,7 +666,7 @@ const updatedUser = {
 };
 ```
 
----
+
 
 # Common Mistakes
 
@@ -684,7 +684,7 @@ Correct
 console.log(user[key]);
 ```
 
----
+
 
 ## Forgetting Curly Braces in Destructuring
 
@@ -700,7 +700,7 @@ Correct
 const {name} = user;
 ```
 
----
+
 
 ## Modifying the Original Object
 
@@ -724,7 +724,7 @@ const copy = {
 };
 ```
 
----
+
 
 ## Overwriting Properties Accidentally
 
@@ -739,7 +739,7 @@ const result = {
 
 The last value wins.
 
----
+
 
 # Interview Questions
 
@@ -747,25 +747,25 @@ The last value wins.
 
 Object keys (property names).
 
----
+
 
 ## Why use `user[key]` instead of `user.key` inside a `for...in` loop?
 
 Because `key` is a variable containing the property name.
 
----
+
 
 ## What is Object Destructuring?
 
 A syntax that extracts object properties into variables.
 
----
+
 
 ## What is the Spread Operator?
 
 The spread operator (`...`) copies or merges objects.
 
----
+
 
 ## Can the spread operator copy nested objects completely?
 
@@ -773,7 +773,7 @@ No.
 
 It creates a **shallow copy**. Nested objects are still shared by reference.
 
----
+
 
 ## Which property wins when merging objects with duplicate keys?
 
@@ -788,7 +788,7 @@ const result = {
 };
 ```
 
----
+
 
 ## When is object destructuring commonly used?
 
@@ -797,7 +797,7 @@ const result = {
 - Function Parameters
 - Configuration Objects
 
----
+
 
 ## Where is the spread operator commonly used?
 
@@ -806,12 +806,12 @@ const result = {
 - API Data Merging
 - Object Copying
 
----
+
 
 # Summary Table
 
 | Topic | Description | Example |
-|--------|-------------|---------|
+|-------|-------------|---------|
 | `for...in` | Loop through object keys | `for (const key in user)` |
 | Access Value | Get value using key | `user[key]` |
 | Object Destructuring | Extract properties | `const {name} = user` |
@@ -821,7 +821,7 @@ const result = {
 | Merge Objects | Combine objects | `{...obj1, ...obj2}` |
 | Override Property | Replace value | `{...user, age: 24}` |
 
----
+
 
 # Most Frequently Used
 
@@ -837,17 +837,17 @@ const result = {
 - Renaming Variables
 - Merging Objects
 
----
+
 
 # Final Notes
 
 These concepts are used daily in modern JavaScript, React, Node.js, and Express applications:
 
-- ✅ Loop through API response objects
-- ✅ Extract data from props and API responses
-- ✅ Update React state immutably
-- ✅ Merge configuration objects
-- ✅ Copy objects without modifying the original
-- ✅ Build scalable, maintainable applications
+-  Loop through API response objects
+-  Extract data from props and API responses
+-  Update React state immutably
+-  Merge configuration objects
+-  Copy objects without modifying the original
+-  Build scalable, maintainable applications
 
 Mastering `for...in`, object destructuring, and the spread operator is essential for writing clean, modern JavaScript.

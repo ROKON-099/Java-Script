@@ -23,36 +23,47 @@ body{
 /* ---------- Headings ---------- */
 
 h1{
-    font-size:30px;
+    font-size:26px;
     color:#1e3a8a;
     text-align:left;
     margin-top:0;
-    margin-bottom:20px;
+    margin-bottom:18px;
     font-weight:700;
 }
 
 h2{
-    font-size:24px;
+    font-size:21px;
     color:#2563eb;
-    margin-top:35px;
+    text-align:left;
+    margin-top:30px;
     margin-bottom:12px;
     font-weight:700;
 }
 
 h3{
-    font-size:20px;
+    font-size:18px;
     color:#111827;
-    margin-top:25px;
+    text-align:left;
+    margin-top:24px;
     margin-bottom:10px;
     font-weight:700;
 }
 
 h4{
-    font-size:17px;
+    font-size:16px;
     color:#374151;
+    text-align:left;
     margin-top:18px;
     margin-bottom:8px;
     font-weight:600;
+}
+
+/* ---------- Horizontal Line ---------- */
+
+hr{
+    border:none;
+    border-top:1.5px solid #cbd5e1;
+    margin:28px 0;
 }
 
 /* ---------- Paragraph ---------- */
@@ -73,14 +84,16 @@ li{
     margin:6px 0;
 }
 
-/* ---------- Inline Code ---------- */
+/* ---------- Inline Code / Keywords ---------- */
+
 
 code{
-    background:#f3f4f6;
-    color:#c7254e;
+    background:white;
+    color:rgb(136, 4, 4);     
     padding:2px 6px;
     border-radius:4px;
     font-size:13px;
+    font-weight:600;
 }
 
 /* ---------- Code Block ---------- */
@@ -112,14 +125,16 @@ table{
 
 th{
     background:#2563eb;
-    color:white;
+    color:#fff;
     padding:10px;
     text-align:center;
+    border:1px solid #d1d5db;
 }
 
 td{
     padding:10px;
     border:1px solid #d1d5db;
+    text-align:left;
 }
 
 tr:nth-child(even){
@@ -141,7 +156,7 @@ blockquote{
 
 img{
     display:block;
-    margin:auto;
+    margin:20px auto;
     max-width:90%;
 }
 
@@ -151,4 +166,3 @@ a{
     color:#2563eb;
     text-decoration:none;
 }
-

@@ -11,7 +11,7 @@ This section covers:
 - Interview Questions
 - Summary Table
 
----
+
 
 # Object.keys()
 
@@ -21,7 +21,7 @@ The `Object.keys()` method returns an **array containing all the property names 
 
 It does **not** return the values.
 
----
+
 
 ## Syntax
 
@@ -29,7 +29,7 @@ It does **not** return the values.
 Object.keys(object)
 ```
 
----
+
 
 ## Example
 
@@ -53,7 +53,7 @@ console.log(Object.keys(student));
 ["name", "age", "cgpa"]
 ```
 
----
+
 
 ## Explanation
 
@@ -81,7 +81,7 @@ Object.keys()
 ["name","age","cgpa"]
 ```
 
----
+
 
 ## Store Keys in a Variable
 
@@ -107,7 +107,7 @@ Output
 ["name","email","role"]
 ```
 
----
+
 
 ## Access Individual Keys
 
@@ -135,7 +135,7 @@ name
 country
 ```
 
----
+
 
 # Object.values()
 
@@ -143,7 +143,7 @@ country
 
 The `Object.values()` method returns an **array containing all the values** of an object.
 
----
+
 
 ## Syntax
 
@@ -151,7 +151,7 @@ The `Object.values()` method returns an **array containing all the values** of a
 Object.values(object)
 ```
 
----
+
 
 ## Example
 
@@ -175,7 +175,7 @@ console.log(Object.values(student));
 ["Rokon",23,3.9]
 ```
 
----
+
 
 ## Explanation
 
@@ -203,7 +203,7 @@ Object.values()
 ["Rokon",23,3.9]
 ```
 
----
+
 
 ## Another Example
 
@@ -227,7 +227,7 @@ Output
 ["HP","16GB",80000]
 ```
 
----
+
 
 # Object.entries()
 
@@ -241,7 +241,7 @@ Each element is itself an array with two items:
 [key, value]
 ```
 
----
+
 
 ## Syntax
 
@@ -249,7 +249,7 @@ Each element is itself an array with two items:
 Object.entries(object)
 ```
 
----
+
 
 ## Example
 
@@ -274,7 +274,7 @@ console.log(Object.entries(student));
 ]
 ```
 
----
+
 
 ## Explanation
 
@@ -306,7 +306,7 @@ Object.entries()
 ]
 ```
 
----
+
 
 ## Access Individual Entries
 
@@ -334,7 +334,7 @@ Output
 ["age",30]
 ```
 
----
+
 
 # Looping Through Entries
 
@@ -366,16 +366,16 @@ age 23
 country Bangladesh
 ```
 
----
+
 # Difference Between keys(), values() and entries()
 
 | Method | Returns |
-|---------|----------|
+|--------|---------|
 | Object.keys() | Array of Keys |
 | Object.values() | Array of Values |
 | Object.entries() | Array of Key-Value Pairs |
 
----
+
 
 # Real Project Example 1
 
@@ -409,7 +409,7 @@ email
 role
 ```
 
----
+
 
 # Real Project Example 2
 
@@ -443,7 +443,7 @@ HP
 70000
 ```
 
----
+
 
 # Real Project Example 3
 
@@ -477,7 +477,7 @@ Age: 23
 Country: Bangladesh
 ```
 
----
+
 
 # Real Project Example 4
 
@@ -505,7 +505,7 @@ Output
 4
 ```
 
----
+
 
 # Real Project Example 5
 
@@ -527,23 +527,23 @@ Output
 Object is Empty
 ```
 
----
+
 
 # Best Practices
 
-✅ Use `Object.keys()` when only property names are needed.
+ Use `Object.keys()` when only property names are needed.
 
----
 
-✅ Use `Object.values()` when only values are required.
 
----
+ Use `Object.values()` when only values are required.
 
-✅ Use `Object.entries()` when both keys and values are needed.
 
----
 
-✅ Prefer `for...of` with `Object.entries()` for clean iteration.
+ Use `Object.entries()` when both keys and values are needed.
+
+
+
+ Prefer `for...of` with `Object.entries()` for clean iteration.
 
 ```javascript
 for(const [key,value] of Object.entries(user)){
@@ -553,7 +553,7 @@ for(const [key,value] of Object.entries(user)){
 }
 ```
 
----
+
 
 # Common Mistakes
 
@@ -571,7 +571,7 @@ Correct
 Object.keys(user)
 ```
 
----
+
 
 ## Expecting Object.keys() to Return Values
 
@@ -593,7 +593,7 @@ Not
 ["Rokon",23]
 ```
 
----
+
 
 ## Confusing entries() with values()
 
@@ -617,7 +617,7 @@ Not
 ["Rokon"]
 ```
 
----
+
 
 ## Using for...of Directly on Objects
 
@@ -639,7 +639,7 @@ for(const item of Object.entries(user)){
 }
 ```
 
----
+
 
 # Interview Questions
 
@@ -647,19 +647,19 @@ for(const item of Object.entries(user)){
 
 An array containing all property names.
 
----
+
 
 ## What does Object.values() return?
 
 An array containing all property values.
 
----
+
 
 ## What does Object.entries() return?
 
 An array of key-value pairs.
 
----
+
 
 ## Which method is best for looping through both keys and values?
 
@@ -667,7 +667,7 @@ An array of key-value pairs.
 Object.entries()
 ```
 
----
+
 
 ## How do you count the number of properties in an object?
 
@@ -675,7 +675,7 @@ Object.entries()
 Object.keys(object).length
 ```
 
----
+
 
 ## How do you check whether an object is empty?
 
@@ -683,7 +683,7 @@ Object.keys(object).length
 Object.keys(object).length === 0
 ```
 
----
+
 
 ## Which method is most useful for generating dynamic tables or profile cards?
 
@@ -691,17 +691,17 @@ Object.keys(object).length === 0
 Object.entries()
 ```
 
----
+
 
 # Summary Table
 
 | Method | Returns | Common Use |
-|---------|----------|------------|
+|--------|---------|------------|
 | Object.keys() | Array of Keys | Property names |
 | Object.values() | Array of Values | Property values |
 | Object.entries() | Array of Key-Value Pairs | Looping, Tables, APIs |
 
----
+
 
 # Most Frequently Used
 
@@ -715,7 +715,7 @@ Object.entries()
 
 - Object.values()
 
----
+
 
 # Final Notes
 
@@ -739,7 +739,7 @@ This section covers:
 - Object inside Array
 - Optional Chaining (`?.`)
 
----
+
 
 # Nested Objects
 
@@ -749,7 +749,7 @@ A **Nested Object** is an object that contains another object as one of its prop
 
 It allows you to organize related data in a structured way.
 
----
+
 
 ## Syntax
 
@@ -763,7 +763,7 @@ const object = {
 };
 ```
 
----
+
 
 ## Example
 
@@ -800,7 +800,7 @@ console.log(student);
 }
 ```
 
----
+
 
 # Access Nested Properties
 
@@ -834,7 +834,7 @@ Dhaka
 Bangladesh
 ```
 
----
+
 
 # Update Nested Property
 
@@ -862,7 +862,7 @@ console.log(student.address.city);
 Chittagong
 ```
 
----
+
 
 # Add Nested Property
 
@@ -891,7 +891,7 @@ console.log(student);
 }
 ```
 
----
+
 
 # Nested Object Example
 
@@ -931,7 +931,7 @@ San Francisco
 Sam
 ```
 
----
+
 
 # Nested Array inside Object
 
@@ -941,7 +941,7 @@ An object property can store an array.
 
 This is one of the most common data structures in JavaScript.
 
----
+
 
 ## Syntax
 
@@ -953,7 +953,7 @@ const object = {
 };
 ```
 
----
+
 
 ## Example
 
@@ -983,7 +983,7 @@ console.log(student.skills);
 ["HTML","CSS","JavaScript"]
 ```
 
----
+
 
 # Access Array Elements
 
@@ -1001,7 +1001,7 @@ HTML
 JavaScript
 ```
 
----
+
 
 # Loop Through Array
 
@@ -1039,7 +1039,7 @@ CSS
 JavaScript
 ```
 
----
+
 
 # Add New Skill
 
@@ -1055,7 +1055,7 @@ console.log(student.skills);
 ["HTML","CSS","JavaScript","React"]
 ```
 
----
+
 
 # Real Project Example
 
@@ -1085,7 +1085,7 @@ console.log(user.roles[1]);
 Editor
 ```
 
----
+
 
 # Object inside Array
 
@@ -1095,7 +1095,7 @@ An array can contain multiple objects.
 
 This is the most common structure returned from APIs and databases.
 
----
+
 
 ## Syntax
 
@@ -1111,7 +1111,7 @@ const array = [
 ];
 ```
 
----
+
 
 ## Example
 
@@ -1147,7 +1147,7 @@ const students = [
 console.log(students);
 ```
 
----
+
 
 # Access Object inside Array
 
@@ -1165,7 +1165,7 @@ Rokon
 22
 ```
 
----
+
 
 # Loop Through Objects
 
@@ -1187,7 +1187,7 @@ Rahim
 Karim
 ```
 
----
+
 
 # Multiple Properties
 
@@ -1209,7 +1209,7 @@ Rahim 24
 Karim 22
 ```
 
----
+
 
 # Real Project Example
 
@@ -1247,7 +1247,7 @@ console.log(products[1].price);
 25000
 ```
 
----
+
 
 # Optional Chaining (?.)
 
@@ -1257,13 +1257,13 @@ Optional Chaining (`?.`) safely accesses nested properties.
 
 If a property does not exist, JavaScript returns **undefined** instead of throwing an error.
 
----
+
 
 ## Why Use Optional Chaining?
 
 Without optional chaining, accessing a missing nested property causes a runtime error.
 
----
+
 
 ## Without Optional Chaining
 
@@ -1283,7 +1283,7 @@ console.log(user.address.city);
 TypeError
 ```
 
----
+
 
 ## With Optional Chaining
 
@@ -1303,7 +1303,7 @@ console.log(user.address?.city);
 undefined
 ```
 
----
+
 
 # Multiple Levels
 
@@ -1331,7 +1331,7 @@ console.log(student.profile?.contact?.email);
 abc@gmail.com
 ```
 
----
+
 
 # Missing Property
 
@@ -1345,7 +1345,7 @@ console.log(student.profile?.address?.city);
 undefined
 ```
 
----
+
 
 # Real Project Example
 
@@ -1369,7 +1369,7 @@ undefined
 
 Instead of crashing, the application continues running.
 
----
+
 
 # Best Practices
 
@@ -1383,7 +1383,7 @@ contact
 profile
 ```
 
----
+
 
  Store collections as arrays.
 
@@ -1395,7 +1395,7 @@ courses
 products
 ```
 
----
+
 
  Use arrays of objects for lists.
 
@@ -1407,7 +1407,7 @@ students
 employees
 ```
 
----
+
 
  Use optional chaining when accessing API or database data.
 
@@ -1415,7 +1415,7 @@ employees
 user.profile?.email
 ```
 
----
+
 
 # Common Mistakes
 
@@ -1433,7 +1433,7 @@ Correct
 students[0].name
 ```
 
----
+
 
 ## Accessing Missing Nested Property
 
@@ -1449,7 +1449,7 @@ Correct
 user.address?.city
 ```
 
----
+
 
 ## Confusing Objects and Arrays
 
@@ -1465,7 +1465,7 @@ Correct
 student.skills[0]
 ```
 
----
+
 
 ## Using Dot Notation on Arrays
 
@@ -1481,7 +1481,7 @@ Correct
 students[0].name
 ```
 
----
+
 
 # Interview Questions
 
@@ -1489,7 +1489,7 @@ students[0].name
 
 An object inside another object.
 
----
+
 
 ## Can an object contain an array?
 
@@ -1503,7 +1503,7 @@ const user = {
 };
 ```
 
----
+
 
 ## Can an array contain objects?
 
@@ -1519,13 +1519,13 @@ const users=[
 ];
 ```
 
----
+
 
 ## What is Optional Chaining?
 
 Optional Chaining (`?.`) safely accesses nested properties without throwing an error if a property is missing.
 
----
+
 
 ## What happens if a property doesn't exist when using `?.`?
 
@@ -1537,7 +1537,7 @@ undefined
 
 instead of throwing a `TypeError`.
 
----
+
 
 ## Where is Optional Chaining commonly used?
 
@@ -1547,12 +1547,12 @@ instead of throwing a `TypeError`.
 - MongoDB Documents
 - Firebase Data
 
----
+
 
 # Summary Table
 
 | Topic | Description |
-|--------|-------------|
+|-------|-------------|
 | Nested Object | Object inside another object |
 | Nested Array | Array inside an object |
 | Object inside Array | Array containing multiple objects |
@@ -1562,7 +1562,7 @@ instead of throwing a `TypeError`.
 | Optional Chaining | `object?.property` |
 | Missing Property | Returns `undefined` |
 
----
+
 
 # Most Frequently Used
 
@@ -1576,7 +1576,7 @@ instead of throwing a `TypeError`.
 
 - Nested Array inside Object
 
----
+
 
 # Final Notes
 
