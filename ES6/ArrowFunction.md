@@ -4421,3 +4421,356 @@ reduce()
 - Best Practices
 
 Software Development-এ `reduce()` শুধু Array-এর Number যোগ করার জন্য নয়, বরং **Business Logic** তৈরির জন্য ব্যবহার করা হয়। Finance, E-Commerce, Analytics, Admin Dashboard, Booking System, Blood Donation Platform—প্রায় সব বড় Project-এ `reduce()` গুরুত্বপূর্ণ ভূমিকা পালন করে।
+
+# 🚀 ES6 Arrow Function (Part 3B-2B-2B)
+
+> Advanced reduce() Examples for Software Development
+
+## 📖 Group Data by Category
+
+ধরো তোমার কাছে Product List আছে।
+
+```javascript
+const products = [
+  { name: "Laptop", category: "Electronics" },
+  { name: "Mouse", category: "Electronics" },
+  { name: "Shirt", category: "Fashion" },
+  { name: "Pant", category: "Fashion" },
+];
+```
+
+Category অনুযায়ী Group করো।
+
+```javascript
+const grouped = products.reduce((acc, product) => {
+  if (!acc[product.category]) {
+    acc[product.category] = [];
+  }
+
+  acc[product.category].push(product);
+
+  return acc;
+}, {});
+
+console.log(grouped);
+```
+
+Output
+
+```javascript
+{
+  Electronics: [
+    { name: "Laptop", category: "Electronics" },
+    { name: "Mouse", category: "Electronics" }
+  ],
+
+  Fashion: [
+    { name: "Shirt", category: "Fashion" },
+    { name: "Pant", category: "Fashion" }
+  ]
+}
+```
+
+ব্যবহার
+
+- Product Category
+- Student Department
+- Blog Category
+- News Category
+
+---
+
+# 📖 Count Objects by Category
+
+```javascript
+const users = [
+  { role: "Admin" },
+  { role: "User" },
+  { role: "Admin" },
+  { role: "Moderator" },
+  { role: "User" }
+];
+```
+
+```javascript
+const count = users.reduce((acc, user) => {
+
+  acc[user.role] = (acc[user.role] || 0) + 1;
+
+  return acc;
+
+}, {});
+
+console.log(count);
+```
+
+Output
+
+```javascript
+{
+  Admin: 2,
+  User: 2,
+  Moderator: 1
+}
+```
+
+ব্যবহার
+
+- Role Count
+- Blood Group Count
+- Vehicle Type Count
+- Order Status Count
+
+---
+
+# 📖 Most Expensive Product
+
+```javascript
+const products = [
+
+  { name: "Laptop", price: 50000 },
+
+  { name: "Phone", price: 30000 },
+
+  { name: "Mouse", price: 1200 }
+
+];
+```
+
+```javascript
+const expensive = products.reduce((max, product) => {
+
+  return product.price > max.price
+
+    ? product
+
+    : max;
+
+});
+
+console.log(expensive);
+```
+
+Output
+
+```javascript
+{
+  name: "Laptop",
+  price: 50000
+}
+```
+
+---
+
+# 🚀 MERN Admin Dashboard Example
+
+Dashboard Card
+
+```
+Total Users
+
+Total Products
+
+Total Orders
+
+Total Revenue
+
+Pending Orders
+```
+
+Example
+
+```javascript
+const revenue = orders.reduce(
+
+(acc, order) => acc + order.total,
+
+0
+
+);
+
+const pending = orders.filter(
+
+order => order.status === "Pending"
+
+).length;
+```
+
+React
+
+```jsx
+<h2>Total Revenue : {revenue}</h2>
+
+<h2>Pending Orders : {pending}</h2>
+```
+
+---
+
+# 💼 Professional Project Uses
+
+✅ Shopping Cart
+
+✅ Expense Tracker
+
+✅ Sales Dashboard
+
+✅ Blood Donation Dashboard
+
+✅ Student Result System
+
+✅ Travel Booking
+
+✅ Admin Panel
+
+✅ Analytics Report
+
+✅ E-commerce
+
+---
+
+# ⚠️ Common Mistakes
+
+❌ map() দিয়ে Total বের করা
+
+```javascript
+products.map(item => item.price);
+```
+
+✔ Correct
+
+```javascript
+products.reduce(
+
+(acc, item) => acc + item.price,
+
+0
+
+);
+```
+
+---
+
+❌ filter() দিয়ে একটি Object খোঁজা
+
+✔ Correct
+
+```javascript
+products.find(
+
+item => item.id === 1
+
+);
+```
+
+---
+
+# 💡 Best Practices
+
+- map() → Transform Data
+- filter() → Filter Data
+- find() → One Item
+- some() → At Least One
+- every() → All Items
+- reduce() → One Final Value
+
+---
+
+# 🎯 Interview Questions
+
+### map() vs filter()
+
+### filter() vs find()
+
+### some() vs every()
+
+### reduce() কী?
+
+### Accumulator কী?
+
+### reduce() কোথায় ব্যবহার হয়?
+
+### কেন React-এ map() বেশি ব্যবহার হয়?
+
+### Shopping Cart-এর Total কীভাবে বের করবে?
+
+### Dashboard Revenue কীভাবে বের করবে?
+
+### Group By কীভাবে করবে?
+
+---
+
+# 📝 Final Practice
+
+## Project 1
+
+Student Management
+
+- Total Students
+- Passed Students
+- Failed Students
+- Average GPA
+
+---
+
+## Project 2
+
+Shopping Cart
+
+- Total Price
+- Total Quantity
+- Highest Price
+- Cheapest Product
+
+---
+
+## Project 3
+
+Blood Donation
+
+- Total Donors
+- Total Requests
+- Pending Requests
+- Approved Requests
+- Total Donations
+
+---
+
+## Project 4
+
+Travel Booking
+
+- Total Vehicles
+- Available Vehicles
+- Total Revenue
+- Pending Booking
+- Completed Booking
+
+---
+
+# 📌 ES6 Array Methods Cheat Sheet
+
+| Method | Return | Use Case |
+|---------|---------|----------|
+| map() | New Array | Transform Data |
+| filter() | New Array | Filter Data |
+| find() | One Element | Search One Item |
+| findIndex() | Index | Get Position |
+| some() | Boolean | At Least One |
+| every() | Boolean | Validate All |
+| forEach() | Undefined | Loop Only |
+| reduce() | Single Value | Total, Analytics, Report |
+
+---
+
+# 🎉 Final Summary
+
+React এবং MERN Project-এ সবচেয়ে বেশি ব্যবহৃত Array Methods হলো:
+
+- map()
+- filter()
+- find()
+- some()
+- every()
+- reduce()
+
+এই Method-গুলো ভালোভাবে আয়ত্ত করতে পারলে তুমি Shopping Cart, Dashboard, Admin Panel, Analytics, Report, Booking System, Blood Donation Platform এবং বড় বড় MERN Project-এর ৮০% Data Processing Logic সহজেই লিখতে পারবে।
