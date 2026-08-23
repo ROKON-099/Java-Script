@@ -1,168 +1,622 @@
-/* ===========================
-   Markdown PDF Default Style
-   =========================== */
+/* =========================================================
+   BOOTSTRAP NOTES — PROFESSIONAL PDF STYLE
+   Designed for VS Code Markdown PDF
+   ========================================================= */
+
+
+/* =========================================================
+   1. PAGE SETUP
+   ========================================================= */
 
 @page {
     size: A4;
-    margin: 22mm 18mm;
+    margin: 18mm 16mm 18mm 16mm;
+}
 
-    @bottom-center {
-        content: counter(page) " / " counter(pages);
-        font-size: 10px;
-        color: #777;
+
+/* =========================================================
+   2. ROOT / BODY
+   ========================================================= */
+
+body {
+    font-family: "Segoe UI", "Noto Sans Bengali", Arial, sans-serif;
+
+    font-size: 10.5pt;
+    line-height: 1.65;
+
+    color: #292929;
+    background: #ffffff;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================================
+   3. MAIN CONTENT
+   ========================================================= */
+
+.markdown-body {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+
+/* =========================================================
+   4. TITLE / H1
+   ========================================================= */
+
+h1 {
+    font-size: 24pt;
+    font-weight: 800;
+
+    color: #171717;
+
+    margin-top: 0;
+    margin-bottom: 14px;
+
+    padding-bottom: 12px;
+
+    border-bottom: 3px solid #7b4db3;
+
+    letter-spacing: -0.3px;
+}
+
+
+/* =========================================================
+   5. H2
+   ========================================================= */
+
+h2 {
+    font-size: 17pt;
+    font-weight: 750;
+
+    color: #202020;
+
+    margin-top: 30px;
+    margin-bottom: 14px;
+
+    padding-bottom: 8px;
+
+    border-bottom: 3px solid #7b4db3;
+
+    page-break-after: avoid;
+}
+
+
+/* =========================================================
+   6. H3
+   ========================================================= */
+
+h3 {
+    font-size: 13.5pt;
+    font-weight: 700;
+
+    color: #242424;
+
+    margin-top: 24px;
+    margin-bottom: 10px;
+
+    padding-left: 10px;
+
+    border-left: 4px solid #7b4db3;
+
+    page-break-after: avoid;
+}
+
+
+/* =========================================================
+   7. H4
+   ========================================================= */
+
+h4 {
+    font-size: 11.5pt;
+    font-weight: 700;
+
+    color: #333333;
+
+    margin-top: 18px;
+    margin-bottom: 8px;
+
+    page-break-after: avoid;
+}
+
+
+/* =========================================================
+   8. PARAGRAPH
+   ========================================================= */
+
+p {
+    margin-top: 7px;
+    margin-bottom: 10px;
+
+    text-align: left;
+}
+
+
+/* =========================================================
+   9. STRONG / BOLD
+   ========================================================= */
+
+strong {
+    font-weight: 700;
+    color: #202020;
+}
+
+
+/* =========================================================
+   10. INLINE CODE
+   ========================================================= */
+
+code {
+    font-family:
+        "Cascadia Code",
+        "JetBrains Mono",
+        "Fira Code",
+        Consolas,
+        monospace;
+
+    font-size: 0.9em;
+
+    color: #7b3f98;
+
+    background: #f4eef8;
+
+    padding: 2px 5px;
+
+    border-radius: 3px;
+}
+
+
+/* =========================================================
+   11. CODE BLOCK
+   ========================================================= */
+
+pre {
+    background: #202030 !important;
+
+    color: #eeeeee !important;
+
+    border-radius: 6px;
+
+    padding: 17px 18px;
+
+    margin-top: 12px;
+    margin-bottom: 18px;
+
+    font-family:
+        "Cascadia Code",
+        "JetBrains Mono",
+        "Fira Code",
+        Consolas,
+        monospace;
+
+    font-size: 8.8pt;
+
+    line-height: 1.55;
+
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+
+    box-shadow: none;
+
+    /* VERY IMPORTANT FOR PDF */
+    page-break-inside: avoid !important;
+    break-inside: avoid-page !important;
+}
+
+
+/* code inside pre */
+
+pre code {
+    background: transparent !important;
+
+    color: #eeeeee !important;
+
+    padding: 0;
+
+    font-size: inherit;
+
+    border-radius: 0;
+
+    white-space: pre-wrap;
+
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+}
+
+
+/* =========================================================
+   12. CODE SYNTAX COLORS
+   ========================================================= */
+
+.hljs {
+    background: #202030 !important;
+    color: #eeeeee !important;
+}
+
+
+/* Keywords */
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-built_in {
+    color: #e58cff;
+}
+
+
+/* Strings */
+
+.hljs-string,
+.hljs-attr {
+    color: #8fd694;
+}
+
+
+/* Numbers */
+
+.hljs-number,
+.hljs-literal {
+    color: #f3b562;
+}
+
+
+/* Comments */
+
+.hljs-comment {
+    color: #8b8b9a;
+    font-style: italic;
+}
+
+
+/* Functions */
+
+.hljs-title,
+.hljs-title.function_,
+.hljs-function {
+    color: #79c8ff;
+}
+
+
+/* Tags */
+
+.hljs-name {
+    color: #ff7aa2;
+}
+
+
+/* =========================================================
+   13. BLOCKQUOTE / CONCEPT BOX
+   ========================================================= */
+
+blockquote {
+    margin: 16px 0;
+
+    padding: 13px 16px;
+
+    background: #f6f3fa;
+
+    border-left: 4px solid #7b4db3;
+
+    border-top: 1px solid #eee;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+
+    border-radius: 0 4px 4px 0;
+
+    color: #444;
+
+    page-break-inside: avoid;
+}
+
+
+/* =========================================================
+   14. LIST
+   ========================================================= */
+
+ul,
+ol {
+    margin-top: 8px;
+    margin-bottom: 12px;
+
+    padding-left: 24px;
+}
+
+
+li {
+    margin-bottom: 4px;
+}
+
+
+/* Purple bullet */
+
+ul li::marker {
+    color: #7b4db3;
+}
+
+
+/* =========================================================
+   15. TABLE
+   ========================================================= */
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: 14px;
+    margin-bottom: 20px;
+
+    font-size: 9.5pt;
+
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+}
+
+
+/* Table Header */
+
+thead th {
+    background: #7b4db3;
+
+    color: #ffffff;
+
+    font-weight: 700;
+
+    text-align: left;
+
+    padding: 8px 10px;
+
+    border: 1px solid #7b4db3;
+}
+
+
+/* Table Body */
+
+tbody td {
+    padding: 7px 10px;
+
+    border-bottom: 1px solid #ded8e5;
+
+    vertical-align: middle;
+}
+
+
+/* Alternate rows */
+
+tbody tr:nth-child(even) {
+    background: #f8f5fa;
+}
+
+
+/* Table inline code */
+
+td code {
+    font-size: 8.5pt;
+
+    color: #7b3f98;
+
+    background: #f1eaf6;
+}
+
+
+/* =========================================================
+   16. HORIZONTAL RULE
+   ========================================================= */
+
+hr {
+    height: 1px;
+
+    border: 0;
+
+    background: #e1e1e1;
+
+    margin: 24px 0;
+}
+
+
+/* =========================================================
+   17. LINKS
+   ========================================================= */
+
+a {
+    color: #7043a4;
+
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   18. IMAGES
+   ========================================================= */
+
+img {
+    max-width: 100%;
+
+    height: auto;
+
+    display: block;
+
+    margin: 15px auto;
+
+    page-break-inside: avoid;
+}
+
+
+/* =========================================================
+   19. VISUAL EXAMPLE / DIAGRAM
+   ========================================================= */
+
+pre:has(code.language-text),
+pre:has(code.language-plaintext) {
+    background: #202030 !important;
+
+    color: #eeeeee !important;
+
+    border-radius: 6px;
+}
+
+
+/* =========================================================
+   20. KEEP HEADINGS WITH CONTENT
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    page-break-after: avoid !important;
+    break-after: avoid-page !important;
+}
+
+
+/* Heading + paragraph */
+
+h2 + p,
+h3 + p,
+h4 + p {
+    page-break-before: avoid;
+}
+
+
+/* Heading + code */
+
+h2 + pre,
+h3 + pre,
+h4 + pre {
+    page-break-before: avoid;
+}
+
+
+/* =========================================================
+   21. PREVENT CONTENT BREAKING
+   ========================================================= */
+
+blockquote,
+table,
+figure {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+}
+
+
+/* =========================================================
+   22. SECTION SPACING
+   ========================================================= */
+
+h2:not(:first-child) {
+    margin-top: 34px;
+}
+
+
+/* =========================================================
+   23. PAGE BREAK UTILITY
+   ========================================================= */
+
+.page-break {
+    page-break-before: always;
+}
+
+
+/* =========================================================
+   24. PRINT OPTIMIZATION
+   ========================================================= */
+
+@media print {
+
+    body {
+        background: #ffffff;
+    }
+
+    pre {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    table,
+    pre,
+    blockquote {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
     }
 }
 
-body{
-    font-family: "Segoe UI", Arial, sans-serif;
-    font-size:14px;
-    line-height:1.8;
-    color:#222;
+
+/* =========================================================
+   25. SMALL TEXT
+   ========================================================= */
+
+small {
+    font-size: 8.5pt;
+    color: #666666;
 }
 
-/* ---------- Headings ---------- */
 
-h1{
-    font-size:26px;
-    color:#1e3a8a;
-    text-align:left;
-    margin-top:0;
-    margin-bottom:18px;
-    font-weight:700;
+/* =========================================================
+   26. KEYBOARD
+   ========================================================= */
+
+kbd {
+    background: #202030;
+
+    color: #ffffff;
+
+    padding: 3px 6px;
+
+    border-radius: 4px;
+
+    font-family: monospace;
+
+    font-size: 8.5pt;
 }
 
-h2{
-    font-size:21px;
-    color:#2563eb;
-    text-align:left;
-    margin-top:30px;
-    margin-bottom:12px;
-    font-weight:700;
+
+/* =========================================================
+   27. CHECKLIST
+   ========================================================= */
+
+input[type="checkbox"] {
+    accent-color: #7b4db3;
 }
 
-h3{
-    font-size:18px;
-    color:#111827;
-    text-align:left;
-    margin-top:24px;
-    margin-bottom:10px;
-    font-weight:700;
+
+/* =========================================================
+   28. PAGE BREAK CONTROL
+   ========================================================= */
+
+/* Code block কখনো মাঝখান থেকে split না করার চেষ্টা করবে */
+
+pre,
+pre code {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
 }
 
-h4{
-    font-size:16px;
-    color:#374151;
-    text-align:left;
-    margin-top:18px;
-    margin-bottom:8px;
-    font-weight:600;
+
+/* বড় section মাঝখানে ভাঙা কমাবে */
+
+h2 {
+    orphans: 3;
+    widows: 3;
 }
 
-/* ---------- Horizontal Line ---------- */
 
-hr{
-    border:none;
-    border-top:1.5px solid #cbd5e1;
-    margin:28px 0;
+/* =========================================================
+   29. FOOTER SPACE
+   ========================================================= */
+
+body {
+    padding-bottom: 20px;
 }
 
-/* ---------- Paragraph ---------- */
 
-p{
-    margin:8px 0;
-    text-align:justify;
-}
-
-/* ---------- List ---------- */
-
-ul,
-ol{
-    margin-left:24px;
-}
-
-li{
-    margin:6px 0;
-}
-
-/* ---------- Inline Code / Keywords ---------- */
-
-
-code{
-    background:white;
-    color:rgb(136, 4, 4);     
-    padding:2px 6px;
-    border-radius:4px;
-    font-size:13px;
-    font-weight:600;
-}
-
-/* ---------- Code Block ---------- */
-
-pre{
-    background:#1f2937;
-    color:#f8fafc;
-    padding:18px;
-    border-radius:8px;
-    overflow:auto;
-    font-size:13px;
-    line-height:1.6;
-}
-
-pre code{
-    background:none;
-    color:inherit;
-    padding:0;
-}
-
-/* ---------- Table ---------- */
-
-table{
-    width:100%;
-    border-collapse:collapse;
-    margin:20px 0;
-    font-size:13px;
-}
-
-th{
-    background:#2563eb;
-    color:#fff;
-    padding:10px;
-    text-align:center;
-    border:1px solid #d1d5db;
-}
-
-td{
-    padding:10px;
-    border:1px solid #d1d5db;
-    text-align:left;
-}
-
-tr:nth-child(even){
-    background:#f8fafc;
-}
-
-/* ---------- Blockquote ---------- */
-
-blockquote{
-    background:#f8fafc;
-    border-left:5px solid #2563eb;
-    padding:10px 15px;
-    color:#444;
-    margin:20px 0;
-    font-style:italic;
-}
-
-/* ---------- Image ---------- */
-
-img{
-    display:block;
-    margin:20px auto;
-    max-width:90%;
-}
-
-/* ---------- Links ---------- */
-
-a{
-    color:#2563eb;
-    text-decoration:none;
-}
+/* =========================================================
+   END
+   ========================================================= */

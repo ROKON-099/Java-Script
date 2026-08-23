@@ -403,7 +403,7 @@ export default Navbar;
 
 Professional React Project-এর প্রায় সব Component এভাবেই তৈরি করা হয়।
 
-# ✅ Benefits
+#  Benefits
 
 - কম Code লিখতে হয়।
 - Code Readable হয়।
@@ -1005,7 +1005,7 @@ Correct
 const sum = (a,b) => a+b;
 ```
 
-# ✅ Best Practices
+#  Best Practices
 
 - সবসময় Meaningful Parameter Name ব্যবহার করো।
 - Single Line হলে Implicit Return ব্যবহার করো।
@@ -1652,7 +1652,7 @@ map()
 
 নতুন Array Return করে।
 
-# ✅ Best Practices
+#  Best Practices
 
 - Data Transform করতে map() ব্যবহার করো।
 - শুধু Loop করার জন্য forEach() ব্যবহার করো।
@@ -2322,7 +2322,7 @@ Index Return করে।
 
 Object নয়।
 
-# ✅ Best Practices
+#  Best Practices
 
 - Search করার জন্য `find()`
 - Filter করার জন্য `filter()`
@@ -2971,13 +2971,13 @@ every()
 # 🔥 some() vs every()
 
 | some() | every() |
-|---------|----------|
+||-|
 | কমপক্ষে একটি True হলেই True | সবগুলো True হতে হবে |
 | Boolean Return করে | Boolean Return করে |
 | প্রথম True পেলেই Loop Stop | প্রথম False পেলেই Loop Stop |
 | Exists Check | Validation Check |
 
-# ✅ Best Practices
+#  Best Practices
 
 - কোনো একটি Data আছে কিনা → `some()`
 - সবগুলো Data Valid কিনা → `every()`
@@ -3429,7 +3429,7 @@ acc=0
 # 📊 Iteration Table
 
 | Step | acc | current | Result |
-|------|------|---------|--------|
+||||--|
 |1|0|10|10|
 |2|10|20|30|
 |3|30|30|60|
@@ -3681,7 +3681,7 @@ reduce()
 
 ব্যবহার করতে হবে।
 
-# ✅ Best Practices
+#  Best Practices
 
 - সবসময় Initial Value দাও।
 - Meaningful Variable Name ব্যবহার করো।
@@ -3923,7 +3923,7 @@ Initial Value
 # 📊 Iteration Table
 
 | Step | Previous Total | Current Expense | New Total |
-|------|---------------:|----------------:|----------:|
+||:|-:|-:|
 |1|0|500|500|
 |2|500|800|1300|
 |3|1300|300|1600|
@@ -4310,7 +4310,7 @@ reduce()
 
 ব্যবহার করতে হবে।
 
-# ✅ Best Practices
+#  Best Practices
 
 - Total বের করার জন্য reduce() ব্যবহার করো।
 - Initial Value সবসময় দাও।
@@ -4478,7 +4478,7 @@ Output
 - Blog Category
 - News Category
 
----
+
 
 # 📖 Count Objects by Category
 
@@ -4521,7 +4521,7 @@ Output
 - Vehicle Type Count
 - Order Status Count
 
----
+
 
 # 📖 Most Expensive Product
 
@@ -4560,7 +4560,7 @@ Output
 }
 ```
 
----
+
 
 # 🚀 MERN Admin Dashboard Example
 
@@ -4604,33 +4604,33 @@ React
 <h2>Pending Orders : {pending}</h2>
 ```
 
----
+
 
 # 💼 Professional Project Uses
 
-✅ Shopping Cart
+ Shopping Cart
 
-✅ Expense Tracker
+ Expense Tracker
 
-✅ Sales Dashboard
+ Sales Dashboard
 
-✅ Blood Donation Dashboard
+ Blood Donation Dashboard
 
-✅ Student Result System
+ Student Result System
 
-✅ Travel Booking
+ Travel Booking
 
-✅ Admin Panel
+ Admin Panel
 
-✅ Analytics Report
+ Analytics Report
 
-✅ E-commerce
+ E-commerce
 
----
+
 
 # ⚠️ Common Mistakes
 
-❌ map() দিয়ে Total বের করা
+ map() দিয়ে Total বের করা
 
 ```javascript
 products.map(item => item.price);
@@ -4648,9 +4648,9 @@ products.reduce(
 );
 ```
 
----
 
-❌ filter() দিয়ে একটি Object খোঁজা
+
+ filter() দিয়ে একটি Object খোঁজা
 
 ✔ Correct
 
@@ -4662,7 +4662,7 @@ item => item.id === 1
 );
 ```
 
----
+
 
 # 💡 Best Practices
 
@@ -4673,7 +4673,7 @@ item => item.id === 1
 - every() → All Items
 - reduce() → One Final Value
 
----
+
 
 # 🎯 Interview Questions
 
@@ -4697,7 +4697,7 @@ item => item.id === 1
 
 ### Group By কীভাবে করবে?
 
----
+
 
 # 📝 Final Practice
 
@@ -4710,7 +4710,7 @@ Student Management
 - Failed Students
 - Average GPA
 
----
+
 
 ## Project 2
 
@@ -4721,7 +4721,7 @@ Shopping Cart
 - Highest Price
 - Cheapest Product
 
----
+
 
 ## Project 3
 
@@ -4733,7 +4733,7 @@ Blood Donation
 - Approved Requests
 - Total Donations
 
----
+
 
 ## Project 4
 
@@ -4745,12 +4745,12 @@ Travel Booking
 - Pending Booking
 - Completed Booking
 
----
+
 
 # 📌 ES6 Array Methods Cheat Sheet
 
 | Method | Return | Use Case |
-|---------|---------|----------|
+|--------|--------|----------|
 | map() | New Array | Transform Data |
 | filter() | New Array | Filter Data |
 | find() | One Element | Search One Item |
@@ -4760,7 +4760,7 @@ Travel Booking
 | forEach() | Undefined | Loop Only |
 | reduce() | Single Value | Total, Analytics, Report |
 
----
+
 
 # 🎉 Final Summary
 
