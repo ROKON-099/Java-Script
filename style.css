@@ -19,14 +19,11 @@
    ========================================================= */
 
 body {
-    font-family: "Segoe UI", "Noto Sans Bengali", Arial, sans-serif;
-
-    font-size: 10.5pt;
-    line-height: 1.65;
-
+    font-family: Arial, sans-serif;
+    font-size: 11pt;
+    line-height: 1.45;
     color: #292929;
     background: #ffffff;
-
     margin: 0;
     padding: 0;
 }
@@ -48,19 +45,15 @@ body {
    ========================================================= */
 
 h1 {
-    font-size: 24pt;
-    font-weight: 800;
-
-    color: #171717;
-
+    font-family: Arial, sans-serif;
+    font-size: 14pt;
+    font-weight: 700;
+    color: #003b73;
     margin-top: 0;
-    margin-bottom: 14px;
-
-    padding-bottom: 12px;
-
-    border-bottom: 3px solid #7b4db3;
-
-    letter-spacing: -0.3px;
+    margin-bottom: 7px;
+    padding: 0;
+    border: 0;
+    letter-spacing: 0;
 }
 
 
@@ -69,18 +62,14 @@ h1 {
    ========================================================= */
 
 h2 {
-    font-size: 17pt;
-    font-weight: 750;
-
-    color: #202020;
-
-    margin-top: 30px;
-    margin-bottom: 14px;
-
-    padding-bottom: 8px;
-
-    border-bottom: 3px solid #7b4db3;
-
+    font-family: Arial, sans-serif;
+    font-size: 13pt;
+    font-weight: 500;
+    color: black;
+    margin-top: 12px;
+    margin-bottom: 5px;
+    padding: 0;
+    border: 0;
     page-break-after: avoid;
 }
 
@@ -90,18 +79,14 @@ h2 {
    ========================================================= */
 
 h3 {
-    font-size: 13.5pt;
-    font-weight: 700;
-
-    color: #242424;
-
-    margin-top: 24px;
-    margin-bottom: 10px;
-
-    padding-left: 10px;
-
-    border-left: 4px solid #7b4db3;
-
+    font-family: Arial, sans-serif;
+    font-size: 12pt;
+    font-weight: 400;
+    color: #6a00c6;
+    margin-top: 9px;
+    margin-bottom: 4px;
+    padding-left: 8px;
+    border-left: 3px solid #0066cc;
     page-break-after: avoid;
 }
 
@@ -111,14 +96,12 @@ h3 {
    ========================================================= */
 
 h4 {
-    font-size: 11.5pt;
-    font-weight: 700;
-
-    color: #333333;
-
-    margin-top: 18px;
-    margin-bottom: 8px;
-
+    font-family: Arial, sans-serif;
+    font-size: 11pt;
+    font-weight: 400;
+    color: rgb(45, 43, 43);
+    margin-top: 8px;
+    margin-bottom: 4px;
     page-break-after: avoid;
 }
 
@@ -128,9 +111,10 @@ h4 {
    ========================================================= */
 
 p {
-    margin-top: 7px;
-    margin-bottom: 10px;
-
+    font-family: Arial, sans-serif;
+    font-size: 11pt;
+    margin-top: 4px;
+    margin-bottom: 7px;
     text-align: left;
 }
 
@@ -175,33 +159,22 @@ code {
 
 pre {
     background: #202030 !important;
-
     color: #eeeeee !important;
-
     border-radius: 6px;
-
-    padding: 17px 18px;
-
-    margin-top: 12px;
-    margin-bottom: 18px;
-
+    padding: 14px 16px;
+    margin-top: 9px;
+    margin-bottom: 13px;
     font-family:
         "Cascadia Code",
         "JetBrains Mono",
         "Fira Code",
         Consolas,
         monospace;
-
-    font-size: 8.8pt;
-
+    font-size: 9.5pt;
     line-height: 1.55;
-
     white-space: pre-wrap;
     overflow-wrap: break-word;
-
     box-shadow: none;
-
-    /* VERY IMPORTANT FOR PDF */
     page-break-inside: avoid !important;
     break-inside: avoid-page !important;
 }
@@ -282,7 +255,7 @@ pre code {
 /* Tags */
 
 .hljs-name {
-    color: #ff7aa2;
+    color: #2c161d;
 }
 
 
@@ -291,22 +264,15 @@ pre code {
    ========================================================= */
 
 blockquote {
-    margin: 16px 0;
-
-    padding: 13px 16px;
-
-    background: #f6f3fa;
-
-    border-left: 4px solid #7b4db3;
-
-    border-top: 1px solid #eee;
-    border-right: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-
-    border-radius: 0 4px 4px 0;
-
-    color: #444;
-
+    margin: 9px 0;
+    padding: 8px 12px;
+    background: #f5f9ff;
+    border-left: 3px solid #0066cc;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-radius: 0;
+    color: #333333;
     page-break-inside: avoid;
 }
 
@@ -317,15 +283,16 @@ blockquote {
 
 ul,
 ol {
-    margin-top: 8px;
-    margin-bottom: 12px;
-
-    padding-left: 24px;
+    margin-top: 3px;
+    margin-bottom: 6px;
+    padding-left: 22px;
 }
 
 
 li {
-    margin-bottom: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 11pt;
+    margin-bottom: 3px;
 }
 
 
@@ -345,8 +312,8 @@ table {
 
     border-collapse: collapse;
 
-    margin-top: 14px;
-    margin-bottom: 20px;
+    margin-top: 7px;
+    margin-bottom: 8px;
 
     font-size: 9.5pt;
 
@@ -406,13 +373,7 @@ td code {
    ========================================================= */
 
 hr {
-    height: 1px;
-
-    border: 0;
-
-    background: #e1e1e1;
-
-    margin: 24px 0;
+    display: none;
 }
 
 
@@ -462,6 +423,11 @@ pre:has(code.language-plaintext) {
 }
 
 
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Arial, sans-serif;
+    font-size: 14pt;
+}
 /* =========================================================
    20. KEEP HEADINGS WITH CONTENT
    ========================================================= */
@@ -512,7 +478,8 @@ figure {
    ========================================================= */
 
 h2:not(:first-child) {
-    margin-top: 34px;
+    margin-top: 18px;
+    margin-bottom: 6px;
 }
 
 
@@ -620,3 +587,123 @@ body {
 /* =========================================================
    END
    ========================================================= */
+
+
+/* =========================================================
+   30. PROFESSIONAL NOTES — READING SPACING
+   ========================================================= */
+
+/* Comfortable spacing between separate note elements */
+.markdown-body > * {
+    margin-bottom: 9px;
+}
+
+/* Paragraphs: readable but compact */
+.markdown-body p {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    line-height: 1.55;
+}
+
+/* Lists: add breathing room without making them too loose */
+.markdown-body ul,
+.markdown-body ol {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.markdown-body li {
+    margin-bottom: 5px;
+    line-height: 1.5;
+}
+
+/* Nested list spacing */
+.markdown-body li > ul,
+.markdown-body li > ol {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* Headings get clear separation from surrounding content */
+.markdown-body h1 {
+    margin-bottom: 10px;
+}
+
+.markdown-body h2 {
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+.markdown-body h3 {
+    margin-top: 15px;
+    margin-bottom: 7px;
+}
+
+.markdown-body h4 {
+    margin-top: 12px;
+    margin-bottom: 6px;
+}
+
+/* Keep heading close to the content that follows */
+.markdown-body h1 + p,
+.markdown-body h2 + p,
+.markdown-body h3 + p,
+.markdown-body h4 + p,
+.markdown-body h1 + ul,
+.markdown-body h2 + ul,
+.markdown-body h3 + ul,
+.markdown-body h4 + ul,
+.markdown-body h1 + ol,
+.markdown-body h2 + ol,
+.markdown-body h3 + ol,
+.markdown-body h4 + ol {
+    margin-top: 4px;
+}
+
+/* Bold text remains visually connected to its explanation */
+.markdown-body strong {
+    line-height: inherit;
+}
+
+/* Tables need breathing room around them */
+.markdown-body table {
+    margin-top: 11px;
+    margin-bottom: 13px;
+}
+
+/* Concept / definition boxes */
+.markdown-body blockquote {
+    margin-top: 11px;
+    margin-bottom: 13px;
+    line-height: 1.55;
+}
+
+/* Code blocks separated from normal notes */
+.markdown-body pre {
+    margin-top: 11px;
+    margin-bottom: 15px;
+}
+
+/* Images / diagrams */
+.markdown-body img {
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+
+/* Avoid excessive blank space at the very end */
+.markdown-body > *:last-child {
+    margin-bottom: 0;
+}
+
+/* Print/PDF readability */
+@media print {
+    .markdown-body p,
+    .markdown-body li,
+    .markdown-body blockquote {
+        line-height: 1.5;
+    }
+
+    .markdown-body > * {
+        margin-bottom: 8px;
+    }
+}
