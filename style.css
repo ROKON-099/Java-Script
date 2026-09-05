@@ -1,709 +1,740 @@
-/* =========================================================
-   BOOTSTRAP NOTES — PROFESSIONAL PDF STYLE
-   Designed for VS Code Markdown PDF
-   ========================================================= */
+/*
+ * Professional Markdown → PDF stylesheet
+ * Visual match for:
+ * "CSE 0613-2203 | Design and Analysis of Algorithms"
+ *
+ * Designed for A4 / Chromium-based Markdown PDF exporters
+ * (VS Code Markdown PDF, Puppeteer/Chromium, etc.)
+ */
 
-
 /* =========================================================
-   1. PAGE SETUP
+   1. PAGE / PRINT SETUP
    ========================================================= */
 
 @page {
-    size: A4;
-    margin: 18mm 16mm 18mm 16mm;
+  size: A4;
+  margin: 18mm 15mm 17mm 15mm;
 }
 
+:root {
+  --primary: #4338ca;
+  --primary-dark: #312e81;
+  --primary-soft: #f8f9ff;
+  --text: #252a31;
+  --muted: #667085;
+  --heading: #313080;
+  --border: #e5e7eb;
+  --row: #f6f8fa;
+  --code-bg: #0d1016;
+  --code-text: #e5e7eb;
+  --note-bg: #f8f9ff;
+  --remember-bg: #fffbeb;
+  --remember-border: #f0d98c;
+  --remember-text: #a44a00;
+  --success-bg: #eefbf3;
+  --success-border: #ccefd9;
+  --success-text: #22734a;
+  --danger-bg: #fff1f2;
+  --danger-border: #f3d1d5;
+  --danger-text: #a33a45;
+  --radius: 6px;
+}
 
-/* =========================================================
-   2. ROOT / BODY
-   ========================================================= */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 9.5pt;
+  -webkit-print-color-adjust: exact !important;
+  print-color-adjust: exact !important;
+}
 
 body {
-    font-family: Arial, sans-serif;
-    font-size: 11pt;
-    line-height: 1.45;
-    color: #292929;
-    background: #ffffff;
-    margin: 0;
-    padding: 0;
+  margin: 0 auto;
+  max-width: 100%;
+  color: var(--text);
+  background: #fff;
+  font-family:
+    "Inter",
+    "Segoe UI",
+    Arial,
+    Helvetica,
+    sans-serif;
+  font-size: 9.5pt;
+  line-height: 1.45;
+  letter-spacing: 0.005em;
+  text-rendering: optimizeLegibility;
 }
 
-
-/* =========================================================
-   3. MAIN CONTENT
-   ========================================================= */
-
-.markdown-body {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0;
+/* Keep sections together whenever Chromium can do so. */
+h1, h2, h3, h4, h5, h6,
+table,
+pre,
+blockquote,
+.callout,
+.memory-box,
+.info-box,
+.two-column,
+.card-grid {
+  break-inside: avoid;
+  page-break-inside: avoid;
 }
 
-
-/* =========================================================
-   4. TITLE / H1
-   ========================================================= */
-
-h1 {
-    font-family: Arial, sans-serif;
-    font-size: 14pt;
-    font-weight: 700;
-    color: #003b73;
-    margin-top: 0;
-    margin-bottom: 7px;
-    padding: 0;
-    border: 0;
-    letter-spacing: 0;
+/* Avoid lonely headings at the bottom of a page. */
+h1, h2, h3, h4, h5, h6 {
+  break-after: avoid;
+  page-break-after: avoid;
 }
 
-
 /* =========================================================
-   5. H2
-   ========================================================= */
-
-h2 {
-    font-family: Arial, sans-serif;
-    font-size: 13pt;
-    font-weight: 500;
-    color: black;
-    margin-top: 12px;
-    margin-bottom: 5px;
-    padding: 0;
-    border: 0;
-    page-break-after: avoid;
-}
-
-
-/* =========================================================
-   6. H3
-   ========================================================= */
-
-h3 {
-    font-family: Arial, sans-serif;
-    font-size: 12pt;
-    font-weight: 400;
-    color: #6a00c6;
-    margin-top: 9px;
-    margin-bottom: 4px;
-    padding-left: 8px;
-    border-left: 3px solid #0066cc;
-    page-break-after: avoid;
-}
-
-
-/* =========================================================
-   7. H4
-   ========================================================= */
-
-h4 {
-    font-family: Arial, sans-serif;
-    font-size: 11pt;
-    font-weight: 400;
-    color: rgb(45, 43, 43);
-    margin-top: 8px;
-    margin-bottom: 4px;
-    page-break-after: avoid;
-}
-
-
-/* =========================================================
-   8. PARAGRAPH
+   2. TYPOGRAPHY
    ========================================================= */
 
 p {
-    font-family: Arial, sans-serif;
-    font-size: 11pt;
-    margin-top: 4px;
-    margin-bottom: 7px;
-    text-align: left;
+  margin: 0 0 7px;
 }
-
-
-/* =========================================================
-   9. STRONG / BOLD
-   ========================================================= */
 
 strong {
-    font-weight: 700;
-    color: #202020;
+  font-weight: 700;
 }
 
+em {
+  color: #4b5563;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 20px 0;
+}
+
+/* Main section heading — purple left accent + underline. */
+h1 {
+  position: relative;
+  margin: 0 0 15px;
+  padding: 0 0 8px;
+  color: #182033;
+  font-size: 18pt;
+  line-height: 1.15;
+  font-weight: 750;
+  border-bottom: 2px solid var(--primary);
+}
+
+h1::first-letter {
+  color: var(--primary);
+}
+
+/* Subsection headings match the PDF's purple left rule. */
+h2 {
+  position: relative;
+  margin: 17px 0 7px;
+  padding-left: 9px;
+  color: var(--heading);
+  font-size: 11.5pt;
+  line-height: 1.25;
+  font-weight: 750;
+}
+
+h2::before,
+h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1px;
+  bottom: 1px;
+  width: 3px;
+  background: #6c63ff;
+  border-radius: 1px;
+}
+
+h3 {
+  position: relative;
+  margin: 12px 0 6px;
+  padding-left: 9px;
+  color: var(--heading);
+  font-size: 10.5pt;
+  line-height: 1.25;
+  font-weight: 750;
+}
+
+h4 {
+  margin: 9px 0 5px;
+  color: var(--primary);
+  font-size: 9.5pt;
+  font-weight: 750;
+}
+
+/* Small section labels. */
+h5,
+h6 {
+  margin: 8px 0 4px;
+  color: #4b5563;
+  font-size: 8.5pt;
+  font-weight: 750;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
 
 /* =========================================================
-   10. INLINE CODE
+   3. COVER / TITLE PAGE
    ========================================================= */
 
-code {
-    font-family:
-        "Cascadia Code",
-        "JetBrains Mono",
-        "Fira Code",
-        Consolas,
-        monospace;
+/*
+Use this structure in Markdown/HTML:
 
-    font-size: 0.9em;
+<div class="title-page">
+  <div class="eyebrow">LECTURE NOTES</div>
+  <div class="course">CSE 0613-2203 | Design and Analysis of Algorithms</div>
+  <h1>Introduction to Algorithms &amp; Algorithm Writing</h1>
+  <p class="subtitle">Foundations, characteristics, analysis, and structured pseudocode design</p>
+  <div class="title-accent"></div>
+  <div class="topics">
+    <strong>TOPICS COVERED</strong>
+    <p>...</p>
+  </div>
+</div>
+*/
 
-    color: #7b3f98;
-
-    background: #f4eef8;
-
-    padding: 2px 5px;
-
-    border-radius: 3px;
+.title-page {
+  min-height: 245mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5mm 0 20mm;
+  break-after: page;
+  page-break-after: always;
 }
 
+.title-page .eyebrow {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 5px 12px;
+  margin-bottom: 20px;
+  border-radius: 999px;
+  background: #eef0ff;
+  color: var(--primary-dark);
+  font-size: 7.5pt;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.title-page .course {
+  margin-bottom: 10px;
+  color: #5d6675;
+  font-size: 10pt;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.title-page h1 {
+  margin: 0;
+  padding: 0;
+  max-width: 180mm;
+  border: 0;
+  color: #151c2c;
+  font-size: 26pt;
+  line-height: 1.08;
+  font-weight: 800;
+}
+
+.title-page .subtitle {
+  max-width: 160mm;
+  margin: 13px 0 0;
+  color: #536174;
+  font-size: 11pt;
+  line-height: 1.45;
+}
+
+.title-page .title-accent {
+  width: 40px;
+  height: 4px;
+  margin: 32px 0 36px;
+  background: var(--primary);
+  border-radius: 2px;
+}
+
+.title-page .topics {
+  padding-top: 19px;
+  border-top: 1px solid var(--border);
+  color: #687386;
+  font-size: 8.5pt;
+}
+
+.title-page .topics strong {
+  display: block;
+  margin-bottom: 7px;
+  color: #394255;
+  font-size: 8pt;
+  letter-spacing: 0.08em;
+}
 
 /* =========================================================
-   11. CODE BLOCK
-   ========================================================= */
-
-pre {
-    background: #202030 !important;
-    color: #eeeeee !important;
-    border-radius: 6px;
-    padding: 14px 16px;
-    margin-top: 9px;
-    margin-bottom: 13px;
-    font-family:
-        "Cascadia Code",
-        "JetBrains Mono",
-        "Fira Code",
-        Consolas,
-        monospace;
-    font-size: 9.5pt;
-    line-height: 1.55;
-    white-space: pre-wrap;
-    overflow-wrap: break-word;
-    box-shadow: none;
-    page-break-inside: avoid !important;
-    break-inside: avoid-page !important;
-}
-
-
-/* code inside pre */
-
-pre code {
-    background: transparent !important;
-
-    color: #eeeeee !important;
-
-    padding: 0;
-
-    font-size: inherit;
-
-    border-radius: 0;
-
-    white-space: pre-wrap;
-
-    page-break-inside: avoid !important;
-    break-inside: avoid !important;
-}
-
-
-/* =========================================================
-   12. CODE SYNTAX COLORS
-   ========================================================= */
-
-.hljs {
-    background: #202030 !important;
-    color: #eeeeee !important;
-}
-
-
-/* Keywords */
-
-.hljs-keyword,
-.hljs-selector-tag,
-.hljs-built_in {
-    color: #e58cff;
-}
-
-
-/* Strings */
-
-.hljs-string,
-.hljs-attr {
-    color: #8fd694;
-}
-
-
-/* Numbers */
-
-.hljs-number,
-.hljs-literal {
-    color: #f3b562;
-}
-
-
-/* Comments */
-
-.hljs-comment {
-    color: #8b8b9a;
-    font-style: italic;
-}
-
-
-/* Functions */
-
-.hljs-title,
-.hljs-title.function_,
-.hljs-function {
-    color: #79c8ff;
-}
-
-
-/* Tags */
-
-.hljs-name {
-    color: #2c161d;
-}
-
-
-/* =========================================================
-   13. BLOCKQUOTE / CONCEPT BOX
-   ========================================================= */
-
-blockquote {
-    margin: 9px 0;
-    padding: 8px 12px;
-    background: #f5f9ff;
-    border-left: 3px solid #0066cc;
-    border-top: 0;
-    border-right: 0;
-    border-bottom: 0;
-    border-radius: 0;
-    color: #333333;
-    page-break-inside: avoid;
-}
-
-
-/* =========================================================
-   14. LIST
+   4. LISTS
    ========================================================= */
 
 ul,
 ol {
-    margin-top: 3px;
-    margin-bottom: 6px;
-    padding-left: 22px;
+  margin: 5px 0 9px;
+  padding-left: 20px;
 }
-
 
 li {
-    font-family: Arial, sans-serif;
-    font-size: 11pt;
-    margin-bottom: 3px;
+  margin: 2px 0;
+  padding-left: 1px;
 }
 
-
-/* Purple bullet */
-
-ul li::marker {
-    color: #7b4db3;
+ul li::marker,
+ol li::marker {
+  color: #30343b;
 }
 
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
 
 /* =========================================================
-   15. TABLE
+   5. TABLES
    ========================================================= */
 
 table {
-    width: 100%;
-
-    border-collapse: collapse;
-
-    margin-top: 7px;
-    margin-bottom: 8px;
-
-    font-size: 9.5pt;
-
-    page-break-inside: avoid !important;
-    break-inside: avoid !important;
+  width: 100%;
+  margin: 8px 0 14px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 8.4pt;
+  line-height: 1.35;
 }
 
-
-/* Table Header */
-
-thead th {
-    background: #7b4db3;
-
-    color: #ffffff;
-
-    font-weight: 700;
-
-    text-align: left;
-
-    padding: 8px 10px;
-
-    border: 1px solid #7b4db3;
+thead {
+  display: table-header-group;
 }
 
-
-/* Table Body */
-
-tbody td {
-    padding: 7px 10px;
-
-    border-bottom: 1px solid #ded8e5;
-
-    vertical-align: middle;
+tr {
+  break-inside: avoid;
+  page-break-inside: avoid;
 }
 
-
-/* Alternate rows */
-
-tbody tr:nth-child(even) {
-    background: #f8f5fa;
+th {
+  padding: 7px 9px;
+  background: var(--primary);
+  color: #fff;
+  border: 1px solid var(--primary);
+  text-align: left;
+  font-weight: 750;
 }
 
-
-/* Table inline code */
-
-td code {
-    font-size: 8.5pt;
-
-    color: #7b3f98;
-
-    background: #f1eaf6;
+td {
+  padding: 6px 9px;
+  border-bottom: 1px solid #dfe3e8;
+  vertical-align: top;
 }
 
+tbody tr:nth-child(odd) td {
+  background: var(--row);
+}
+
+tbody tr:nth-child(even) td {
+  background: #fff;
+}
+
+tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+/* First column often contains labels/numbers. */
+table td:first-child,
+table th:first-child {
+  white-space: nowrap;
+}
 
 /* =========================================================
-   16. HORIZONTAL RULE
+   6. CODE / PSEUDOCODE
    ========================================================= */
 
-hr {
-    display: none;
+code {
+  padding: 1px 4px;
+  border-radius: 3px;
+  background: #f4f1f2;
+  color: #b45a66;
+  font-family:
+    "JetBrains Mono",
+    "Cascadia Mono",
+    "Consolas",
+    "Courier New",
+    monospace;
+  font-size: 0.88em;
 }
 
+pre {
+  margin: 8px 0 13px;
+  padding: 15px 16px;
+  overflow: hidden;
+  border: 1px solid #dfe3e8;
+  border-radius: 6px;
+  background: #f7f8fa;
+}
+
+pre code {
+  display: block;
+  padding: 0;
+  color: var(--code-text);
+  background: var(--code-bg);
+  border-radius: 5px;
+  padding: 14px 15px;
+  font-family:
+    "JetBrains Mono",
+    "Cascadia Mono",
+    "Consolas",
+    "Courier New",
+    monospace;
+  font-size: 7.7pt;
+  line-height: 1.55;
+  white-space: pre-wrap;
+  word-break: normal;
+}
 
 /* =========================================================
-   17. LINKS
+   7. BLOCKQUOTES / CALLOUTS
    ========================================================= */
 
-a {
-    color: #7043a4;
-
-    text-decoration: none;
+blockquote {
+  margin: 9px 0 13px;
+  padding: 9px 12px;
+  border-left: 3px solid #6c63ff;
+  background: var(--note-bg);
+  color: #343b48;
 }
 
-a:hover {
-    text-decoration: underline;
+blockquote p:last-child {
+  margin-bottom: 0;
 }
 
+/*
+Generic callout:
+> **Shortcut:** Problem → Constraints → Input → Output → Feasibility
+
+For more control:
+<div class="callout">...</div>
+*/
+.callout,
+.info-box {
+  margin: 9px 0 13px;
+  padding: 9px 12px;
+  border-left: 3px solid #6c63ff;
+  background: var(--note-bg);
+  color: #3d4350;
+}
+
+.callout strong:first-child,
+.info-box strong:first-child {
+  color: var(--primary-dark);
+}
 
 /* =========================================================
-   18. IMAGES
+   8. REMEMBER / MEMORY BOX
+   ========================================================= */
+
+.memory-box {
+  margin: 10px 0 14px;
+  padding: 8px 11px;
+  border: 1px dashed var(--remember-border);
+  border-radius: 6px;
+  background: var(--remember-bg);
+  color: var(--remember-text);
+  font-size: 8pt;
+  font-weight: 700;
+}
+
+/* =========================================================
+   9. ADVANTAGE / DISADVANTAGE BOXES
+   ========================================================= */
+
+.success,
+.advantages {
+  padding: 9px 11px;
+  border: 1px solid var(--success-border);
+  border-radius: 6px;
+  background: var(--success-bg);
+  color: #315f47;
+}
+
+.danger,
+.disadvantages {
+  padding: 9px 11px;
+  border: 1px solid var(--danger-border);
+  border-radius: 6px;
+  background: var(--danger-bg);
+  color: #6d3a40;
+}
+
+.success h4,
+.advantages h4 {
+  margin-top: 0;
+  color: var(--success-text);
+}
+
+.danger h4,
+.disadvantages h4 {
+  margin-top: 0;
+  color: var(--danger-text);
+}
+
+/* =========================================================
+   10. THREE-COLUMN / CARD SECTIONS
+   ========================================================= */
+
+/*
+Use:
+<div class="card-grid">
+  <div class="card">...</div>
+  <div class="card">...</div>
+  <div class="card">...</div>
+</div>
+*/
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  margin: 8px 0 14px;
+}
+
+.card {
+  min-height: 28mm;
+  padding: 10px 11px;
+  border: 1px solid #dfe3e8;
+  background: #f7f8fa;
+}
+
+.card:first-child {
+  border-radius: 6px 0 0 6px;
+}
+
+.card:last-child {
+  border-radius: 0 6px 6px 0;
+}
+
+.card + .card {
+  border-left: 0;
+}
+
+.card-title {
+  margin-bottom: 7px;
+  color: #596273;
+  font-size: 7.5pt;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* Generic two-column layout. */
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7px;
+  margin: 8px 0 14px;
+}
+
+.two-column > * {
+  min-width: 0;
+}
+
+/* =========================================================
+   11. QUICK REVISION / EXAM NOTES
+   ========================================================= */
+
+.revision-card {
+  margin: 9px 0;
+  padding: 10px 12px;
+  border: 1px solid #e3e5e9;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.revision-card h3 {
+  margin-top: 0;
+  padding-left: 0;
+  color: #30343b;
+}
+
+.revision-card h3::before {
+  display: none;
+}
+
+.revision-card ul,
+.revision-card ol {
+  margin-bottom: 0;
+}
+
+/* Strong final memory guide block. */
+.memory-guide {
+  margin-top: 13px;
+  padding: 13px 15px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #4338ca, #4936bd);
+  color: #fff;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.memory-guide p {
+  margin: 0 0 6px;
+  font-size: 8.3pt;
+  line-height: 1.45;
+}
+
+.memory-guide p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   12. FIGURES / IMAGES
    ========================================================= */
 
 img {
-    max-width: 100%;
-
-    height: auto;
-
-    display: block;
-
-    margin: 15px auto;
-
-    page-break-inside: avoid;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 9px auto 13px;
+  break-inside: avoid;
+  page-break-inside: avoid;
 }
 
-
-/* =========================================================
-   19. VISUAL EXAMPLE / DIAGRAM
-   ========================================================= */
-
-pre:has(code.language-text),
-pre:has(code.language-plaintext) {
-    background: #202030 !important;
-
-    color: #eeeeee !important;
-
-    border-radius: 6px;
-}
-
-
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: Arial, sans-serif;
-    font-size: 14pt;
-}
-/* =========================================================
-   20. KEEP HEADINGS WITH CONTENT
-   ========================================================= */
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    page-break-after: avoid !important;
-    break-after: avoid-page !important;
-}
-
-
-/* Heading + paragraph */
-
-h2 + p,
-h3 + p,
-h4 + p {
-    page-break-before: avoid;
-}
-
-
-/* Heading + code */
-
-h2 + pre,
-h3 + pre,
-h4 + pre {
-    page-break-before: avoid;
-}
-
-
-/* =========================================================
-   21. PREVENT CONTENT BREAKING
-   ========================================================= */
-
-blockquote,
-table,
 figure {
-    page-break-inside: avoid !important;
-    break-inside: avoid !important;
+  margin: 10px 0 14px;
+  text-align: center;
+  break-inside: avoid;
+  page-break-inside: avoid;
 }
 
-
-/* =========================================================
-   22. SECTION SPACING
-   ========================================================= */
-
-h2:not(:first-child) {
-    margin-top: 18px;
-    margin-bottom: 6px;
+figcaption {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 7.5pt;
 }
 
-
 /* =========================================================
-   23. PAGE BREAK UTILITY
+   13. PAGE BREAK HELPERS
    ========================================================= */
 
 .page-break {
-    page-break-before: always;
+  break-before: page;
+  page-break-before: always;
 }
 
+.keep-together {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.no-break {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+/* Start major sections on a clean page when explicitly requested. */
+.new-page {
+  break-before: page;
+  page-break-before: always;
+}
 
 /* =========================================================
-   24. PRINT OPTIMIZATION
+   14. FOOTER / PAGE NUMBER SUPPORT
+   ========================================================= */
+
+/*
+For VS Code Markdown PDF:
+  "markdown-pdf.displayHeaderFooter": true
+
+Recommended footer template:
+  <div style="width:100%;font-size:7px;color:#9aa1ad;text-align:center;">
+    <span class="pageNumber"></span>
+  </div>
+
+If your exporter supports CSS running elements, this footer is also
+available as a reusable class.
+*/
+
+.pdf-footer {
+  width: 100%;
+  margin-top: 20px;
+  padding-top: 8px;
+  border-top: 1px solid #e5e7eb;
+  color: #9aa1ad;
+  text-align: center;
+  font-size: 7pt;
+}
+
+/* =========================================================
+   15. PRINT-SPECIFIC CLEANUP
    ========================================================= */
 
 @media print {
+  body {
+    width: auto;
+    max-width: none;
+  }
 
-    body {
-        background: #ffffff;
-    }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 
-    pre {
-        -webkit-print-color-adjust: exact !important;
-        print-color-adjust: exact !important;
-    }
+  pre,
+  table,
+  figure,
+  .card-grid,
+  .two-column,
+  .memory-box,
+  .memory-guide,
+  .callout,
+  .info-box,
+  .revision-card {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
 
-    table,
-    pre,
-    blockquote {
-        -webkit-print-color-adjust: exact !important;
-        print-color-adjust: exact !important;
-    }
+  h1 {
+    margin-top: 0;
+  }
+
+  /* Prevent accidental URL printing. */
+  a[href]::after {
+    content: none !important;
+  }
 }
-
 
 /* =========================================================
-   25. SMALL TEXT
+   16. RESPONSIVE FALLBACK
    ========================================================= */
 
-small {
-    font-size: 8.5pt;
-    color: #666666;
-}
+@media screen and (max-width: 800px) {
+  .card-grid,
+  .two-column {
+    grid-template-columns: 1fr;
+  }
 
+  .card + .card {
+    border-left: 1px solid #dfe3e8;
+    border-top: 0;
+  }
 
-/* =========================================================
-   26. KEYBOARD
-   ========================================================= */
+  .card:first-child {
+    border-radius: 6px 6px 0 0;
+  }
 
-kbd {
-    background: #202030;
-
-    color: #ffffff;
-
-    padding: 3px 6px;
-
-    border-radius: 4px;
-
-    font-family: monospace;
-
-    font-size: 8.5pt;
-}
-
-
-/* =========================================================
-   27. CHECKLIST
-   ========================================================= */
-
-input[type="checkbox"] {
-    accent-color: #7b4db3;
-}
-
-
-/* =========================================================
-   28. PAGE BREAK CONTROL
-   ========================================================= */
-
-/* Code block কখনো মাঝখান থেকে split না করার চেষ্টা করবে */
-
-pre,
-pre code {
-    page-break-inside: avoid !important;
-    break-inside: avoid !important;
-}
-
-
-/* বড় section মাঝখানে ভাঙা কমাবে */
-
-h2 {
-    orphans: 3;
-    widows: 3;
-}
-
-
-/* =========================================================
-   29. FOOTER SPACE
-   ========================================================= */
-
-body {
-    padding-bottom: 20px;
-}
-
-
-/* =========================================================
-   END
-   ========================================================= */
-
-
-/* =========================================================
-   30. PROFESSIONAL NOTES — READING SPACING
-   ========================================================= */
-
-/* Comfortable spacing between separate note elements */
-.markdown-body > * {
-    margin-bottom: 9px;
-}
-
-/* Paragraphs: readable but compact */
-.markdown-body p {
-    margin-top: 5px;
-    margin-bottom: 10px;
-    line-height: 1.55;
-}
-
-/* Lists: add breathing room without making them too loose */
-.markdown-body ul,
-.markdown-body ol {
-    margin-top: 5px;
-    margin-bottom: 10px;
-}
-
-.markdown-body li {
-    margin-bottom: 5px;
-    line-height: 1.5;
-}
-
-/* Nested list spacing */
-.markdown-body li > ul,
-.markdown-body li > ol {
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-/* Headings get clear separation from surrounding content */
-.markdown-body h1 {
-    margin-bottom: 10px;
-}
-
-.markdown-body h2 {
-    margin-top: 20px;
-    margin-bottom: 8px;
-}
-
-.markdown-body h3 {
-    margin-top: 15px;
-    margin-bottom: 7px;
-}
-
-.markdown-body h4 {
-    margin-top: 12px;
-    margin-bottom: 6px;
-}
-
-/* Keep heading close to the content that follows */
-.markdown-body h1 + p,
-.markdown-body h2 + p,
-.markdown-body h3 + p,
-.markdown-body h4 + p,
-.markdown-body h1 + ul,
-.markdown-body h2 + ul,
-.markdown-body h3 + ul,
-.markdown-body h4 + ul,
-.markdown-body h1 + ol,
-.markdown-body h2 + ol,
-.markdown-body h3 + ol,
-.markdown-body h4 + ol {
-    margin-top: 4px;
-}
-
-/* Bold text remains visually connected to its explanation */
-.markdown-body strong {
-    line-height: inherit;
-}
-
-/* Tables need breathing room around them */
-.markdown-body table {
-    margin-top: 11px;
-    margin-bottom: 13px;
-}
-
-/* Concept / definition boxes */
-.markdown-body blockquote {
-    margin-top: 11px;
-    margin-bottom: 13px;
-    line-height: 1.55;
-}
-
-/* Code blocks separated from normal notes */
-.markdown-body pre {
-    margin-top: 11px;
-    margin-bottom: 15px;
-}
-
-/* Images / diagrams */
-.markdown-body img {
-    margin-top: 18px;
-    margin-bottom: 18px;
-}
-
-/* Avoid excessive blank space at the very end */
-.markdown-body > *:last-child {
-    margin-bottom: 0;
-}
-
-/* Print/PDF readability */
-@media print {
-    .markdown-body p,
-    .markdown-body li,
-    .markdown-body blockquote {
-        line-height: 1.5;
-    }
-
-    .markdown-body > * {
-        margin-bottom: 8px;
-    }
+  .card:last-child {
+    border-radius: 0 0 6px 6px;
+  }
 }
